@@ -1,0 +1,333 @@
+
+"hi Comment guibg=#212121
+"hi jsDocParam guibg=#212121
+"hi jsDocTags guibg=#212121
+"hi Type guibg=#212121
+hi jsThis term=bold ctermfg=215 guifg=#ffb964
+hi jsFunction term=bold cterm=bold ctermfg=205 gui=bold guifg=#cc4c8c
+hi jsFuncName ctermfg=205 guifg=#cc4c8c
+hi jsFunctionKey ctermfg=205 guifg=#cc4c8c
+hi jsFuncArgs term=bold,italic ctermfg=103 gui=italic guifg=#8197bf
+"hi jsDocTags term=bold cterm=bold ctermfg=107 gui=bold guifg=#799d6a
+hi jsDocTags term=bold cterm=bold ctermfg=103 gui=bold guifg=#8197bf guibg=#212121
+hi jsDocComment term=bold ctermfg=244 gui=italic guibg=#212121 guifg=#888888
+hi jsComment term=bold ctermfg=244 gui=italic guibg=#212121 guifg=#888888
+hi jsDocParam term=bold ctermfg=103 guibg=#212121 guifg=#8197bf
+hi jsDocType term=underline ctermfg=215 guibg=#212121 guifg=#ffb964
+hi jsDocTypeNoParam term=underline ctermfg=215 guibg=#212121 guifg=#ffb964
+
+" tweak color scheme colors slightly:
+hi Special guifg=#DF7401
+
+" tweak SpecialKey background so it always matches theme:
+"let oldcolor = synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")
+hi SpecialKey guibg=#151515
+" matches jellybeans (@todo make dynamic)
+
+" syntastic tweak
+"hi SpellCap ctermfg=www ctermbg=xxx guifg=#yyyyyy guibg=#zzzzzz
+" got this from obsidian colorscheme via: :hi SpellCap
+"hi SpellCap term=reverse cterm=undercurl ctermbg=12 gui=undercurl guisp=#eeee00
+hi clear SpellCap
+hi SpellCap term=reverse cterm=undercurl ctermbg=233 guibg=#151515 gui=undercurl guisp=#eeee00
+" source:
+" http://stackoverflow.com/questions/17677441/changing-error-highlight-color-used-by-syntastic
+
+" the above doesnt change the warning symbol at all (obsidian orig fg color
+" was #C0A25F)
+"hi SyntasticWarningSign guifg=#eeee00 guibg=#151515
+hi SyntasticWarningSign guifg=#ffffff guibg=#808000
+
+hi SpellBad cterm=undercurl ctermbg=233 guibg=#151515 gui=undercurl guisp=#808000
+
+"hi SyntasticErrorSign guifg=#870000 guibg=#b2b2b2
+"hi SyntasticErrorSign guifg=#ffffff guibg=#870000
+hi SyntasticErrorSign guifg=#ffffff guibg=#808000
+
+" Dynamic increase or decrease font size:
+" source: http://vim.wikia.com/wiki/VimTip414
+map ,- :let &guifont = substitute(&guifont, '\(\d\+\)', '\="" . (submatch(1) - 1)', '')<CR>
+map ,+ :let &guifont = substitute(&guifont, '\(\d\+\)', '\="" . (submatch(1) + 1)', '')<CR>
+map ,= :let &guifont = substitute(&guifont, '\(\d\+\)', '\="" . (submatch(1) + 1)', '')<CR>
+
+
+" attempt to maximize gVim window (not exactly but better)
+" set lines=999 columns=999
+" temporary for testing vim-webdevicons
+" set lines=3 columns=66
+" source: http://superuser.com/questions/140419/how-to-start-gvim-maximized
+
+" attempt Maximize window completely:
+" au GUIEnter * simalt x " x on an English Windows version. n on a French one
+" source: http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
+
+" Sets the font and size using font that shows special characters for Powerline
+"set guifont=Consolas\ for\ Powerline\ FixedD:h11
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline:h11
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+" working well:
+"set guifont=Source\ Code\ Pro\ for\ Powerline\ 11
+"set guifont=ProggyCleanTT\ Plus\ Nerd\ File\ Types\ Regular\ 14
+"set guifont=ProggyCleanTT\ Regular\ 24
+" check for gaps:
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 5
+"set guifont=Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+"set guifont=Anonymice\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+"set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+"set guifont=Sauce\ Code\ Powerline\ 11
+"set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 12
+"set guifont=Purisa,\ Droid\ Sans\ Mono\ 11,\ Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+"set guifont=PurisaXyz,\ Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+"set guifont=PurisaXyz,Purisa
+"set guifont=Purisa2,\ Purisa
+"set guifontwide=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+
+" test 1000 em fonts:
+"set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+"set guifont=Ubuntu\ Mono\ Plus\ Nerd\ File\ Types\ 12
+"set guifont=Anonymice\ Powerline\ Plus\ Nerd\ File\ Types\ Regular\ 11
+"set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Plus\ Nerd\ File\ Types\ Regular\ 12
+
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
+
+"set guifont=Courier10\ BT\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Book\ 12
+
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
+"set guifont=PragmataPro\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Regular\ 12
+
+"let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
+
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['db'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['less'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['styl'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['sh'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['php'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['wav'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['diff'] = ''
+
+" test setting folders in flags:
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = ''
+
+" set guifont=Ubuntu\ Mono:h8
+" set guifont=ProggyCleanTT\ 16
+" Sets the font and size
+"set guifont="Consolas:h11"
+
+" force to use vim keys more often and give more screen realestate:
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+"set guioptions-=r  "remove right-hand scroll bar
+" source: http://vim.wikia.com/wiki/Hide_toolbar_or_menus_to_see_more_text
+
+" Set Color of ColorColumn
+if exists('+colorcolumn')
+  "set colorcolumn=100
+  "highlight ColorColumn guibg=Black
+else
+  "au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+" Nice overflow of column decoration :)
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" match OverLength /\%81v.\+/
+" sources:
+" http://choorucode.com/2011/07/29/vim-set-color-of-colorcolumn/
+" http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
+
+" vim-how-to-change-the-current-item-highlight-color-when-substituting
+" The highlight group you want is “IncSearch” even if you don’t have the the ‘incsearch’ option enabled—it is also used for the current substitution when confirmation is enabled.
+highlight IncSearch guifg=firebrick1 guibg=firebrick4
+" source: http://denihow.com/vim-how-to-change-the-current-item-highlight-color-when-substituting/
+
+"highlight Cursor guifg=white guibg=firebrick4
+"highlight iCursor guifg=white guibg=firebrick4
+highlight iCursor guifg=#ff00aa guibg=#8fbfdc
+highlight NCursor guifg=#005f00 guibg=#afd700
+"highlight! def link iCursor Function
+"set guicursor=n-v-c:block-Cursor
+"set guicursor+=i:ver100-iCursor
+"set guicursor+=i-ci:ver25-iCursor
+"set guicursor+=n-v-c:blinkon0
+"set guicursor+=i:blinkwait10
+" source: http://stackoverflow.com/questions/6230490/how-i-can-change-cursor-color-in-color-scheme-vim
+
+" More fix annoyances :)
+"" disable cursor blinking when in normal mode:
+set guicursor+=n:blinkon0
+"set guicursor+=n-v-c-i:blinkon0
+"set guicursor+=i:ver100-iCursor-blinkon0
+set guicursor+=i:blinkon0
+" source: http://vim.wikia.com/wiki/Configuring_the_cursor
+
+set guicursor=i-ci:ver30-iCursor-blinkwait0-blinkon0-blinkoff0
+set guicursor=n:block-NCursor-blinkwait0-blinkon0-blinkoff0
+
+" set the cursor to a vertical line in insert mode and a solid block
+" " in command mode
+"let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+"let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
+" add right-click menu
+set mousemodel=popup
+
+
+
+" JSDoc形式のコメントを追加(functionの行で実行する)
+" hogeFunc: function() の形式と function hogeFunc() に対応
+" 関数定義でない場合は、コメントだけ出力する
+function! AddJSDoc()
+  let l:jsDocregex = '^.\{-}\s*\([a-zA-Z_$][a-zA-Z0-9_$]*\)\s*[:=]\s*function\s*(\s*\([^)]*\)\s*).*$'
+  let l:jsDocregex2 = '^.\{-}\s*function\s\+\([a-zA-Z_$][a-zA-Z0-9_$]*\)\s*(\s*\([^)]*\)\s*).*$'
+
+  let l:line = getline('.')
+  let l:indentCharSpace = ' '
+  let l:indentCharTab = '	'
+  let l:autoexpandtab = &l:expandtab
+
+  if l:autoexpandtab == 'noexpandtab'
+	 " tabs
+    let l:indent = indent('.') / &l:tabstop
+	 let l:indentChar = l:indentCharTab
+  elseif l:autoexpandtab == 'expandtab'
+	 " spaces
+    let l:indent = indent('.')
+	 let l:indentChar = l:indentCharSpace
+  endif
+
+  " @todo rename space to indentation or something
+  let l:space = repeat(l:indentChar, l:indent)
+
+  if l:line =~ l:jsDocregex
+    let l:flag = 1
+    let l:regex = l:jsDocregex
+  elseif l:line =~ l:jsDocregex2
+    let l:flag = 1
+    let l:regex = l:jsDocregex2
+  else
+    let l:flag = 0
+  endif
+
+  let l:lines = []
+  let l:desc = ''
+  if g:jsdoc_input_description == 1
+    let l:desc = input('Description: ')
+  endif
+  call add(l:lines, l:space. '/**')
+  call add(l:lines, l:space . ' * ' . l:desc)
+  call add(l:lines, l:space . ' *')
+  let l:funcName = ''
+  if l:flag
+    let l:funcName = substitute(l:line, l:regex, '\1', "g")
+    let l:arg = substitute(l:line, l:regex, '\2', "g")
+    let l:args = split(l:arg, '\s*,\s*')
+
+    if g:jsdoc_additional_descriptions == 1
+      call add(l:lines, l:space . ' * @name ' . l:funcName)
+      call add(l:lines, l:space . ' * @function')
+    endif
+
+    if g:jsdoc_access_descriptions == 1
+      let l:access = 'public'
+      let l:funcNameFirstChar = l:funcName[0]
+
+      if l:funcNameFirstChar == '_'
+        let l:access = 'private'
+      endif
+
+      call add(l:lines, l:space . ' * @' . l:access)
+
+    endif
+
+    for l:arg in l:args
+      if g:jsdoc_allow_input_prompt == 1
+        let l:argType = input('Argument "' . l:arg . '" type: ')
+        let l:argDescription = input('Argument "' . l:arg . '" description: ')
+        " Prepend space to start of description only if it was provided
+        if l:argDescription != ''
+          let l:argDescription = ' ' . l:argDescription
+        endif
+        call add(l:lines, l:space . ' * @param {' . l:argType . '} ' . l:arg . l:argDescription)
+      else
+        call add(l:lines, l:space . ' * @param ' . l:arg)
+      endif
+    endfor
+  endif
+  if g:jsdoc_return == 1
+    if g:jsdoc_allow_input_prompt == 1
+      let l:returnType = input('Return type (blank for no @return): ')
+      let l:returnDescription = ''
+      if l:returnType != ''
+        if g:jsdoc_return_description == 1
+          let l:returnDescription = input('Return description: ')
+        endif
+        if l:returnDescription != ''
+          let l:returnDescription = ' ' . l:returnDescription
+        endif
+        call add(l:lines, l:space . ' * @return {' . l:returnType . '}' . l:returnDescription)
+      else
+        call add(l:lines, l:space . ' * @return {undefined}')
+      endif
+    else
+      call add(l:lines, l:space . ' * @return {undefined}')
+    endif
+  endif
+  call add(l:lines, l:space . ' */')
+
+  let l:paste = &g:paste
+  let &g:paste = 1
+
+  call append(line('.') - 1, l:lines)
+
+  let l:pos = line('.') - (len(l:lines) - 1)
+
+  silent! execute 'normal! ' . l:pos . 'G$'
+  if l:desc == '' && l:funcName != ''
+    silent! execute 'normal! a' . l:funcName
+  endif
+
+  let &g:paste = paste
+endfunction
+ 
+" JSDocのキーバインド
+"nmap ,d :<C-u>call AddJSDoc()<CR>
+" source: https://gist.github.com/sunvisor/3903772#file-jsdoc-vim
+
+
+" NOTE: keep at bottom of file:
+" reload your .vimrc file without restarting vim
+" Only if you're editing it
+":so %
+" Else if not editing this file directly
+":so $MYGVIMRC
+
+let s:FlagSet = {}
+
+""FUNCTION: FlagSet.renderToString() {{{1
+"function! s:FlagSet.renderToString()
+
+
+"   "let Fn = function("MyFunc")
+
+"    let flagstring = ""
+"    for i in values(self._flags)
+"        let flagstring .= join(i)
+"    endfor
+
+"    if len(flagstring) == 0
+"        return ""
+"    endif
+
+"    "return '[' . flagstring . ']'
+"    return flagstring
+"    "let flagstring = g:NERDTreeFlagSet.renderToString()
+"    "return flagstring
+"endfunction
+
+""let g:NERDTreeFlagSet.renderToString = substitute(g:NERDTreeFlagSet.renderToString(), "[", "x", "")
+"let g:NERDTreeFlagSet.renderToString = s:FlagSet.renderToString
+
+" try: http://vimdoc.sourceforge.net/htmldoc/usr_41.html
+"
