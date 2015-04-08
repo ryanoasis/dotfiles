@@ -8,7 +8,9 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc bash_profile vimrc vim zshrc oh-my-zsh jscs.json gitignore gitconfig oh-my-zsh"    # list of files/folders to symlink in homedir
+files=".bashrc .bash_profile .vimrc .zshrc .jscs.json"    # list of files/folders to symlink in homedir
+# for testing:
+#files=".vimrc .gvimrc Dropbox/vim/allcolorstest.vim"
 
 ##########
 
@@ -24,10 +26,24 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+   #if [[ -r ~/$file ]] ; then
+   #    echo "$file can be read!"
+   #fi
+   #if [[ -e ~/$file ]] ; then
+   #    echo "$file is a file!"
+   #fi
+   #if ! [[ -L ~/$file ]] ; then
+   #    echo "$file is NOT a symlink!"
+   #fi
+   if [ -f ~/$file ] && ! [ -L ~/$file ]; then
+       echo "$file exists and is not a symlink"
+       echo "Moving any existing dotfiles from ~ to $olddir"
+       mv ~/$file ~/dotfiles_old/
+       echo "Creating symlink to $file in home directory."
+       ln -s $dir/$file ~/$file
+   else
+       echo "NOT Creating symlink to $file already seems to be a symlink: not overwriting back-up"
+   fi
 done
 
 # original source: http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
