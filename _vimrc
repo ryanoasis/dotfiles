@@ -460,6 +460,28 @@ let g:ctrlp_cmd = 'CtrlPMRU'
 " End CtrlP
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tabular
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" custom mapping shortcuts
+"if exists(":Tabularize")
+	nmap <Leader>t= :Tabularize /=<CR>
+	vmap <Leader>t= :Tabularize /=<CR>
+	"nmap <Leader>t| :Tabularize /|<CR>
+	"vmap <Leader>t| :Tabularize /|<CR>
+	nmap <Leader>t: :Tabularize /:<CR>
+	vmap <Leader>t: :Tabularize /:<CR>
+"endif
+" e.g. If you were in normal or visual mode, you could type ,t= to align
+" equals signs
+" source: http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" End tabular
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GitGutter
