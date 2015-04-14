@@ -95,7 +95,7 @@ Plugin 'file:///home/ryan/Dropbox/projects/vim-webdevicons'
 Bundle 'ervandew/supertab'
 " Track the engine.
 Bundle 'SirVer/ultisnips'
-Bundle 'terryma/vim-smooth-scroll'
+"Bundle 'terryma/vim-smooth-scroll'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
