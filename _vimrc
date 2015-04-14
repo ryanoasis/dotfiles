@@ -703,10 +703,52 @@ map <Leader>nt :NERDTreeToggle %:p:h<CR>
 " let loaded_nerd_tree = 1
 let NERDChristmasTree = 0
 
+" standard:
+"exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" conceal cchar=_'
+" trying contained:
+"exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" contained conceal cchar=_ containedin=NERDTreeDir,NERDTreeFile'
+"
+"
+"
+" GOOD WORKING 4/12/2015 :)
+"exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" contained conceal cchar=_ containedin=ALL'
+"
+"
+"
+"exec 'autocmd filetype nerdtree syntax region hideBracketsInNerdTree start=/\[/ end=/\]/ conceal cchar=_'
+"exec 'autocmd filetype nerdtree syntax region hideBracketsInNerdTree start=/\[.\{1,2}/ end=/\]/ conceal cchar=_'
+"exec 'autocmd filetype nerdtree syntax region hideBracketsInNerdTree start=/\[/ end=/\]/ concealends cchar=_ containedin=NERDTreeDir,NERDTreeFile'
+"
+" GOOD WORKING 4/12/2015 :)
+ "exec 'autocmd filetype nerdtree highlight hideBracketsInNerdTreeClose ctermbg=green ctermfg=none guibg=green guifg=#151515'
+
+
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeOpen Acronym conceal cchar=_'
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose LICENSE conceal cchar=_'
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose LICENSE'
+"
+" test is working:
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose LICENSE containedin=NERDTreeDir,NERDTreeFile conceal cchar=_'
+"
+" test is working:
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose doc containedin=NERDTreeDir,NERDTreeFile'
+"
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose \[ containedin=NERDTreeDir,NERDTreeFile'
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose \] containedin=NERDTreeDir,NERDTreeFile'
+
 " NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+" original:
  exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+ " after first ]
+ "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #\]\@<=.*'. a:extension .'$#'
+ " trying contains on match
+ "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #\]\@<=.*'. a:extension .'$# contains=hideBracketsInNerdTree'
+" trying contains on keyword:
+ "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #\]\@<=.*'. a:extension .'$# contains=hideBracketsInNerdTreeOpen,hideBracketsInNerdTreeClose'
+ " tyring contains on keyword with original match:
+ "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$# contains=hideBracketsInNerdTreeOpen,hideBracketsInNerdTreeClose'
 endfunction
 
 call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
@@ -1306,8 +1348,72 @@ sign define wholeline linehl=Search
 "nmap <silent> <LeftMouse> <LeftMouse> | :call MinimapExecute()<CR>
 "nmap j :call GotoLine(2)<CR>
 
-nnoremap <silent> j j | :call MinimapExecute()<CR>
-nnoremap <silent> k k | :call MinimapExecute()<CR>
-nnoremap <silent> <c-u> <c-u> | :call MinimapExecute()<CR>
-nnoremap <silent> <c-d> <c-d> | :call MinimapExecute()<CR>
+"nnoremap <silent> j j | :call MinimapExecute()<CR>
+"nnoremap <silent> k k | :call MinimapExecute()<CR>
+"nnoremap <silent> <c-u> <c-u> | :call MinimapExecute()<CR>
+"nnoremap <silent> <c-d> <c-d> | :call MinimapExecute()<CR>
 
+" patch/hack fix the screen flashing annoyance until proper solution?
+set novisualbell
+
+" see: help map_bar
+nnoremap <silent> j j|:call MinimapUpdate()<CR>
+nnoremap <silent> k k|:call MinimapUpdate()<CR>
+nnoremap <silent> <c-u> <c-u>|:call MinimapUpdate()<CR>
+nnoremap <silent> <c-d> <c-d>|:call MinimapUpdate()<CR>
+nnoremap <silent> <S-g> <S-g>|:call MinimapUpdate()<CR>
+nnoremap <silent> gg gg |:call MinimapUpdate()<CR>
+nnoremap <silent> <CR> <CR> |:call MinimapUpdate()<CR>
+
+nnoremap <leader>mm :call MinimapOpen()<CR>
+
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
+
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = 'M'
+
+" Replace any `[` or `]` with underscore.
+" We'll hide the underscores anyways.
+"syntax match hideBracketsInNerdTree "[\]|\[]*" conceal cchar=_
+
+ "exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" conceal cchar=_'
+
+" my test look behind:
+" /\]\@<=.*$
+" look behind part: \@<= (in front of this is what you are looking behind of)
+
+" test:
+" /\]\@<=.*md$
+
+" not working?
+" /\]\@<=.*md$
+
+" check ones active:
+"autocmd filetype nerdtree
+" clear all:
+"autocmd! filetype nerdtree
+
+"autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" conceal cchar=_
+
+" seems to be working well!
+"autocmd filetype nerdtree syn match md #\]\@<=.*md$#
+"autocmd filetype nerdtree syn match md #\]\@<=.*md$#
+
+" cant seem to have both at the same time. need to ignore [ and ] on the syn
+" match:
+
+" tester
+"hi tester ctermbg=green ctermfg=none guibg=green guifg=#151515
+"syntax keyword tester LICENSE
+
+" tester on nerdtree
+"autocmd filetype nerdtree highlight tester ctermbg=green ctermfg=none guibg=green guifg=#151515
+"autocmd filetype nerdtree syntax keyword tester LICENSE
+
+
+" Must be completely hidden otherwise cursorline doesn't highlight the concealed bg color correctly.
+"set conceallevel=3
+"set concealcursor=nvic
+
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
