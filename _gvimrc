@@ -331,3 +331,6 @@ let s:FlagSet = {}
 
 " try: http://vimdoc.sourceforge.net/htmldoc/usr_41.html
 "
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
+
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = 'M'
