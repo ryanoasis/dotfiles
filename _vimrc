@@ -1265,15 +1265,19 @@ function! GotoLine(line)
 	execute "silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . a:line . "<CR>'"
 endfunction
 
+function! MinimapOpen()
+	execute "silent !gvim -R % +" . shellescape(line(".")) . ' "+set nonumber" "+set foldcolumn=0" "+set tabline=" "+set norelativenumber" "+set noruler" "+set laststatus=0" "+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 3" "+set lines=130" "+set columns=90" --servername VIM-EXTERNAL-MINIMAP'
+endfunction
+
 function! UpdateHighlight()
 	let l:start = line("w0")
 	let l:end = line("w$")
 	let l:centerize = "zz"
 	let l:file = expand('%:t')
-	"let l:matchUpdate = "match currawong /".'\\%'."".l:start.'l\|'.'\\%'."".l:end."l/"
+	"let l:matchUpdate = "match externalminimap /".'\\%'."".l:start.'l\|'.'\\%'."".l:end."l/"
 	" now lets match the range: /\%>10l\&\%<14l/
 	" ^ matches line 10 to 14^
-	let l:matchUpdate = "match currawong /".'\\%>'."".l:start.'l\&'.'\\%<'."".l:end."l/"
+	let l:matchUpdate = "match externalminimap /".'\\%>'."".l:start.'l\&'.'\\%<'."".l:end."l/"
 	let l:signStartUnplaceUpdate = "sign unplace 1 file=" . l:file
 	let l:signEndUnplaceUpdate = "sign unplace 2 file=" . l:file
 	let l:signStartUpdate = "sign place 1 line=" . l:start . " name=wholeline file=" . l:file
@@ -1294,10 +1298,6 @@ function! GotoCurrentLine()
 	call GotoLine(line('.'))
 endfunction
 
-function! DoIt()
-	echom "doIt!!!"
-endfunction
-
 function! ServerRunning()
 	"execute "silent !vim --serverlist <CR>"
 	let l:servers = split(system("vim --serverlist"), "\n")
@@ -1305,26 +1305,33 @@ function! ServerRunning()
 	"echom l:servers[0]
 	for i in l:servers
 		if i == "VIM-EXTERNAL-MINIMAP"
-			echom "running"
+			"echom "running"
 			let l:running = 1
 		endif
 	endfor
 	
 	if l:running == 1
-		echom "server is running, execute methods"
+		"echom "server is running, execute methods"
 	else
-		echom "server is NOT running, NOT executing methods"
+		"echom "server is NOT running, NOT executing methods"
 	endif
 
 	return l:running
 endfunction
 
 
-function! MinimapExecute()
+function! MinimapUpdate()
+	"echom "minimapupdate"
 	if ServerRunning() == 1
 		call GotoCurrentLine()
 		call UpdateHighlight()
 	endif
+endfunction
+
+function! Stuff()
+	echom "stuff!"
+	echo "stuff!"
+	"return
 endfunction
 
 
@@ -1336,8 +1343,8 @@ endfunction
 " refactor:
 " using map_bar (help map_bar)
 
-"highlight currawong ctermbg=lightgray guibg=lightgray
-highlight link currawong Visual
+"highlight externalminimap ctermbg=lightgray guibg=lightgray
+highlight link externalminimap Visual
 sign define wholeline linehl=Search
 
 
