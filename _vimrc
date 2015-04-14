@@ -611,7 +611,7 @@ nnoremap <leader><space> :noh<cr>
 " Folding rules & setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set foldenable                  " enable folding
-set foldcolumn=2                " add a fold column
+set foldcolumn=4                " add a fold column
 set foldmethod=marker           " detect triple-{ style fold markers
 
 set foldmethod=indent   "fold based on indent
