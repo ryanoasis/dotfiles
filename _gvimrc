@@ -134,7 +134,31 @@ set guicursor=n:block-NCursor-blinkwait0-blinkon0-blinkoff0
 " add right-click menu
 set mousemodel=popup
 
+" kinda fun but not too great
+"" change cursorlinenr based on mode
+"function! InsertStatuslineColor(mode)
+"   echom a:mode
+"  if a:mode == 'i'
+"     echom 'change to i'
+"    "hi cursorLineNr guibg=magenta
+"    "hi link cursorLineNr iCursor
+"    hi cursorLineNr ctermfg=199 ctermbg=11 guifg=#ff00aa guibg=#8fbfdc
+"  elseif a:mode == 'r'
+"     echom 'change to r'
+"    hi cursorLineNr guibg=blue
+"  else
+"     echom 'change to other'
+"    "hi cursorLineNr guibg=red
+"    "hi link cursorLineNr NCursor
+"    hi cursorLineNr ctermfg=22 guifg=#00500f guibg=#afd700
+"  endif
+"endfunction
 
+"au InsertEnter * call InsertStatuslineColor(v:insertmode)
+"au InsertChange * call InsertStatuslineColor(v:insertmode)
+""au InsertLeave * hi cursorLineNr guibg=green
+""au InsertLeave * hi link cursorLineNr NCursor
+"au InsertLeave * hi cursorLineNr ctermfg=22 guifg=#00500f guibg=#afd700
 
 " JSDoc形式のコメントを追加(functionの行で実行する)
 " hogeFunc: function() の形式と function hogeFunc() に対応
