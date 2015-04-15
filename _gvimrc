@@ -160,6 +160,12 @@ set mousemodel=popup
 ""au InsertLeave * hi link cursorLineNr NCursor
 "au InsertLeave * hi cursorLineNr ctermfg=22 guifg=#00500f guibg=#afd700
 
+"" default the statusline to green when entering Vim
+""hi cursorLineNr guibg=green
+""hi link cursorLineNr NCursor
+"hi cursorLineNr ctermfg=22 guifg=#00500f guibg=#afd700
+" source:
+" http://vim.wikia.com/wiki/Change_statusline_color_to_show_insert_or_normal_mode
 
 " NOTE: keep at bottom of file:
 " reload your .vimrc file without restarting vim
