@@ -1427,3 +1427,46 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 "set concealcursor=nvic
 
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+
+
+"hi Comment guibg=#212121
+"hi jsDocParam guibg=#212121
+"hi jsDocTags guibg=#212121
+"hi Type guibg=#212121
+hi jsThis term=bold cterm=bold ctermfg=214 guifg=#ffb964
+hi jsFunction term=bold cterm=bold ctermfg=205 gui=bold guifg=#cc4c8c
+hi jsFuncName ctermfg=205 guifg=#cc4c8c
+hi jsFunctionKey ctermfg=205 guifg=#cc4c8c
+hi jsFuncArgs term=italic cterm=italic gui=italic guifg=#8197bf
+hi jsDocTags term=bold cterm=bold ctermfg=103 gui=bold guifg=#8197bf guibg=#212121
+hi jsDocComment term=bold cterm=bold ctermfg=244 gui=italic guibg=#212121 guifg=#888888
+hi jsComment term=italic cterm=italic gui=italic ctermfg=244 guibg=#212121 guifg=#888888
+hi jsDocParam term=bold cterm=bold ctermbg=233 ctermfg=103 guibg=#212121 guifg=#8197bf
+hi jsDocType term=underline cterm=underline ctermfg=215 guibg=#212121 guifg=#ffb964
+hi jsDocTypeNoParam term=underline cterm=underline ctermfg=215 guibg=#212121 guifg=#ffb964
+
+" tweak color scheme colors slightly:
+hi Special guifg=#DF7401
+
+" tweak SpecialKey background so it always matches theme:
+"let oldcolor = synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")
+hi SpecialKey ctermbg=233 guibg=#151515
+" matches jellybeans (@todo make dynamic)
+
+" syntastic tweak
+"hi SpellCap ctermfg=www ctermbg=xxx guifg=#yyyyyy guibg=#zzzzzz
+" got this from obsidian colorscheme via: :hi SpellCap
+"hi SpellCap term=reverse cterm=undercurl ctermbg=12 gui=undercurl guisp=#eeee00
+hi clear SpellCap
+hi clear SpellBad
+hi SpellCap term=reverse cterm=undercurl ctermbg=233 guibg=#151515 gui=undercurl guisp=#eeee00
+" source:
+" http://stackoverflow.com/questions/17677441/changing-error-highlight-color-used-by-syntastic
+
+" the above doesnt change the warning symbol at all (obsidian orig fg color
+" was #C0A25F)
+hi SyntasticWarningSign ctermfg=184 guifg=#eeee00
+hi SpellBad cterm=undercurl gui=undercurl ctermfg=184 guifg=#eeee00
+hi SyntasticErrorSign ctermfg=184 guifg=#eeee00
+
+
