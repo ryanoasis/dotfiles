@@ -1381,7 +1381,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
 
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = 'M'
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = 'M'
 
 " Replace any `[` or `]` with underscore.
 " We'll hide the underscores anyways.
