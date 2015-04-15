@@ -101,8 +101,12 @@ highlight IncSearch guifg=firebrick1 guibg=firebrick4
 
 "highlight Cursor guifg=white guibg=firebrick4
 "highlight iCursor guifg=white guibg=firebrick4
-highlight iCursor guifg=#ff00aa guibg=#8fbfdc
-highlight NCursor guifg=#005f00 guibg=#afd700
+"
+" lets match the cursor mode colors to my airline theme colors :)
+" This can only be done in gvim (GUI vim):
+highlight iCursor ctermfg=199 ctermbg=cyan guifg=#ff00aa guibg=#8fbfdc
+highlight NCursor ctermfg=22 guifg=#005f00 guibg=#afd700
+
 "highlight! def link iCursor Function
 "set guicursor=n-v-c:block-Cursor
 "set guicursor+=i:ver100-iCursor
