@@ -44,7 +44,10 @@ Plugin 'beautify-web/js-beautify'
 Plugin 'scrooloose/nerdcommenter'
 " Plugin 'scrooloose/nerdtree' " commented out, because trying git-nerdtree
 " using official nerdtree plugin again now a dependency for Xuyuanp/nerdtree-git-plugin
+
+Plugin 'file:///home/ryan/Dropbox/projects/vim-webdevicons'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'bling/vim-airline'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'ramitos/jsctags'
@@ -74,7 +77,7 @@ Plugin 'tpope/vim-unimpaired'
 " Plugin 'lilydjwg/colorizer' " temporarily disabled due to performance issues
 " and seemingly not maintained anymore, now using: gorodinskiy/vim-coloresque
 Plugin 'gorodinskiy/vim-coloresque'
-" Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 " dont need right now, working in vim for tabs with set list lcs=tab...
 Plugin 'justinmk/vim-gtfo'
 Plugin 'vim-scripts/text-object-left-and-right'
@@ -93,11 +96,12 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic'
 Plugin 'KabbAmine/vCoolor.vim'
 Plugin 'heavenshell/vim-jsdoc'
-Plugin 'file:///home/ryan/Dropbox/projects/vim-webdevicons'
 Bundle 'ervandew/supertab'
 " Track the engine.
 Bundle 'SirVer/ultisnips'
 "Bundle 'terryma/vim-smooth-scroll'
+Bundle 'itchyny/lightline.vim'
+Plugin 'kshenoy/vim-signature'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -377,6 +381,7 @@ set noshowmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-airline
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
 let g:airline#extensions#tabline#enabled = 1
@@ -400,6 +405,30 @@ let g:airline_mode_map = {
    \ }
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" test disabling the extension
+"let g:loaded_airline = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" lightline.vim
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:lightline = {
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \ }
+      \ }
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+" disable loading:
+let g:loaded_lightline = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" End lightline.vim
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-markdown (plasticboy)
@@ -685,6 +714,17 @@ nnoremap <Leader>hn :match<CR>
 " http://www.openlogic.com/wazi/bid/188101/Create-Your-Own-Syntax-Highlighting-in-Vim
 " http://stackoverflow.com/questions/7342441/how-would-i-have-vim-highlight-redundant-white-space-and-all-tabs
 " http://rayninfo.co.uk/vimtips.html
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree tabs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:nerdtree_tabs_open_on_gui_startup = 0
+let g:nerdtree_tabs_open_on_new_tab = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" end NERDTree tabs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree tweaks
@@ -1426,7 +1466,9 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 "set conceallevel=3
 "set concealcursor=nvic
 
-let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+" for testing:
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 
 "hi Comment guibg=#212121
