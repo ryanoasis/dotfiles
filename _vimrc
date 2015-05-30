@@ -532,7 +532,8 @@ let g:gitgutter_max_signs = 500
 set cole=1
 " source: https://github.com/pangloss/vim-javascript/issues/101#issuecomment-45543789
 
-"let g:javascript_conceal = 1
+" change to 1 to enable concealing
+let g:javascript_conceal = 0
 
 let g:javascript_conceal_function   = "ƒ"
 let g:javascript_conceal_null       = "ø"
