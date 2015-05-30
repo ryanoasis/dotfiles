@@ -42,3 +42,4 @@ PERL_MM_OPT="INSTALL_BASE=/home/ryan/perl5"; export PERL_MM_OPT;
 # .                                                                    ..      .
 # 
 # EOF
+#source /home/ryan/.oh-my-git/prompt.sh
