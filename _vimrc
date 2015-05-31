@@ -291,7 +291,7 @@ let g:syntastic_check_on_open=0
 " custom jshint rules for KO (acrowidgets, but should apply to all JS files)
 " /home/ryan/www/ko/proto/acrowidgets/.jshintrc
 let g:syntastic_javascript_jshint_args = " --config /home/ryan/Dropbox/.jshintrc"
-let g:syntastic_javascript_jscs_args = " --config /home/ryan/Dropbox/.jscs.json --reporter text --force"
+let g:syntastic_javascript_jscs_args = " --fix --config /home/ryan/Dropbox/.jscs.json --reporter text --force"
 
 " for troubleshooting:
 "let g:syntastic_debug=3
@@ -529,7 +529,7 @@ let g:gitgutter_max_signs = 500
 " vim-javascript
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set cole=1
+set cole=0
 " source: https://github.com/pangloss/vim-javascript/issues/101#issuecomment-45543789
 
 " change to 1 to enable concealing
@@ -1508,8 +1508,10 @@ hi SpellCap term=reverse cterm=undercurl ctermbg=233 guibg=#151515 gui=undercurl
 
 " the above doesnt change the warning symbol at all (obsidian orig fg color
 " was #C0A25F)
+" guisp for undercurl
+" (http://vimdoc.sourceforge.net/htmldoc/syntax.html#highlight-guisp)
 hi SyntasticWarningSign ctermfg=184 guifg=#eeee00
-hi SpellBad cterm=undercurl gui=undercurl ctermfg=184 guifg=#eeee00
+hi SpellBad cterm=undercurl gui=undercurl ctermfg=184 guisp=#eeee00
 hi SyntasticErrorSign ctermfg=184 guifg=#eeee00
 
 
