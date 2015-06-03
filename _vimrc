@@ -290,8 +290,8 @@ let g:syntastic_check_on_open=0
 
 " custom jshint rules for KO (acrowidgets, but should apply to all JS files)
 " /home/ryan/www/ko/proto/acrowidgets/.jshintrc
-let g:syntastic_javascript_jshint_args = " --config /home/ryan/Dropbox/.jshintrc"
-let g:syntastic_javascript_jscs_args = " --fix --config /home/ryan/Dropbox/.jscs.json --reporter text --force"
+let g:syntastic_javascript_jshint_args = " --config /home/ryan/dotfiles/.jshintrc"
+let g:syntastic_javascript_jscs_args = " --fix --config /home/ryan/dotfiles/.jscsrc --reporter text --force"
 
 " for troubleshooting:
 "let g:syntastic_debug=3
