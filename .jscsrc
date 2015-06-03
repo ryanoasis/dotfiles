@@ -6,7 +6,8 @@
         "while",
         "catch"
     ],
-    "requireSpaceAfterLineComment": true,
+	 // disabled until autofix supported: https://github.com/jscs-dev/node-jscs/issues/1250
+    //"requireSpaceAfterLineComment": true,
     "requireSpaceBeforeBlockStatements": true,
     "requireSpaceBeforeObjectValues": true,
     "requireSpaceBetweenArguments": true,
