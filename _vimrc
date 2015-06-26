@@ -45,10 +45,11 @@ Plugin 'scrooloose/nerdcommenter'
 " Plugin 'scrooloose/nerdtree' " commented out, because trying git-nerdtree
 " using official nerdtree plugin again now a dependency for Xuyuanp/nerdtree-git-plugin
 
+Plugin 'bling/vim-airline'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'file:///home/ryan/Dropbox/projects/vim-webdevicons'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'bling/vim-airline'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'ramitos/jsctags'
 Plugin 'kien/ctrlp.vim'
@@ -87,7 +88,6 @@ Plugin 'endel/ctrlp-filetype.vim'
 " gitgutter (didnt seem like there was a way to have both) and the styling i didnt find too appealing
 Plugin 'mattn/gist-vim'
 " Plugin 'Xuyuanp/git-nerdtree' " deprecated
-"Plugin 'Xuyuanp/nerdtree-git-plugin'
 " having issues: e605 exception nerdtree.invalid Argument Error invalid path
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -102,6 +102,9 @@ Bundle 'SirVer/ultisnips'
 "Bundle 'terryma/vim-smooth-scroll'
 Bundle 'itchyny/lightline.vim'
 Plugin 'kshenoy/vim-signature'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimfiler.vim'
+Plugin 'tpope/vim-flagship'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -141,7 +144,7 @@ syntax on
 colorscheme jellybeans
 
 " working directory always where the active buffer is located
-set autochdir
+"set autochdir
 
 set ruler
 
@@ -416,11 +419,16 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:lightline = {
       \ 'component_function': {
       \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
       \ }
       \ }
 
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
 " disable loading:
@@ -731,7 +739,7 @@ let g:nerdtree_tabs_open_on_new_tab = 0
 " NERDTree tweaks
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " sets the working directory to the current file's directory:
-autocmd BufEnter * lcd %:p:h
+"autocmd BufEnter * lcd %:p:h
 " source: http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
 
 map <F1> :NERDTreeToggle %:p:h<CR>
@@ -808,6 +816,7 @@ call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
 " source: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
 
 " airline config
@@ -1259,6 +1268,7 @@ endif
 " source: http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
 
 "let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+"let g:webdevicons_conceal_nerdtree_brackets = 0
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
 
 " NOTE: keep at bottom of file:
@@ -1513,5 +1523,217 @@ hi SpellCap term=reverse cterm=undercurl ctermbg=233 guibg=#151515 gui=undercurl
 hi SyntasticWarningSign ctermfg=184 guifg=#eeee00
 hi SpellBad cterm=undercurl gui=undercurl ctermfg=184 guisp=#eeee00
 hi SyntasticErrorSign ctermfg=184 guifg=#eeee00
+
+" vim-webdevicons testing area
+
+" testing work with nerdtree-git
+"let g:webdevicons_enable = 0
+
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rb'] = ''
+" test fix to glyph artifacts:
+
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
+
+"autocmd filetype nerdtree echom "NT filetype"
+
+"autocmd FileType nerdtree nnoremap <S-c> :call webdevicons#redraw()<cr>
+"autocmd FileType nerdtree nmap <S-c> :call webdevicons#redraw()<cr>
+"nmap <S-c> :call webdevicons#redraw()<cr>
+
+" testing WIP ctrlp integration:
+
+"let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+"let g:ctrlp_user_command = 'echo "hi"'        " MacOSX/Linux
+
+function! Function_Name_1(...)
+	"echom "Function_Name_1!"
+	"echom s:keyloop
+	"echom ctrlp_allfiles
+	"buffers
+	"echo getloclist(1)
+	"echom "line 1: " . getline(1)
+	call setline(1, "asdf")
+	"echom a:0
+	"echom a:1
+	"echom a:000 " a:000 contains a list of all arguments that were passed to the function
+	"return
+endfunction
+
+function! Function_Name_2(...)
+	"echom "Function_Name_2!"
+	"echom "line 1: " . getline(1)
+	"return
+endfunction
+
+let g:ctrlp_buffer_func = {
+	 \ 'enter': 'Function_Name_1',
+	 \ 'exit':  'Function_Name_2',
+	 \ }
+
+fu! s:reformat(mrufs, ...)
+	let cwd = getcwd()
+	let cwd .= cwd !~ '[\/]$' ? ctrlp#utils#lash() : ''
+	if {s:re}
+		let cwd = exists('+ssl') ? tr(cwd, '/', '\') : cwd
+		cal filter(a:mrufs, '!stridx(v:val, cwd)')
+	en
+	if a:0 && a:1 == 'raw' | retu a:mrufs | en
+	let idx = strlen(cwd)
+	if exists('+ssl') && &ssl
+		let cwd = tr(cwd, '\', '/')
+		cal map(a:mrufs, 'tr(v:val, "\\", "/")')
+	en
+	retu map(a:mrufs, '!stridx(v:val, cwd) ? "[☘ " . WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . "] " . strpart(v:val, idx) : v:val')
+endf
+
+"au BufReadPost quickfix echom "ryan bufreadpost"
+"au BufReadPost quickfix  setlocal modifiable
+"      \ | silent exe 'g/^/s//\=line(".")." "/'
+"      \ | setlocal nomodifiable
+
+"function QfMakeConv()
+"   echom "QfMakeConv"
+"      let qflist = getqflist()
+"      for i in qflist
+"         let i.text = iconv(i.text, "cp936", "utf-8")
+"      endfor
+"      call setqflist(qflist)
+"   endfunction
+
+"   au QuickfixCmdPost make call QfMakeConv()
+
+" Unite
+
+let s:filters = {
+\   "name" : "my_converter",
+\}
+
+function! s:filters.filter(candidates, context)
+    for candidate in a:candidates
+        let bufname = bufname(candidate.action__buffer_nr)
+        let filename = fnamemodify(bufname, ':p:t')
+        let path = fnamemodify(bufname, ':p:h')
+		  let icon = WebDevIconsGetFileTypeSymbol(filename)
+
+        " Customize output format.
+        let candidate.abbr = printf("%s %s %s", icon, filename, path)
+    endfor
+    return a:candidates
+endfunction
+
+call unite#define_filter(s:filters)
+unlet s:filters
+
+
+"call unite#custom#source('source,file,buffer,vimfiler,vimfiler/history,vimfiler/drive,vimfiler/sort,vimfiler/mask,vimfiler/mapping,vimfiler/execute,vimfiler/popd', 'converters', 'my_converter')
+call unite#custom#source('buffer', 'converters', 'my_converter')
+"call unite#custom#source('buffer', 'vimfiler_gather_candidates', 'my_converter')
+
+" vimfiler
+
+"function! vimfiler#columns#typeC#define()
+"  return s:column
+"endfunction"}}}
+
+"let s:column = {
+"      \ 'name' : 'typec',
+"      \ 'description' : 'get filetype',
+"      \ 'syntax' : 'vimfilerColumn__TypeC',
+"      \ }
+
+"function! s:column.length(files, context) "{{{
+"  return 3
+"endfunction"}}}
+
+"function! s:column.define_syntax(context) "{{{
+"  syntax match   vimfilerColumn__TypeText       '\[T\]'
+"        \ contained containedin=vimfilerColumn__Type
+"  syntax match   vimfilerColumn__TypeImage      '\[I\]'
+"        \ contained containedin=vimfilerColumn__Type
+"  syntax match   vimfilerColumn__TypeArchive    '\[A\]'
+"        \ contained containedin=vimfilerColumn__Type
+"  syntax match   vimfilerColumn__TypeExecute    '\[X\]'
+"        \ contained containedin=vimfilerColumn__Type
+"  syntax match   vimfilerColumn__TypeMultimedia '\[M\]'
+"        \ contained containedin=vimfilerColumn__Type
+"  syntax match   vimfilerColumn__TypeDirectory  '\[do\]'
+"        \ contained containedin=vimfilerColumn__Type
+"  syntax match   vimfilerColumn__TypeSystem     '\[S\]'
+"        \ contained containedin=vimfilerColumn__Type
+"  syntax match   vimfilerColumn__TypeLink       '\[L\]'
+"        \ contained containedin=vimfilerColumn__Type
+
+"  highlight def link vimfilerColumn__TypeText Constant
+"  highlight def link vimfilerColumn__TypeImage Type
+"  highlight def link vimfilerColumn__TypeArchive Special
+"  highlight def link vimfilerColumn__TypeExecute Statement
+"  highlight def link vimfilerColumn__TypeMultimedia Identifier
+"  highlight def link vimfilerColumn__TypeDirectory Preproc
+"  highlight def link vimfilerColumn__TypeSystem Comment
+"  highlight def link vimfilerColumn__TypeLink Comment
+"endfunction"}}}
+
+"function! s:column.get(file, context) "{{{
+"  let ext = tolower(a:file.vimfiler__extension)
+
+"  if (vimfiler#util#is_windows() && ext ==? 'LNK')
+"        \ || get(a:file, 'vimfiler__ftype', '') ==# 'link'
+"    " Symbolic link.
+"    return '[L]'
+"  elseif a:file.vimfiler__is_directory
+"    " Directory.
+"    return '[do]'
+"  elseif has_key(g:vimfiler_extensions.text, ext)
+"    " Text.
+"    return '[T]'
+"  elseif has_key(g:vimfiler_extensions.image, ext)
+"    " Image.
+"    return '[I]'
+"  elseif has_key(g:vimfiler_extensions.archive, ext)
+"    " Archive.
+"    return '[A]'
+"  elseif has_key(g:vimfiler_extensions.multimedia, ext)
+"    " Multimedia.
+"    return '[M]'
+"  elseif a:file.vimfiler__filename =~ '^\.'
+"        \ || has_key(g:vimfiler_extensions.system, ext)
+"    " System.
+"    return '[S]'
+"  elseif a:file.vimfiler__is_executable
+"    " Execute.
+"    return '[X]'
+"  else
+"    " Others filetype.
+"    return '   '
+"  endif
+"endfunction"}}}
+
+
+"let g:vimfiler_file_icon = '-'
+"let g:vimfiler_file_icon = WebDevIconsGetFileTypeSymbol()
+			"\ 'columns' : 'devicon:type:typeB:size:time'
+
+call vimfiler#custom#profile('default', 'context', {
+			\ 'safe' : 0,
+			\ 'edit_action' : 'tabopen',
+			\ 'columns' : 'type:type:typed:size:time'
+			\ })
+
+" vim-jsdoc
+
+"let g:jsdoc_param_description_separator = 'XXXX'
+
+
+
+" vim-flagship
+
+autocmd User Flags call Hoist("window", "SyntasticStatuslineFlag")
+autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileTypeSymbol")
+autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
+
+" test disabling the extension
+let g:loaded_flagship = 1
 
 
