@@ -1534,7 +1534,7 @@ hi SyntasticErrorSign ctermfg=184 guifg=#eeee00
 " test fix to glyph artifacts:
 
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
+"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
 
 "autocmd filetype nerdtree echom "NT filetype"
 
@@ -1736,4 +1736,17 @@ autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
 " test disabling the extension
 let g:loaded_flagship = 1
 
+" after a re-source, fix syntax matching issues (concealing brackets):
+if exists("webdevicons#refresh")
+	call webdevicons#refresh()
+endif
 
+" testing extra powerline icons
+let g:airline_left_sep = "\uE0B4"
+let g:airline_right_sep = "\uE0B6"
+
+function s:test()
+	return "\uE0A1" . line(".") . "\uE0A3" . col(".")
+endfunction
+
+let g:airline_section_z = exe s:test()
