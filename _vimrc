@@ -1736,17 +1736,24 @@ autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
 " test disabling the extension
 let g:loaded_flagship = 1
 
-" after a re-source, fix syntax matching issues (concealing brackets):
-if exists("webdevicons#refresh")
-	call webdevicons#refresh()
-endif
-
 " testing extra powerline icons
 let g:airline_left_sep = "\uE0B4"
 let g:airline_right_sep = "\uE0B6"
 
-function s:test()
+function! s:test()
 	return "\uE0A1" . line(".") . "\uE0A3" . col(".")
 endfunction
 
-let g:airline_section_z = exe s:test()
+"let g:airline_section_z = echo s:test()
+"let g:airline_section_z = airline#section#create(["\uE0A1" . line(".") . "\uE0A3" . col(".")])
+let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+
+" after a re-source, fix syntax matching issues (concealing brackets):
+"if exists(":webdevicons#refresh")
+if exists("g:loaded_webdevicons")
+	"echom "loaded " . g:loaded_webdevicons
+	"echom "call refresh webdevicons"
+	call webdevicons#refresh()
+endif
+
+
