@@ -105,6 +105,7 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
 Plugin 'tpope/vim-flagship'
+Plugin 'koron/minimap-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
