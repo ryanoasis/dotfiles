@@ -1757,4 +1757,27 @@ if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()
 endif
 
-
+" test cursor shape:
+"
+"
+"if &term =~ "xterm"
+"   "let &t_SI = "\<Esc>]15;purple\x7"
+"   "let &t_SI = "\<Esc>h;purple\x7"
+"   "let &t_SI = "\<Esc>]h;purple\x7"
+"   "let &t_SI = "\u0033\x7"
+"   "let &t_EI = "\<Esc>]12;blue\x7"
+"   "let &t_SI = "\u0034\x7"
+"   "let &t_IS = "f"
+"   "let &t_SI = "\<Esc>]50;CursorShape=003\x7"
+"   "
+"   " Switch to underline on insert 
+"   "let &t_SI="\<Esc>[4 q" 
+"   "let &t_SI="\<Esc>]15;purple\x7"
+"   "let &t_EI="\u1006;purple\x7"
+"   let &t_SI="\<Esc>\u106\x7"
+"   " Back to block when leaving 
+"   "let &t_EI="\<Esc>[2 q" 
+"   "let &t_EI="\u1006;blue\x7"|
+"   let &t_EI="\<Esc>\u106\x7"
+"   "let &t_EI="\u0033;blue\x7"
+"endif
