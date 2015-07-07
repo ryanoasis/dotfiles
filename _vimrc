@@ -1738,8 +1738,8 @@ autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
 let g:loaded_flagship = 1
 
 " testing extra powerline icons
-let g:airline_left_sep = "\uE0B4"
-let g:airline_right_sep = "\uE0B6"
+"let g:airline_left_sep = "\uE0B4"
+"let g:airline_right_sep = "\uE0B6"
 
 function! s:test()
 	return "\uE0A1" . line(".") . "\uE0A3" . col(".")
