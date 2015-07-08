@@ -1284,24 +1284,6 @@ endif
 " Else if not editing this file directly
 ":so $MYVIMRC
 
-"com -complete=custom,ListUsers -nargs=1 Finger !finger <args>
-"fun ListUsers(A,L,P)
-"    return system("cut -d: -f1 /etc/passwd")
-"endfun
-
-" 'custom' argument, the function should return the completion
-" candidates one per line in a newline separated string.
-" ... [whereas] 'customlist' argument, Vim will not filter the returned completion
-" thats why instead of returning ["", ..] I am returing a newline deliminated
-" string
-"com -complete=customlist,ListTypes -nargs=1 JSTypes !jstypes <args>
-"com -complete=custom,ListTypes -nargs=1 JSTypes !jstypes <args>
-"fun ListTypes(A,L,P)
-"    "return ['boolean', 'null', 'undefined', 'number', 'string', 'symbol', 'object']
-"    let types = ['boolean', 'null', 'undefined', 'number', 'string', 'symbol', 'object']
-"    "return "boolean\nnull"
-"    return join(types, "\n")
-"endfun
 
 
 " test vim-external-minimap server bindings:
@@ -1386,12 +1368,6 @@ function! MinimapUpdate()
 		call GotoCurrentLine()
 		call UpdateHighlight()
 	endif
-endfunction
-
-function! Stuff()
-	echom "stuff!"
-	echo "stuff!"
-	"return
 endfunction
 
 
@@ -1594,166 +1570,6 @@ fu! s:reformat(mrufs, ...)
 	retu map(a:mrufs, '!stridx(v:val, cwd) ? "[☘ " . WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . "] " . strpart(v:val, idx) : v:val')
 endf
 
-"au BufReadPost quickfix echom "ryan bufreadpost"
-"au BufReadPost quickfix  setlocal modifiable
-"      \ | silent exe 'g/^/s//\=line(".")." "/'
-"      \ | setlocal nomodifiable
-
-"function QfMakeConv()
-"   echom "QfMakeConv"
-"      let qflist = getqflist()
-"      for i in qflist
-"         let i.text = iconv(i.text, "cp936", "utf-8")
-"      endfor
-"      call setqflist(qflist)
-"   endfunction
-
-"   au QuickfixCmdPost make call QfMakeConv()
-
-"" Unite
-
-"let s:filters = {
-"\   "name" : "my_converter",
-"\}
-
-"function! s:filters.filter(candidates, context)
-"    for candidate in a:candidates
-"        let bufname = bufname(candidate.action__buffer_nr)
-"        let filename = fnamemodify(bufname, ':p:t')
-"        let path = fnamemodify(bufname, ':p:h')
-"        let icon = WebDevIconsGetFileTypeSymbol(filename)
-
-"        " Customize output format.
-"        let candidate.abbr = printf("%s %s %s", icon, filename, path)
-"    endfor
-"    return a:candidates
-"endfunction
-
-"call unite#define_filter(s:filters)
-"unlet s:filters
-
-
-""call unite#custom#source('source,file,buffer,vimfiler,vimfiler/history,vimfiler/drive,vimfiler/sort,vimfiler/mask,vimfiler/mapping,vimfiler/execute,vimfiler/popd', 'converters', 'my_converter')
-"call unite#custom#source('buffer', 'converters', 'my_converter')
-""call unite#custom#source('buffer', 'vimfiler_gather_candidates', 'my_converter')
-
-" vimfiler
-
-"function! vimfiler#columns#typeC#define()
-"  return s:column
-"endfunction"}}}
-
-"let s:column = {
-"      \ 'name' : 'typec',
-"      \ 'description' : 'get filetype',
-"      \ 'syntax' : 'vimfilerColumn__TypeC',
-"      \ }
-
-"function! s:column.length(files, context) "{{{
-"  return 3
-"endfunction"}}}
-
-"function! s:column.define_syntax(context) "{{{
-"  syntax match   vimfilerColumn__TypeText       '\[T\]'
-"        \ contained containedin=vimfilerColumn__Type
-"  syntax match   vimfilerColumn__TypeImage      '\[I\]'
-"        \ contained containedin=vimfilerColumn__Type
-"  syntax match   vimfilerColumn__TypeArchive    '\[A\]'
-"        \ contained containedin=vimfilerColumn__Type
-"  syntax match   vimfilerColumn__TypeExecute    '\[X\]'
-"        \ contained containedin=vimfilerColumn__Type
-"  syntax match   vimfilerColumn__TypeMultimedia '\[M\]'
-"        \ contained containedin=vimfilerColumn__Type
-"  syntax match   vimfilerColumn__TypeDirectory  '\[do\]'
-"        \ contained containedin=vimfilerColumn__Type
-"  syntax match   vimfilerColumn__TypeSystem     '\[S\]'
-"        \ contained containedin=vimfilerColumn__Type
-"  syntax match   vimfilerColumn__TypeLink       '\[L\]'
-"        \ contained containedin=vimfilerColumn__Type
-
-"  highlight def link vimfilerColumn__TypeText Constant
-"  highlight def link vimfilerColumn__TypeImage Type
-"  highlight def link vimfilerColumn__TypeArchive Special
-"  highlight def link vimfilerColumn__TypeExecute Statement
-"  highlight def link vimfilerColumn__TypeMultimedia Identifier
-"  highlight def link vimfilerColumn__TypeDirectory Preproc
-"  highlight def link vimfilerColumn__TypeSystem Comment
-"  highlight def link vimfilerColumn__TypeLink Comment
-"endfunction"}}}
-
-"function! s:column.get(file, context) "{{{
-"  let ext = tolower(a:file.vimfiler__extension)
-
-"  if (vimfiler#util#is_windows() && ext ==? 'LNK')
-"        \ || get(a:file, 'vimfiler__ftype', '') ==# 'link'
-"    " Symbolic link.
-"    return '[L]'
-"  elseif a:file.vimfiler__is_directory
-"    " Directory.
-"    return '[do]'
-"  elseif has_key(g:vimfiler_extensions.text, ext)
-"    " Text.
-"    return '[T]'
-"  elseif has_key(g:vimfiler_extensions.image, ext)
-"    " Image.
-"    return '[I]'
-"  elseif has_key(g:vimfiler_extensions.archive, ext)
-"    " Archive.
-"    return '[A]'
-"  elseif has_key(g:vimfiler_extensions.multimedia, ext)
-"    " Multimedia.
-"    return '[M]'
-"  elseif a:file.vimfiler__filename =~ '^\.'
-"        \ || has_key(g:vimfiler_extensions.system, ext)
-"    " System.
-"    return '[S]'
-"  elseif a:file.vimfiler__is_executable
-"    " Execute.
-"    return '[X]'
-"  else
-"    " Others filetype.
-"    return '   '
-"  endif
-"endfunction"}}}
-
-
-"let g:vimfiler_file_icon = '-'
-"let g:vimfiler_file_icon = WebDevIconsGetFileTypeSymbol()
-			"\ 'columns' : 'devicon:type:typeB:size:time'
-
-"call vimfiler#custom#profile('default', 'context', {
-"         \ 'safe' : 0,
-"         \ 'edit_action' : 'tabopen',
-"         \ 'columns' : 'type:typed:size:time'
-"         \ })
-
-" vim-jsdoc
-
-"let g:jsdoc_param_description_separator = 'XXXX'
-
-
-
-" vim-flagship
-
-"autocmd User Flags call Hoist("window", "SyntasticStatuslineFlag")
-"autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileTypeSymbol")
-"autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
-
-" test disabling the extension
-let g:loaded_flagship = 1
-"let g:loaded_airline = 1
-
-" testing extra powerline icons
-"let g:airline_left_sep = "\uE0B4"
-"let g:airline_right_sep = "\uE0B6"
-
-function! s:test()
-	return "\uE0A1" . line(".") . "\uE0A3" . col(".")
-endfunction
-
-"let g:airline_section_z = echo s:test()
-"let g:airline_section_z = airline#section#create(["\uE0A1" . line(".") . "\uE0A3" . col(".")])
-let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
 
 " after a re-source, fix syntax matching issues (concealing brackets):
 "if exists(":webdevicons#refresh")
@@ -1763,27 +1579,3 @@ if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()
 endif
 
-" test cursor shape:
-"
-"
-"if &term =~ "xterm"
-"   "let &t_SI = "\<Esc>]15;purple\x7"
-"   "let &t_SI = "\<Esc>h;purple\x7"
-"   "let &t_SI = "\<Esc>]h;purple\x7"
-"   "let &t_SI = "\u0033\x7"
-"   "let &t_EI = "\<Esc>]12;blue\x7"
-"   "let &t_SI = "\u0034\x7"
-"   "let &t_IS = "f"
-"   "let &t_SI = "\<Esc>]50;CursorShape=003\x7"
-"   "
-"   " Switch to underline on insert 
-"   "let &t_SI="\<Esc>[4 q" 
-"   "let &t_SI="\<Esc>]15;purple\x7"
-"   "let &t_EI="\u1006;purple\x7"
-"   let &t_SI="\<Esc>\u106\x7"
-"   " Back to block when leaving 
-"   "let &t_EI="\<Esc>[2 q" 
-"   "let &t_EI="\u1006;blue\x7"|
-"   let &t_EI="\<Esc>\u106\x7"
-"   "let &t_EI="\u0033;blue\x7"
-"endif
