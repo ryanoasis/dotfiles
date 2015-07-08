@@ -47,7 +47,6 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'bling/vim-airline'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'file:///home/ryan/Dropbox/projects/vim-webdevicons'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'marijnh/tern_for_vim'
@@ -106,6 +105,7 @@ Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
 Plugin 'tpope/vim-flagship'
 Plugin 'koron/minimap-vim'
+Plugin 'file:///home/ryan/Dropbox/projects/vim-webdevicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -817,6 +817,11 @@ call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
 
 " source: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
 
@@ -1605,32 +1610,32 @@ endf
 
 "   au QuickfixCmdPost make call QfMakeConv()
 
-" Unite
+"" Unite
 
-let s:filters = {
-\   "name" : "my_converter",
-\}
+"let s:filters = {
+"\   "name" : "my_converter",
+"\}
 
-function! s:filters.filter(candidates, context)
-    for candidate in a:candidates
-        let bufname = bufname(candidate.action__buffer_nr)
-        let filename = fnamemodify(bufname, ':p:t')
-        let path = fnamemodify(bufname, ':p:h')
-		  let icon = WebDevIconsGetFileTypeSymbol(filename)
+"function! s:filters.filter(candidates, context)
+"    for candidate in a:candidates
+"        let bufname = bufname(candidate.action__buffer_nr)
+"        let filename = fnamemodify(bufname, ':p:t')
+"        let path = fnamemodify(bufname, ':p:h')
+"        let icon = WebDevIconsGetFileTypeSymbol(filename)
 
-        " Customize output format.
-        let candidate.abbr = printf("%s %s %s", icon, filename, path)
-    endfor
-    return a:candidates
-endfunction
+"        " Customize output format.
+"        let candidate.abbr = printf("%s %s %s", icon, filename, path)
+"    endfor
+"    return a:candidates
+"endfunction
 
-call unite#define_filter(s:filters)
-unlet s:filters
+"call unite#define_filter(s:filters)
+"unlet s:filters
 
 
-"call unite#custom#source('source,file,buffer,vimfiler,vimfiler/history,vimfiler/drive,vimfiler/sort,vimfiler/mask,vimfiler/mapping,vimfiler/execute,vimfiler/popd', 'converters', 'my_converter')
-call unite#custom#source('buffer', 'converters', 'my_converter')
-"call unite#custom#source('buffer', 'vimfiler_gather_candidates', 'my_converter')
+""call unite#custom#source('source,file,buffer,vimfiler,vimfiler/history,vimfiler/drive,vimfiler/sort,vimfiler/mask,vimfiler/mapping,vimfiler/execute,vimfiler/popd', 'converters', 'my_converter')
+"call unite#custom#source('buffer', 'converters', 'my_converter')
+""call unite#custom#source('buffer', 'vimfiler_gather_candidates', 'my_converter')
 
 " vimfiler
 
@@ -1716,11 +1721,11 @@ call unite#custom#source('buffer', 'converters', 'my_converter')
 "let g:vimfiler_file_icon = WebDevIconsGetFileTypeSymbol()
 			"\ 'columns' : 'devicon:type:typeB:size:time'
 
-call vimfiler#custom#profile('default', 'context', {
-			\ 'safe' : 0,
-			\ 'edit_action' : 'tabopen',
-			\ 'columns' : 'type:type:typed:size:time'
-			\ })
+"call vimfiler#custom#profile('default', 'context', {
+"         \ 'safe' : 0,
+"         \ 'edit_action' : 'tabopen',
+"         \ 'columns' : 'type:typed:size:time'
+"         \ })
 
 " vim-jsdoc
 
@@ -1730,12 +1735,13 @@ call vimfiler#custom#profile('default', 'context', {
 
 " vim-flagship
 
-autocmd User Flags call Hoist("window", "SyntasticStatuslineFlag")
-autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileTypeSymbol")
-autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
+"autocmd User Flags call Hoist("window", "SyntasticStatuslineFlag")
+"autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileTypeSymbol")
+"autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
 
 " test disabling the extension
 let g:loaded_flagship = 1
+"let g:loaded_airline = 1
 
 " testing extra powerline icons
 "let g:airline_left_sep = "\uE0B4"
