@@ -51,7 +51,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'ramitos/jsctags'
-Plugin 'kien/ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
 "Plugin 'tpope/vim-markdown'
 Plugin 'godlygeek/tabular'
@@ -1529,53 +1530,54 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 "let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 "let g:ctrlp_user_command = 'echo "hi"'        " MacOSX/Linux
 
-function! Function_Name_1(...)
-	"echom "Function_Name_1!"
-	"echom s:keyloop
-	"echom ctrlp_allfiles
-	"buffers
-	"echo getloclist(1)
-	"echom "line 1: " . getline(1)
-	call setline(1, "asdf")
-	"echom a:0
-	"echom a:1
-	"echom a:000 " a:000 contains a list of all arguments that were passed to the function
-	"return
-endfunction
+"function! Function_Name_1(...)
+"   "echom "Function_Name_1!"
+"   "echom s:keyloop
+"   "echom ctrlp_allfiles
+"   "buffers
+"   "echo getloclist(1)
+"   "echom "line 1: " . getline(1)
+"   call setline(1, "asdf")
+"   "echom a:0
+"   "echom a:1
+"   "echom a:000 " a:000 contains a list of all arguments that were passed to the function
+"   "return
+"endfunction
 
-function! Function_Name_2(...)
-	"echom "Function_Name_2!"
-	"echom "line 1: " . getline(1)
-	"return
-endfunction
+"function! Function_Name_2(...)
+"   "echom "Function_Name_2!"
+"   "echom "line 1: " . getline(1)
+"   "return
+"endfunction
 
-let g:ctrlp_buffer_func = {
-	 \ 'enter': 'Function_Name_1',
-	 \ 'exit':  'Function_Name_2',
-	 \ }
+"let g:ctrlp_buffer_func = {
+"    \ 'enter': 'Function_Name_1',
+"    \ 'exit':  'Function_Name_2',
+"    \ }
 
-fu! s:reformat(mrufs, ...)
-	let cwd = getcwd()
-	let cwd .= cwd !~ '[\/]$' ? ctrlp#utils#lash() : ''
-	if {s:re}
-		let cwd = exists('+ssl') ? tr(cwd, '/', '\') : cwd
-		cal filter(a:mrufs, '!stridx(v:val, cwd)')
-	en
-	if a:0 && a:1 == 'raw' | retu a:mrufs | en
-	let idx = strlen(cwd)
-	if exists('+ssl') && &ssl
-		let cwd = tr(cwd, '\', '/')
-		cal map(a:mrufs, 'tr(v:val, "\\", "/")')
-	en
-	retu map(a:mrufs, '!stridx(v:val, cwd) ? "[☘ " . WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . "] " . strpart(v:val, idx) : v:val')
-endf
+"fu! s:reformat(mrufs, ...)
+"   let cwd = getcwd()
+"   let cwd .= cwd !~ '[\/]$' ? ctrlp#utils#lash() : ''
+"   if {s:re}
+"      let cwd = exists('+ssl') ? tr(cwd, '/', '\') : cwd
+"      cal filter(a:mrufs, '!stridx(v:val, cwd)')
+"   en
+"   if a:0 && a:1 == 'raw' | retu a:mrufs | en
+"   let idx = strlen(cwd)
+"   if exists('+ssl') && &ssl
+"      let cwd = tr(cwd, '\', '/')
+"      cal map(a:mrufs, 'tr(v:val, "\\", "/")')
+"   en
+"   retu map(a:mrufs, '!stridx(v:val, cwd) ? "[☘ " . WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . "] " . strpart(v:val, idx) : v:val')
+"endf
+
+" flagship
+" disable while using airline:
+let g:loaded_flagship = 1
 
 
 " after a re-source, fix syntax matching issues (concealing brackets):
-"if exists(":webdevicons#refresh")
 if exists("g:loaded_webdevicons")
-	"echom "loaded " . g:loaded_webdevicons
-	"echom "call refresh webdevicons"
 	call webdevicons#refresh()
 endif
 
