@@ -1,0 +1,4 @@
+#URxvt*background: Blue
+#URxvt*font: xft:Droid Sans Mono for Powerline Plus Nerd File Types Mono:pixelsize=16:antialias=true:hinting=true
+URxvt.font: xft:Droid Sans Mono for Powerline Plus Nerd File Types Mono:pixelsize=16:antialias=true:hinting=true
+#URxvt.font: xft:ProggyCleanTT Plus Nerd File Types Mono:pixelsize=16:antialias=true:hinting=true
