@@ -52,7 +52,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'ramitos/jsctags'
 "Plugin 'kien/ctrlp.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
 "Plugin 'tpope/vim-markdown'
 Plugin 'godlygeek/tabular'
@@ -82,7 +82,7 @@ Plugin 'gorodinskiy/vim-coloresque'
 " dont need right now, working in vim for tabs with set list lcs=tab...
 Plugin 'justinmk/vim-gtfo'
 Plugin 'vim-scripts/text-object-left-and-right'
-Plugin 'endel/ctrlp-filetype.vim'
+"Plugin 'endel/ctrlp-filetype.vim'
 " for files that are not tracked in version control (git):
 " Plugin 'chrisbra/changesPlugin' " didnt like that it conflicted with
 " gitgutter (didnt seem like there was a way to have both) and the styling i didnt find too appealing
@@ -106,7 +106,11 @@ Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
 Plugin 'tpope/vim-flagship'
 Plugin 'koron/minimap-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mhinz/vim-startify'
 Plugin 'file:///home/ryan/Dropbox/projects/vim-webdevicons'
+"Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -453,16 +457,16 @@ let g:vim_markdown_initial_foldlevel = 1
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP settings
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_match_window = 'bottom,order:ttb'
+"let g:ctrlp_switch_buffer = 0
+"let g:ctrlp_working_path_mode = 0
 " let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 " source: http://dougblack.io/words/a-good-vimrc.html#ctrlp-section
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "let g:ctrlp_custom_ignore = {
 "  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
 "  \ 'file': '\v\.(exe|so|dll)$',
@@ -472,7 +476,7 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " ctrlp extensions:
 " CtrlP for filetype
-let g:ctrlp_extensions = ['filetype']
+"let g:ctrlp_extensions = ['filetype']
 " silent! nnoremap <unique> <silent> <Leader>f :CtrlPFiletype<CR>
 " source: https://github.com/endel/ctrlp-filetype.vim
 
@@ -1517,6 +1521,7 @@ hi SyntasticErrorSign ctermfg=184 guifg=#eeee00
 " test fix to glyph artifacts:
 
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
 "let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
 
 "autocmd filetype nerdtree echom "NT filetype"
@@ -1575,9 +1580,41 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 " disable while using airline:
 let g:loaded_flagship = 1
 
+"let g:loaded_nerdtree_git_status = 1
 
 " after a re-source, fix syntax matching issues (concealing brackets):
 if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()
 endif
 
+" testing extra-powerline-symbols
+
+" set font:
+" for now must grab this specific one:
+" https://github.com/ryanoasis/powerline-extra-symbols/blob/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
+
+" testing rounded separators (extra-powerline-symbols):
+"let g:airline_left_sep = "\uE0B4"
+"let g:airline_right_sep = "\uE0B6"
+
+" set the CN (column number) symbol:
+let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+
+"let g:webdevicons_enable_ctrlp = 0
+
+set verbosefile=/home/ryan/debug-vim-verbose.txt
+
+"let g:ctrlp_line_prefix = WebDevIconsGetFileTypeSymbol('foo.txt')
+
+" test vim startify
+"let g:startify_custom_header = 'hey'
+"let g:startify_custom_entry_display = "\" (\" . WebDevIconsGetFileTypeSymbol(entry_path) . \") \" . repeat(' ', (3 - strlen(index))) . entry_path"
+"    let g:startify_custom_file_entry_display = 
+"            \ "' >' . repeat(' ', (3 - strlen(index))) . entry_path"
+"let g:foobar = "foo"
+" hey!
+
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
