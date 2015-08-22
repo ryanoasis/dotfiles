@@ -4,6 +4,10 @@
 
 ## Vim configuration
 
+### Custom font and glyphs
+
+![img](previews/custom-glyphs.png)
+
 ### JavaScript development
 
 ![img](previews/vim-js-development-1.png)
