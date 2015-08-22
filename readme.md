@@ -30,6 +30,10 @@
 * Showing
   * [Milkbikis' Powerline Shell][powerline-shell]
 
+## Tmux
+
+* todo
+
 [vim-devicons]:https://github.com/ryanoasis/vim-devicons
 [powerline-extra-symbols]:https://github.com/ryanoasis/powerline-extra-symbols
 [syntastic]:https://github.com/scrooloose/syntastic
