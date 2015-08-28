@@ -1228,7 +1228,7 @@ set shellslash
 
 
 " attempt to maximize gVim window (not exactly but better)
-" set lines=999 columns=999
+"set lines=999 columns=999
 " source: http://superuser.com/questions/140419/how-to-start-gvim-maximized
 
 " attempt Maximize window completely:
@@ -1595,8 +1595,8 @@ endif
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
 
 " testing rounded separators (extra-powerline-symbols):
-"let g:airline_left_sep = "\uE0B4"
-"let g:airline_right_sep = "\uE0B6"
+let g:airline_left_sep = "\uE0BA"
+let g:airline_right_sep = "\uE0BB"
 
 " set the CN (column number) symbol:
 let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
