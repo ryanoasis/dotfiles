@@ -1520,8 +1520,8 @@ hi SyntasticErrorSign ctermfg=184 guifg=#eeee00
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rb'] = ''
 " test fix to glyph artifacts:
 
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:DevIconsEnableFoldersOpenClose = 1
+"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:DevIconsEnableFoldersOpenClose = 1
 "let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
 
 "autocmd filetype nerdtree echom "NT filetype"
@@ -1618,3 +1618,9 @@ set verbosefile=/home/ryan/debug-vim-verbose.txt
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:DevIconsEnableFoldersOpenClose = 1
+
+"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = '['
+"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
