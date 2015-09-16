@@ -1,0 +1,6 @@
+layout=1
+date_font=Droid Sans 11
+time_font=Droid Sans 11
+date_format=%Y-%m-%d
+time_format=%B %e @ %l:%M %p
+
