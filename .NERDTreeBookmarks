@@ -3,12 +3,12 @@ ko_admin /home/ryan/www/ko/proto/admin
 ko_aud /home/ryan/www/ko/proto/aud
 ko_aud_FE /home/ryan/www/ko/proto/aud/src/ko/AudienceViewBundle/Resources/public
 ko_automation /home/ryan/browser-qa-automation
+ko_multi /home/ryan/www/ko/proto/multi
 ko_portal /home/ryan/www/ko/proto/portal
 ko_ppc /home/ryan/www/ko/proto/ppc
 ko_seo /home/ryan/www/ko/proto/seo
 ko_syn /home/ryan/www/ko/proto/syn
 KPA-Demo /home/ryan/www/estdemo
-ko_multi /home/ryan/www/ko/proto/multi
 nerd-filetype-glyphs-fonts-patcher /home/ryan/projects/nerd-filetype-glyphs-fonts-patcher
 Projects /home/ryan/projects
 ryan /home/ryan
