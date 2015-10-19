@@ -8,6 +8,10 @@
 
 ![img](previews/custom-glyphs.png)
 
+* Showing
+  * file type glyphs from [vim-devicons][vim-devicons]
+  * font from [nerd-fonts][nerd-fonts]
+
 ### JavaScript development
 
 ![img](previews/vim-js-development-1.png)
@@ -45,3 +49,4 @@
 [jshint]:https://github.com/jshint/jshint
 [vim-jsdoc]:https://github.com/heavenshell/vim-jsdoc
 [powerline-shell]:https://github.com/milkbikis/powerline-shell
+[nerd-fonts]:https://github.com/ryanoasis/nerd-fonts
