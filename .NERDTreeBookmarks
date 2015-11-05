@@ -3,6 +3,7 @@ ko_admin /home/ryan/www/ko/proto/admin
 ko_aud /home/ryan/www/ko/proto/aud
 ko_aud_FE /home/ryan/www/ko/proto/aud/src/ko/AudienceViewBundle/Resources/public
 ko_automation /home/ryan/browser-qa-automation
+ko_da /home/ryan/www/ko/proto/da
 ko_multi /home/ryan/www/ko/proto/multi
 ko_portal /home/ryan/www/ko/proto/portal
 ko_ppc /home/ryan/www/ko/proto/ppc
