@@ -4,6 +4,7 @@ ko_aud /home/ryan/www/ko/proto/aud
 ko_aud_FE /home/ryan/www/ko/proto/aud/src/ko/AudienceViewBundle/Resources/public
 ko_automation /home/ryan/browser-qa-automation
 ko_da /home/ryan/www/ko/proto/da
+ko_da_FE /home/ryan/www/ko/proto/da/src/ko/DigitalAuditsBundle/Resources/public
 ko_multi /home/ryan/www/ko/proto/multi
 ko_portal /home/ryan/www/ko/proto/portal
 ko_ppc /home/ryan/www/ko/proto/ppc
@@ -11,6 +12,7 @@ ko_seo /home/ryan/www/ko/proto/seo
 ko_syn /home/ryan/www/ko/proto/syn
 KPA-Demo /home/ryan/www/estdemo
 nerd-fonts /home/ryan/projects/nerd-fonts
+nerd-fonts-site /home/ryan/projects/nerd-fonts-site
 Projects /home/ryan/projects
 ryan /home/ryan
 SkiFree /home/ryan/projects/skifree
