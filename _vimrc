@@ -686,6 +686,10 @@ setglobal fileencoding=utf-8           " change default file encoding when writi
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
+" to test mac as default line endings on new files:
+"set ffs=mac,unix,dos
+
+"set regexpengine=1
 
 " Show matching brackets when text indicator is over them
 "set showmatch
@@ -1592,7 +1596,9 @@ endif
 " set font:
 " for now must grab this specific one:
 " https://github.com/ryanoasis/powerline-extra-symbols/blob/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
+
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
+set guifont=PragmataPro\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
 
 " testing rounded separators (extra-powerline-symbols):
 let g:airline_left_sep = "\uE0BA"
