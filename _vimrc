@@ -108,7 +108,7 @@ Plugin 'tpope/vim-flagship'
 Plugin 'koron/minimap-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mhinz/vim-startify'
-Plugin 'file:///home/ryan/Dropbox/projects/vim-webdevicons'
+Plugin 'file:///home/ryan/projects/vim-devicons'
 "Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'kien/ctrlp.vim'
 
