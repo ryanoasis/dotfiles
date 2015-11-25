@@ -108,7 +108,8 @@ Plugin 'tpope/vim-flagship'
 Plugin 'koron/minimap-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mhinz/vim-startify'
-Plugin 'file:///home/ryan/projects/vim-devicons'
+Plugin 'ryanoasis/vim-devicons'
+"Plugin 'file:///home/ryan/projects/vim-devicons'
 "Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'kien/ctrlp.vim'
 
@@ -1409,13 +1410,13 @@ sign define wholeline linehl=Search
 set novisualbell
 
 " see: help map_bar
-nnoremap <silent> j j|:call MinimapUpdate()<CR>
-nnoremap <silent> k k|:call MinimapUpdate()<CR>
-nnoremap <silent> <c-u> <c-u>|:call MinimapUpdate()<CR>
-nnoremap <silent> <c-d> <c-d>|:call MinimapUpdate()<CR>
-nnoremap <silent> <S-g> <S-g>|:call MinimapUpdate()<CR>
-nnoremap <silent> gg gg |:call MinimapUpdate()<CR>
-nnoremap <silent> <CR> <CR> |:call MinimapUpdate()<CR>
+"nnoremap <silent> j j|:call MinimapUpdate()<CR>
+"nnoremap <silent> k k|:call MinimapUpdate()<CR>
+"nnoremap <silent> <c-u> <c-u>|:call MinimapUpdate()<CR>
+"nnoremap <silent> <c-d> <c-d>|:call MinimapUpdate()<CR>
+"nnoremap <silent> <S-g> <S-g>|:call MinimapUpdate()<CR>
+"nnoremap <silent> gg gg |:call MinimapUpdate()<CR>
+"nnoremap <silent> <CR> <CR> |:call MinimapUpdate()<CR>
 
 nnoremap <leader>mm :call MinimapOpen()<CR>
 
