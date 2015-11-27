@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Application
+TryExec=konsole
+Exec=konsole
+Icon=utilities-terminal
+Terminal=false
+Categories=Qt;KDE;System;TerminalEmulator;
+Actions=NewWindow;
+X-DocPath=konsole/index.html
+X-DBUS-StartupType=Unique
+X-KDE-StartupNotify=true
+X-KDE-AuthorizeAction=shell_access
+Name=Konsole
+GenericName=Terminal
+X-XFCE-Source=file:///usr/share/applications/kde4/konsole.desktop
+
+[Desktop Action NewWindow]
+Name=Open a New Window
+Exec=konsole

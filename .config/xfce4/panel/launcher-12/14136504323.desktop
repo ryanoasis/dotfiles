@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=KeePassX
+GenericName=Cross Platform Password Manager
+Exec=keepassx %f
+Icon=keepassx
+Comment=Cross Platform Password Manager
+Terminal=false
+Type=Application
+Categories=Qt;Utility;Security;
+MimeType=application/x-keepass;
+X-SuSE-translate=true
+X-XFCE-Source=file:///usr/share/applications/keepassx.desktop
