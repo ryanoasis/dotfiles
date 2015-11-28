@@ -1,5 +1,5 @@
 favorites=firefox.desktop,thunderbird.desktop,hexchat.desktop,Thunar.desktop,gedit.desktop,gcalctool.desktop,xfce4-terminal.desktop,gvim.desktop,keepassx.desktop,virtualbox.desktop
-recent=keepassx.desktop,diffmerge.desktop,skype.desktop,xfce4-taskmanager.desktop,gcalctool.desktop,inkscape.desktop,pidgin.desktop,virtualbox.desktop,audacity.desktop,atom.desktop
+recent=keepassx.desktop,unison-gtk.desktop,mintinstall.desktop,meld.desktop,baobab.desktop,gparted.desktop,gnome-disks.desktop,transmission-gtk.desktop,xfce4-taskmanager.desktop,diffmerge.desktop
 button-title=
 button-icon=/home/ryan/Dropbox/images/icon-like/tux.svg
 button-single-row=false
