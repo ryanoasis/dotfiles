@@ -1630,7 +1630,8 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 "let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-"let g:DevIconsEnableFoldersOpenClose = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:webdevicons_gui_glyph_fix = 1
 
 "let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = '['
 "let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
