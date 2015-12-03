@@ -1,10 +1,10 @@
-set -x
-echo "start .bash_profile"
+#set -x
+#echo "start .bash_profile"
 export PATH=$PATH:/opt/lampp/bin
 
-echo "start ~/Dropbox/bash/.bash_profile"
+#echo "start ~/Dropbox/bash/.bash_profile"
 source ~/Dropbox/bash/.bash_profile
-echo "end ~/Dropbox/bash/.bash_profile"
+#echo "end ~/Dropbox/bash/.bash_profile"
 
 # for tmux:
 . ~/.bashrc
@@ -15,4 +15,4 @@ PATH=${PATH}:"/home/ryan/bin/FDK/Tools/linux"
 export PATH
 export FDK_EXE
 
-echo "end .bash_profile"
+#echo "end .bash_profile"
