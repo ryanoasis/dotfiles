@@ -38,6 +38,29 @@
 * Showing
   * [Milkbikis' Powerline Shell][powerline-shell]
 
+### Bash Aliases
+
+* git branch
+  * `gb`
+* git commit -a -m
+  * `gcam`
+* git checkout
+  * `gco`
+* git pull
+  * `gp`
+* git rev-parse HEAD | cut -c -7
+  * `grev`
+* git status
+  * `gs`
+* git fetch pull
+  * `gfpull`
+* git fetch push
+  * `gfpush`
+* git track (create new tracking branch)
+  * `gt`
+* git version (tag and branch at a specific deploy point)
+  * `gv`
+
 ## Tmux
 
 * todo
