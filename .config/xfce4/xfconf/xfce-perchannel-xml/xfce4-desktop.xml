@@ -58,7 +58,7 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/Klivia.jpg"/>
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/kennymatic_taking_it_all_in.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
           <property name="backdrop-cycle-random-order" type="bool" value="true"/>
         </property>
@@ -75,7 +75,7 @@
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-blue.jpg"/>
+          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/papalars_10080195055.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
           <property name="backdrop-cycle-random-order" type="bool" value="true"/>
         </property>
@@ -271,7 +271,7 @@
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/kennymatic_deer_lake.jpg"/>
+          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/jtease.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
         </property>
         <property name="workspace4" type="empty">
