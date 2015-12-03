@@ -4,6 +4,7 @@ echo "start .bashrc"
 export PATH=$PATH:/opt/lampp/bin:/home/ryan/bin:/home/ryan/bin/ls--:/home/ryan/bin/screenFetch
 
 source ~/Dropbox/bash/.bashrc
+source ~/.bash-aliases
 
 function _update_ps1() {
 	 echo "begin _update_ps1"
