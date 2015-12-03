@@ -53,7 +53,7 @@ stashgrep2() {
 ## need -2 for colors i guess on my xterm
 alias tmux="tmux -2"
 
-source ~/.bash-aliases
+source ~/dotfiles/.bash-aliases
 
 function _update_ps1() {
 	 echo "begin _update_ps1"
