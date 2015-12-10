@@ -276,6 +276,11 @@ endif
 nmap <silent> <leader>d <Plug>(jsdoc)
 "nmap ,d :<C-u>call AddJSDoc()<CR>
 
+" test synonyms
+let g:jsdoc_tags = {}
+let g:jsdoc_tags['param'] = 'arg'
+let g:jsdoc_tags['returns'] = 'return'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " END JsDoc config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
