@@ -20,6 +20,7 @@
         <value type="int" value="13"/>
         <value type="int" value="12"/>
         <value type="int" value="2"/>
+        <value type="int" value="16"/>
         <value type="int" value="3"/>
         <value type="int" value="15"/>
         <value type="int" value="11"/>
@@ -38,8 +39,8 @@
       <property name="show-handle" type="empty"/>
     </property>
     <property name="plugin-15" type="empty">
-      <property name="expand" type="empty"/>
-      <property name="style" type="empty"/>
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-5" type="empty">
       <property name="digital-format" type="string" value="%I:%M %p %n%m-%d-%y%n%b %d, %y"/>
@@ -102,6 +103,11 @@
     <property name="plugin-14" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="14428487772.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-16" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14495009792.desktop"/>
       </property>
     </property>
   </property>

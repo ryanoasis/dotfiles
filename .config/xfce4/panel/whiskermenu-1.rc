@@ -1,5 +1,5 @@
 favorites=firefox.desktop,thunderbird.desktop,hexchat.desktop,Thunar.desktop,gedit.desktop,gcalctool.desktop,xfce4-terminal.desktop,gvim.desktop,keepassx.desktop,virtualbox.desktop
-recent=gedit.desktop,gimp.desktop,inkscape.desktop,skype.desktop,pidgin.desktop,sonicwall-netextender.desktop,audacity.desktop,gucharmap.desktop,gcalctool.desktop,firefox.desktop
+recent=baobab.desktop,gparted.desktop,audacity.desktop,skype.desktop,gimp.desktop,gnome-disks.desktop,steam.desktop,keepassx.desktop,sonicwall-netextender.desktop,mysql-workbench.desktop
 button-title=
 button-icon=/home/ryan/Dropbox/images/icon-like/tux.svg
 button-single-row=false
