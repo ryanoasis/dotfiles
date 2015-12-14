@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xsettings" version="1.0">
+  <property name="Net" type="empty">
+    <property name="ThemeName" type="string" value="Radiance-XFCE-LXDE-Teal"/>
+    <property name="IconThemeName" type="string" value="evolvere-vivid-sunken-dark-fallback"/>
+    <property name="DoubleClickTime" type="int" value="457"/>
+    <property name="DoubleClickDistance" type="int" value="3"/>
+    <property name="DndDragThreshold" type="int" value="6"/>
+    <property name="CursorBlink" type="empty"/>
+    <property name="CursorBlinkTime" type="empty"/>
+    <property name="SoundThemeName" type="empty"/>
+    <property name="EnableEventSounds" type="bool" value="true"/>
+    <property name="EnableInputFeedbackSounds" type="bool" value="true"/>
+  </property>
+  <property name="Xft" type="empty">
+    <property name="DPI" type="int" value="96"/>
+    <property name="Antialias" type="int" value="1"/>
+    <property name="Hinting" type="empty"/>
+    <property name="HintStyle" type="string" value="hintslight"/>
+    <property name="RGBA" type="empty"/>
+  </property>
+  <property name="Gtk" type="empty">
+    <property name="CanChangeAccels" type="bool" value="false"/>
+    <property name="ColorPalette" type="empty"/>
+    <property name="FontName" type="string" value="Droid Sans 10"/>
+    <property name="IconSizes" type="empty"/>
+    <property name="KeyThemeName" type="empty"/>
+    <property name="ToolbarStyle" type="string" value="both-horiz"/>
+    <property name="ToolbarIconSize" type="empty"/>
+    <property name="MenuImages" type="empty"/>
+    <property name="ButtonImages" type="bool" value="true"/>
+    <property name="MenuBarAccel" type="empty"/>
+    <property name="CursorThemeName" type="string" value="default"/>
+    <property name="CursorThemeSize" type="int" value="28"/>
+    <property name="DecorationLayout" type="empty"/>
+    <property name="IMPreeditStyle" type="empty"/>
+    <property name="IMStatusStyle" type="empty"/>
+    <property name="IMModule" type="empty"/>
+  </property>
+  <property name="Xfce" type="empty">
+    <property name="LastCustomDPI" type="int" value="96"/>
+  </property>
+</channel>

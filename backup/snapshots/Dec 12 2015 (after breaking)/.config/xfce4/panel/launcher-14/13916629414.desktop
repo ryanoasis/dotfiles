@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Layout: Dual Screen
+Comment=
+Exec=/home/ryan/.screenlayout/ryan-randr-screenlayout.sh
+Icon=text-x-script
+Path=
+Terminal=true
+StartupNotify=false
+X-XFCE-Source=file:///usr/share/applications/Dual%20Screen.desktop
