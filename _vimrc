@@ -1280,10 +1280,10 @@ if has("gui_running")
 else
   " This is console Vim.
   if exists("+lines")
-    set lines=50
+    "set lines=50
   endif
   if exists("+columns")
-    set columns=100
+    "set columns=100
   endif
 endif
 " source: http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
@@ -1610,8 +1610,8 @@ endif
 set guifont=PragmataPro\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
 
 " testing rounded separators (extra-powerline-symbols):
-let g:airline_left_sep = "\uE0BA"
-let g:airline_right_sep = "\uE0BB"
+"let g:airline_left_sep = "\uE0BA"
+"let g:airline_right_sep = "\uE0BB"
 
 " set the CN (column number) symbol:
 let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
