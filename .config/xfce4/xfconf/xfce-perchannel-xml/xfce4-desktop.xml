@@ -58,7 +58,7 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/alone.jpg"/>
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/xfce-gradiented.png"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
           <property name="backdrop-cycle-random-order" type="bool" value="true"/>
         </property>
@@ -75,7 +75,7 @@
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/papalars_10080195055.jpg"/>
+          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/jebeld17_5917553766.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
           <property name="backdrop-cycle-random-order" type="bool" value="true"/>
         </property>
@@ -126,8 +126,8 @@
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
-          <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/jebeld17_6027284922.png"/>
+          <property name="image-style" type="int" value="3"/>
+          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/kennymatic_deer_lake.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
           <property name="backdrop-cycle-timer" type="uint" value="5"/>
           <property name="backdrop-cycle-random-order" type="bool" value="true"/>
@@ -271,7 +271,7 @@
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/mass-effect-citadel-109064.jpg"/>
+          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/ether_slate.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
         </property>
         <property name="workspace4" type="empty">
@@ -322,7 +322,7 @@
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/kennymatic_deer_lake.jpg"/>
+          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/clem_giardini.jpg"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
@@ -355,7 +355,7 @@
     <property name="single-workspace-number" type="int" value="3"/>
   </property>
   <property name="desktop-icons" type="empty">
-    <property name="icon-size" type="empty"/>
+    <property name="icon-size" type="uint" value="58"/>
     <property name="file-icons" type="empty">
       <property name="show-filesystem" type="bool" value="true"/>
       <property name="show-home" type="empty"/>
@@ -363,17 +363,23 @@
       <property name="show-removable" type="bool" value="true"/>
     </property>
     <property name="show-thumbnails" type="bool" value="true"/>
-    <property name="use-custom-font-size" type="empty"/>
-    <property name="font-size" type="double" value="10.000000"/>
+    <property name="use-custom-font-size" type="bool" value="true"/>
+    <property name="font-size" type="double" value="12.000000"/>
     <property name="style" type="empty"/>
     <property name="tooltip-size" type="double" value="64.000000"/>
     <property name="show-tooltips" type="bool" value="true"/>
   </property>
   <property name="desktop-menu" type="empty">
-    <property name="show" type="bool" value="false"/>
+    <property name="show" type="bool" value="true"/>
   </property>
   <property name="last" type="empty">
     <property name="window-width" type="int" value="1115"/>
     <property name="window-height" type="int" value="772"/>
+  </property>
+  <property name="windowlist-menu" type="empty">
+    <property name="show-submenus" type="bool" value="false"/>
+    <property name="show-icons" type="bool" value="true"/>
+    <property name="show-sticky-once" type="bool" value="false"/>
+    <property name="show-add-remove-workspaces" type="bool" value="true"/>
   </property>
 </channel>

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Gist
+Comment=Create a gist (-p for private -f for files, --help for help, etc)
+Exec=gist -p
+Icon=/home/ryan/Dropbox/images/icon-like/git_logo_patch_diff.png
+Path=
+Terminal=true
+StartupNotify=false

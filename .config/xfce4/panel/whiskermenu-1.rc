@@ -1,6 +1,6 @@
-favorites=firefox.desktop,thunderbird.desktop,hexchat.desktop,Thunar.desktop,gedit.desktop,gcalctool.desktop,xfce4-terminal.desktop,gvim.desktop,keepassx.desktop,virtualbox.desktop
-recent=baobab.desktop,gparted.desktop,audacity.desktop,skype.desktop,gimp.desktop,gnome-disks.desktop,steam.desktop,keepassx.desktop,sonicwall-netextender.desktop,mysql-workbench.desktop
-button-title=
+favorites=firefox.desktop,thunderbird.desktop,hexchat.desktop,mintinstall.desktop,Thunar.desktop,gedit.desktop,gcalctool.desktop,xfce4-terminal.desktop
+recent=filezilla.desktop,mintinstall.desktop,eclipse.desktop,kde4-konsole.desktop,gedit.desktop,sonicwall-netextender.desktop,audacity.desktop,Half-Life 2.desktop,xfce4-taskmanager.desktop,meld.desktop
+button-title=Applications
 button-icon=/home/ryan/Dropbox/images/icon-like/tux.svg
 button-single-row=false
 show-button-title=false
@@ -10,21 +10,21 @@ launcher-show-description=true
 item-icon-size=3
 hover-switch-category=false
 category-icon-size=2
-load-hierarchy=false
+load-hierarchy=true
 recent-items-max=10
 favorites-in-recent=true
 display-recent-default=true
 position-search-alternate=false
 position-commands-alternate=false
-position-categories-alternate=false
+position-categories-alternate=true
 menu-width=542
-menu-height=662
-menu-opacity=84
+menu-height=664
+menu-opacity=100
 command-settings=xfce4-settings-manager
 show-command-settings=true
 command-lockscreen=xflock4
 show-command-lockscreen=true
-command-switchuser=gdmflexiserver
+command-switchuser=mdmflexiserver
 show-command-switchuser=true
 command-logout=xfce4-session-logout
 show-command-logout=true
@@ -43,7 +43,7 @@ regex=false
 [action1]
 name=Wikipedia
 pattern=!w
-command=exo-open --launch WebBrowser http://en.wikipedia.org/wiki/%u
+command=exo-open --launch WebBrowser https://en.wikipedia.org/wiki/%u
 regex=false
 
 [action2]

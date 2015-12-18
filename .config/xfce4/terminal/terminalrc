@@ -1,5 +1,5 @@
 [Configuration]
-BackgroundDarkness=1,000000
+BackgroundDarkness=1.000000
 FontName=Fira Mono Medium for Powerline Plus Nerd File Types Medium 12
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
