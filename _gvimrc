@@ -29,7 +29,7 @@ map ,= :let &guifont = substitute(&guifont, '\(\d\+\)', '\="" . (submatch(1) + 1
 " check for gaps:
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 5
 
-set guifont=Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ 12
+"set guifont=Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ 12
 "set guifont=Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
@@ -64,7 +64,8 @@ set guifont=Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ 12
 
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
 
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular\ 12
 "set guifont=PragmataPro\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
 
 "set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 12
