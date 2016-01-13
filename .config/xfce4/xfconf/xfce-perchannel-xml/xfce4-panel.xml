@@ -23,7 +23,9 @@
         <value type="int" value="14"/>
         <value type="int" value="16"/>
         <value type="int" value="17"/>
+        <value type="int" value="25"/>
         <value type="int" value="18"/>
+        <value type="int" value="23"/>
         <value type="int" value="21"/>
         <value type="int" value="24"/>
         <value type="int" value="19"/>
@@ -58,20 +60,21 @@
     <property name="plugin-6" type="empty">
       <property name="names-visible" type="array">
         <value type="string" value="thunar"/>
+        <value type="string" value="systray icon"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="task manager"/>
-        <value type="string" value="drop-down terminal"/>
         <value type="string" value="skype"/>
+        <value type="string" value="drop-down terminal"/>
         <value type="string" value="shutter"/>
-        <value type="string" value="pidgin"/>
         <value type="string" value="xfce terminal"/>
+        <value type="string" value="pidgin"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="mintupdate.py"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="names-hidden" type="array">
       </property>
-      <property name="size-max" type="uint" value="30"/>
+      <property name="size-max" type="uint" value="32"/>
     </property>
     <property name="plugin-2" type="empty">
       <property name="items" type="array">
@@ -81,8 +84,8 @@
     <property name="plugin-4" type="empty"/>
     <property name="plugin-7" type="empty">
       <property name="known-indicators" type="array">
-        <value type="string" value="libapplication.so"/>
         <value type="string" value="com.canonical.indicator.sound"/>
+        <value type="string" value="libapplication.so"/>
       </property>
       <property name="single-row" type="bool" value="false"/>
       <property name="align-left" type="bool" value="false"/>
@@ -179,6 +182,16 @@
     <property name="plugin-24" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="14501989901.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-23" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14521767671.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-25" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14521767972.desktop"/>
       </property>
     </property>
   </property>
