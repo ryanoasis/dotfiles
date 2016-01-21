@@ -1,5 +1,5 @@
 favorites=firefox.desktop,thunderbird.desktop,hexchat.desktop,mintinstall.desktop,Thunar.desktop,gedit.desktop,gcalctool.desktop,xfce4-terminal.desktop
-recent=pidgin.desktop,sonicwall-netextender.desktop,audacity.desktop,libreoffice-calc.desktop,eclipse.desktop,skype.desktop,bum.desktop,gedit.desktop,kde4-konsole.desktop,mintinstall.desktop
+recent=kde4-konsole.desktop,baobab.desktop,Half-Life 2.desktop,audacity.desktop,eclipse.desktop,mysql-workbench.desktop,sonicwall-netextender.desktop,libreoffice-calc.desktop,pidgin.desktop,skype.desktop
 button-title=Applications
 button-icon=/home/ryan/Dropbox/images/icon-like/tux.svg
 button-single-row=false
