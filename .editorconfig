@@ -6,12 +6,14 @@ root = true
 ;https://github.com/maksimr/vim-jsbeautify/issues/62
 ;https://github.com/maksimr/dotfiles/blob/master/export/_editorconfig.symlink#L7
 ;https://github.com/beautify-web/js-beautify/issues/538
+;https://github.com/beautify-web/js-beautify/pull/853
 
 [**.js]
 ;vim:path=~/.vim/bundle/js-beautify/js/lib/beautify.js
 vim:path=/usr/local/lib/node_modules/js-beautify/js/bin/js-beautify.js
 indent_style = tab
 indent_size = 4
-brace_style = none
+;brace_style = none
+brace_style = collapse-preserve-inline
 keep_array_indentation = true
 keep_function_indentation = true
