@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Mount NAS
+Comment=Mounts network attached stoarage after boot (for when NAS not active before boot)
+Exec=sudo /home/ryan/mount-network-drive.sh
+Icon=drive-harddisk
+Terminal=true
+StartupNotify=false
+Name[en_US.UTF-8]=Mount NAS
+GenericName=Mount NAS
+Path=
+X-XFCE-Source=file:///usr/share/applications/Mount%20NAS.desktop

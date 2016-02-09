@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GEdit Text Editor
+Comment=Edit text files (gedit)
+Icon=accessories-text-editor
+Exec=gedit %U
+NoDisplay=false
+Categories=GNOME;GTK;TextEditor;Utility;
+MimeType=text/plain;
+StartupNotify=true
+Terminal=false
+X-XFCE-Source=file:///home/ryan/.local/share/applications/gedit.desktop

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Shell Tabs: KO Apps [Master]
+Comment=
+Exec=./run-acronym-git-master-repos-konsole-tabs.sh
+Icon=terminator
+Path=/home/ryan
+Terminal=false
+StartupNotify=false
