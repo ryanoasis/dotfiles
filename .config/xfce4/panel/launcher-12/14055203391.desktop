@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Start XAMPP
+Comment=
+Exec=/home/ryan/Dropbox/public-bash-scripts/start-xampp.sh
+Icon=utilities-terminal
+Path=/home/ryan/Dropbox/public-bash-scripts
+Terminal=true
+StartupNotify=false

@@ -58,7 +58,7 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/xfce-gradiented.png"/>
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/darek_5921166363.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
           <property name="backdrop-cycle-random-order" type="bool" value="true"/>
         </property>
@@ -75,7 +75,7 @@
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/jebeld17_5917553766.jpg"/>
+          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/wallpaper-695487_windows_fail_error_blue_screen_death.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
           <property name="backdrop-cycle-random-order" type="bool" value="true"/>
         </property>
@@ -127,7 +127,7 @@
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="3"/>
-          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/wallpaper-109068_minimalistic_funny_tech.jpg"/>
+          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/mass-effect-citadel-109064.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
           <property name="backdrop-cycle-timer" type="uint" value="5"/>
           <property name="backdrop-cycle-random-order" type="bool" value="true"/>
@@ -271,7 +271,7 @@
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/ether_slate.jpg"/>
+          <property name="last-image" type="string" value="/home/ryan/Dropbox/desktop-background-wallpaper/best/mass-effect-citadel-109064.jpg"/>
           <property name="backdrop-cycle-enable" type="bool" value="true"/>
         </property>
         <property name="workspace4" type="empty">
@@ -365,9 +365,10 @@
     <property name="show-thumbnails" type="bool" value="true"/>
     <property name="use-custom-font-size" type="bool" value="true"/>
     <property name="font-size" type="double" value="12.000000"/>
-    <property name="style" type="empty"/>
+    <property name="style" type="int" value="2"/>
     <property name="tooltip-size" type="double" value="64.000000"/>
     <property name="show-tooltips" type="bool" value="true"/>
+    <property name="show-hidden-files" type="bool" value="true"/>
   </property>
   <property name="desktop-menu" type="empty">
     <property name="show" type="bool" value="true"/>

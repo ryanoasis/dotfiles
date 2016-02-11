@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=GVim
+GenericName=Text Editor
+Comment=Edit text files
+TryExec=gvim
+Exec=gvim -f %F
+Terminal=false
+Type=Application
+Icon=vim
+Categories=Utility;TextEditor;
+StartupNotify=true
+MimeType=text/plain;
+X-XFCE-Source=file:///usr/share/applications/gvim.desktop

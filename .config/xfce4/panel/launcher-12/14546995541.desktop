@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Wake up Synology NAS
+Comment=Wakes up network attached stoarage after boot
+Exec=sudo /home/ryan/Dropbox/private-bash-scripts/wake-on-lan-syn-drive.sh
+Icon=drive-harddisk
+Path=
+Terminal=true
+StartupNotify=false

@@ -5,14 +5,6 @@
 row=0
 col=1
 
-[01CEB7E77857C730]
-row=4
-col=0
-
-[16999559-853b-4eae-9083-2ced56459d81]
-row=1
-col=0
-
 [2e661c3c-cfd5-4432-9508-4b6f365fc766]
 row=2
 col=0
@@ -21,8 +13,16 @@ col=0
 row=6
 col=0
 
+[01CEB7E77857C730]
+row=3
+col=0
+
+[16999559-853b-4eae-9083-2ced56459d81]
+row=4
+col=0
+
 [Trash]
-row=8
+row=1
 col=0
 
 [/]

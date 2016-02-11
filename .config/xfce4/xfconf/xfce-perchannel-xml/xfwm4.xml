@@ -53,7 +53,7 @@
     <property name="snap_to_border" type="empty"/>
     <property name="snap_to_windows" type="bool" value="true"/>
     <property name="snap_width" type="int" value="7"/>
-    <property name="theme" type="string" value="Ambiance-Window-Border-Classic"/>
+    <property name="theme" type="string" value="Kokodi"/>
     <property name="tile_on_move" type="empty"/>
     <property name="title_alignment" type="empty"/>
     <property name="title_font" type="string" value="Droid Sans Bold 11"/>
