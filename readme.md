@@ -2,6 +2,11 @@
 
 * screenshots and overview of my dev settings for my own reference mainly but if it's helpful to others then that's cool
 
+
+## Desktop
+
+![img](previews/desktop-1.png)
+
 ## Vim configuration
 
 ### Custom font and glyphs
