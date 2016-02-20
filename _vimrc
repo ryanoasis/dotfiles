@@ -34,7 +34,8 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'joonty/vdebug'
-Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-abolish'
 "Plugin 'othree/javascript-libraries-syntax.vim'
@@ -48,7 +49,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'ramitos/jsctags'
 "Plugin 'kien/ctrlp.vim'
@@ -71,7 +72,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Plugin 'user/L9', {'name': 'newL9'}
 
 Plugin 'airblade/vim-gitgutter'
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'tpope/vim-unimpaired'
@@ -102,10 +103,11 @@ Bundle 'SirVer/ultisnips'
 "Bundle 'terryma/vim-smooth-scroll'
 Bundle 'itchyny/lightline.vim'
 Plugin 'kshenoy/vim-signature'
+Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
-Plugin 'tpope/vim-flagship'
-Plugin 'koron/minimap-vim'
+"Plugin 'tpope/vim-flagship'
+"Plugin 'koron/minimap-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mhinz/vim-startify'
 Plugin 'ryanoasis/vim-devicons'
@@ -1144,6 +1146,8 @@ endif
 " 15/10/2014 (Oct 15) @ 21:21 update: noticable delay even just typing 's',
 " disabling for now:
 "cmap ss!! w !sudo tee > /dev/null %
+" lets try it again:
+cmap w!! w !sudo tee > /dev/null %
 " source: http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
 
 
@@ -1662,3 +1666,6 @@ map <Leader>p :set paste<CR>o<esc>"+]p:set nopaste<cr>
 " fix opening in split when using vim startify:
 autocmd User Startified setlocal buftype=
 " source: https://github.com/mhinz/vim-startify/blob/master/doc/startify.txt
+
+" test: https://github.com/ryanoasis/vim-devicons/issues/140
+"let g:webdevicons_enable_unite = 0
