@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=-> Acronym Scrum files
+Name=Acronym Scrum files
 Comment=Open Acronym scrum files in gvim split
 Exec=/home/ryan/acronym-scrum-vim-split.sh
 Icon=/home/ryan/Dropbox/images/acronym-logo.png

@@ -6,7 +6,7 @@
     <property name="panel-1" type="empty">
       <property name="position" type="empty"/>
       <property name="length" type="uint" value="100"/>
-      <property name="position-locked" type="empty"/>
+      <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="40"/>
       <property name="background-style" type="uint" value="0"/>
       <property name="background-alpha" type="uint" value="100"/>
@@ -32,8 +32,9 @@
         <value type="int" value="15"/>
         <value type="int" value="8"/>
         <value type="int" value="13"/>
-        <value type="int" value="7"/>
+        <value type="int" value="23"/>
         <value type="int" value="6"/>
+        <value type="int" value="7"/>
         <value type="int" value="5"/>
       </property>
       <property name="output-name" type="string" value="eDP1"/>
@@ -65,6 +66,7 @@
         <value type="string" value="xfce terminal"/>
         <value type="string" value="pidgin"/>
         <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="banshee"/>
         <value type="string" value="mintupdate.py"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
@@ -83,7 +85,6 @@
         <value type="string" value="libapplication.so"/>
         <value type="string" value="com.canonical.indicator.sound"/>
       </property>
-      <property name="single-row" type="bool" value="false"/>
     </property>
     <property name="plugin-9" type="empty">
       <property name="items" type="array">
@@ -107,18 +108,18 @@
     <property name="plugin-12" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="13938842291.desktop"/>
-        <value type="string" value="13916637026.desktop"/>
         <value type="string" value="14037433921.desktop"/>
-        <value type="string" value="14238793753.desktop"/>
+        <value type="string" value="13917845941.desktop"/>
         <value type="string" value="14183345081.desktop"/>
         <value type="string" value="14546995541.desktop"/>
         <value type="string" value="14055203391.desktop"/>
         <value type="string" value="14006887021.desktop"/>
+        <value type="string" value="13982599251.desktop"/>
+        <value type="string" value="13916637026.desktop"/>
         <value type="string" value="14002514041.desktop"/>
         <value type="string" value="13988158073.desktop"/>
         <value type="string" value="13988156412.desktop"/>
-        <value type="string" value="13982599251.desktop"/>
-        <value type="string" value="13917845941.desktop"/>
+        <value type="string" value="14238793753.desktop"/>
         <value type="string" value="13916644547.desktop"/>
         <value type="string" value="13916634935.desktop"/>
         <value type="string" value="13916629414.desktop"/>
@@ -176,5 +177,6 @@
         <value type="string" value="14545960869.desktop"/>
       </property>
     </property>
+    <property name="plugin-23" type="string" value="power-manager-plugin"/>
   </property>
 </channel>
