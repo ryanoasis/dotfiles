@@ -47,6 +47,7 @@ Plugin 'scrooloose/nerdcommenter'
 " using official nerdtree plugin again now a dependency for Xuyuanp/nerdtree-git-plugin
 
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'jistr/vim-nerdtree-tabs'
