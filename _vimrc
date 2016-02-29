@@ -1673,3 +1673,17 @@ autocmd User Startified setlocal buftype=
 
 " test: https://github.com/ryanoasis/vim-devicons/issues/140
 "let g:webdevicons_enable_unite = 0
+
+" test highlight just the glyph (icons) in nerdtree:
+autocmd filetype nerdtree highlight haskell_icon ctermbg=none ctermfg=Red guifg=#ffa500
+autocmd filetype nerdtree highlight html_icon ctermbg=none ctermfg=Red guifg=#ffa500
+autocmd filetype nerdtree highlight go_icon ctermbg=none ctermfg=Red guifg=#ffa500
+"autocmd filetype nerdtree syn match haskell_icon ##
+autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
+autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,hideBracketsInNerdTree,html
+autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
+"autocmd filetype nerdtree syn match haskell_icon #^\s\+.*hs$# containedin=NERDTreeFile
+
+map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
