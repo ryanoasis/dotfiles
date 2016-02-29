@@ -1150,8 +1150,8 @@ endif
 " 15/10/2014 (Oct 15) @ 21:21 update: noticable delay even just typing 's',
 " disabling for now:
 "cmap ss!! w !sudo tee > /dev/null %
-" lets try it again:
-cmap w!! w !sudo tee > /dev/null %
+" lets try it again, w causes hanging on long file, lets use 'z'
+cmap z!! w !sudo tee > /dev/null %
 " source: http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
 
 
