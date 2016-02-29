@@ -62,6 +62,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
+"Plugin 'user/L9'
+" gives error
+"Plugin 'ascenator/L9'
 " Git plugin not hosted on GitHub
 " Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
