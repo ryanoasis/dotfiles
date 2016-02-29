@@ -3,8 +3,8 @@
 <channel name="xfce4-session" version="1.0">
   <property name="general" type="empty">
     <property name="FailsafeSessionName" type="empty"/>
-    <property name="SaveOnExit" type="empty"/>
-    <property name="AutoSave" type="bool" value="false"/>
+    <property name="SaveOnExit" type="bool" value="true"/>
+    <property name="AutoSave" type="bool" value="true"/>
     <property name="SessionName" type="string" value="Default"/>
   </property>
   <property name="sessions" type="empty">

@@ -58,6 +58,7 @@
     <property name="plugin-6" type="empty">
       <property name="names-visible" type="array">
         <value type="string" value="thunar"/>
+        <value type="string" value="systray icon"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="task manager"/>
         <value type="string" value="skype"/>
@@ -85,6 +86,10 @@
         <value type="string" value="libapplication.so"/>
         <value type="string" value="com.canonical.indicator.sound"/>
       </property>
+      <property name="blacklist" type="array">
+      </property>
+      <property name="align-left" type="bool" value="false"/>
+      <property name="single-row" type="bool" value="false"/>
     </property>
     <property name="plugin-9" type="empty">
       <property name="items" type="array">

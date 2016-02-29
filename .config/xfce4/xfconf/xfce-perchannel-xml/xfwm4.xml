@@ -76,7 +76,7 @@
       <value type="string" value="Travis CI"/>
       <value type="string" value="Interview stuff"/>
       <value type="string" value="Ember - Nerd Fonts"/>
-      <value type="string" value="Personal Projects"/>
+      <value type="string" value="JS Ramp Up"/>
     </property>
     <property name="wrap_cycle" type="bool" value="false"/>
     <property name="wrap_layout" type="bool" value="false"/>

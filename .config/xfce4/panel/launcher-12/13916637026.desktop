@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Acronym: Run Programs
+Name=Acronym Run Programs
 Comment=
 Exec=/home/ryan/run-acronym-programs.sh
 Icon=/home/ryan/Dropbox/images/acronym-logo.png
