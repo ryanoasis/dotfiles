@@ -1678,12 +1678,72 @@ autocmd User Startified setlocal buftype=
 autocmd filetype nerdtree highlight haskell_icon ctermbg=none ctermfg=Red guifg=#ffa500
 autocmd filetype nerdtree highlight html_icon ctermbg=none ctermfg=Red guifg=#ffa500
 autocmd filetype nerdtree highlight go_icon ctermbg=none ctermfg=Red guifg=#ffa500
-"autocmd filetype nerdtree syn match haskell_icon ##
+
 autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
-autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,hideBracketsInNerdTree,html
+" if you are using another syn highlight for a given line (e.g.
+" NERDTreeHighlightFile) need to give that name in the 'containedin' for this
+" other highlight to work with it
+autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
+
 "autocmd filetype nerdtree syn match haskell_icon #^\s\+.*hs$# containedin=NERDTreeFile
 
 map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+" experiments {{{
+
+" setup
+function! s:strip(input)
+  return substitute(a:input, '^\s*\(.\{-}\)\s*$', '\1', '')
+endfunction
+
+" current way:
+
+function! Original115()
+
+  let line = ' ~/www/some/big/long/jenky/path/something.something/whatever_it_is/bigUgly/path/too/long/something.vim'
+  let line = substitute(line, "[-]", "", "")
+  let line = s:strip(line)
+
+endfun
+
+" alternate way:
+
+function! Alternate115()
+
+  let line = ' ~/www/some/big/long/jenky/path/something.something/whatever_it_is/bigUgly/path/too/long/something.vim'
+
+  let glyphCandidate = char2nr(strpart(line, 0, 3))
+  let glyphASCIIRangeStart = 57344
+  let glyphASCIIRangeEnd = 63743
+
+  if glyphCandidate >= glyphASCIIRangeStart && glyphCandidate <= glyphASCIIRangeEnd
+    let line = strpart(line, 3)
+  endif
+
+  let line = s:strip(line)
+
+endfun
+
+" alternate way cached variables:
+
+let s:glyphASCIIRangeStart = 57344
+let s:glyphASCIIRangeEnd = 63743
+
+function! AlternateCached115()
+
+  let line = ' ~/www/some/big/long/jenky/path/something.something/whatever_it_is/bigUgly/path/too/long/something.vim'
+
+  let glyphCandidate = char2nr(strpart(line, 0, 3))
+
+  if glyphCandidate >= s:glyphASCIIRangeStart && glyphCandidate <= s:glyphASCIIRangeEnd
+    let line = strpart(line, 3)
+  endif
+
+  let line = s:strip(line)
+
+endfun
+
+" }}}
