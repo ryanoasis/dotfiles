@@ -4,7 +4,7 @@
   <property name="general" type="empty">
     <property name="FailsafeSessionName" type="empty"/>
     <property name="SaveOnExit" type="bool" value="true"/>
-    <property name="AutoSave" type="bool" value="true"/>
+    <property name="AutoSave" type="bool" value="false"/>
     <property name="SessionName" type="string" value="Default"/>
   </property>
   <property name="sessions" type="empty">
