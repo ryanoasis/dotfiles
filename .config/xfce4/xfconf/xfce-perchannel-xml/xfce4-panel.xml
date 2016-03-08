@@ -67,6 +67,7 @@
         <value type="string" value="xfce terminal"/>
         <value type="string" value="pidgin"/>
         <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="keepassx"/>
         <value type="string" value="banshee"/>
         <value type="string" value="mintupdate.py"/>
       </property>
