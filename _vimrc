@@ -253,7 +253,7 @@ let g:jsdoc_input_description = 1
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_return_description = 0
 let g:jsdoc_additional_descriptions = 0
-let g:jsdoc_access_descriptions = 1
+let g:jsdoc_access_descriptions = 2
 let g:jsdoc_underscore_private = 1
 let g:jsdoc_func_name_description_default = 0
 
