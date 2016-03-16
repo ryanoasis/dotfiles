@@ -1,5 +1,5 @@
 favorites=firefox.desktop,thunderbird.desktop,hexchat.desktop,mintinstall.desktop,Thunar.desktop,gedit.desktop,gcalctool.desktop,xfce4-terminal.desktop
-recent=geany.desktop,virtualbox.desktop,audacity.desktop,mintinstall.desktop,pavucontrol.desktop,eclipse.desktop,xfce4-taskmanager.desktop,sonicwall-netextender.desktop,xfce-keyboard-settings.desktop,baobab.desktop
+recent=geany.desktop,users.desktop,libreoffice-calc.desktop,mysql-workbench.desktop,eclipse.desktop,sonicwall-netextender.desktop,virtualbox.desktop,audacity.desktop,mintinstall.desktop,pavucontrol.desktop
 button-title=Applications
 button-icon=/usr/share/linuxmint/logo.png
 button-single-row=false
