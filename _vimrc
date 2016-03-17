@@ -1,8 +1,16 @@
-
-set t_Co=256
+" vim:fdm=marker
+" vimrc
+" author: ryanoasis (Ryan L McIntyre)
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" License {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Copyright 2016 Ryan McIntyre
+" @todo
+" }}}1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General Leader shortcuts!
+" General Leader shortcuts {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -11,12 +19,7 @@ let g:mapleader = ","
 " source: http://amix.dk/vim/vimrc.html
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End General Leader shortcuts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vundle
+" Package management (vundle) and plugins {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -74,7 +77,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
-
 Plugin 'airblade/vim-gitgutter'
 "Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
@@ -135,18 +137,12 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" END VUNDLE CONFIG
+" General settings {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 " set color term to 256 colors
-" need to use with CSApprox script to work
-" set t_Co=256
+" need to use with CSApprox script to work (huh?)
+set t_Co=256
 
 syntax on
 "colorscheme robinhood
@@ -240,13 +236,8 @@ set scrolloff=3               " keep at least 3 lines above/below
  map <leader><Tab> :set hls<CR>/\n.*\n/<CR>
 " source: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End General settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" JsDoc config
+" JsDoc config {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:jsdoc_input_description = 1
@@ -282,18 +273,12 @@ endif
 nmap <silent> <leader>d <Plug>(jsdoc)
 "nmap ,d :<C-u>call AddJSDoc()<CR>
 
-" test synonyms
+" use some synonyms
 let g:jsdoc_tags = {}
-let g:jsdoc_tags['param'] = 'arg'
 let g:jsdoc_tags['returns'] = 'return'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" END JsDoc config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic config
+" Syntastic config {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:syntastic_style_error_symbol = '⚡'
@@ -334,14 +319,8 @@ let g:syntastic_always_populate_loc_list = 1
 " :SyntasticCheck phpcs phpmd
 " :SyntasticCheck jscs
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" END syntastic config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" YouCompleteMe (YCM) config
+" YouCompleteMe (YCM) config {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " When this option is set to 1, YCM's identifier completer will also collect
@@ -357,12 +336,7 @@ let g:ycm_add_preview_to_completeopt = 0
 " source: https://github.com/Valloric/YouCompleteMe#i-get-a-weird-window-at-the-top-of-my-file-when-i-use-the-semantic-engine
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" END YouCompleteMe (YCM) config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" YouCompleteMe (YCM), SuperTab, and UltiSnips config
+" YouCompleteMe (YCM), SuperTab, and UltiSnips config {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " make YCM compatible with UltiSnips (using supertab)
@@ -381,15 +355,9 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " enough version of both plugins and <tab> will either expand a snippet or defer
 " to Supertab for expansion.
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" END YouCompleteMe (YCM), SuperTab, and UltiSnips config
+" vim-powerline (obselete now using airline) {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-powerline (obselete now using airline)
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " recommended to put in vimrc NOT gvimrc (too late loading)
 " let g:Powerline_symbols = 'fancy'
 " fixes statusline only appearing in split windows mode
@@ -400,8 +368,8 @@ set laststatus=2
 set noshowmode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-airline
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-airline {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
@@ -431,8 +399,8 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 "let g:loaded_airline = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" lightline.vim
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" lightline.vim {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:lightline = {
       \ 'component_function': {
@@ -453,22 +421,14 @@ endfunction
 let g:loaded_lightline = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End lightline.vim
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" vim-markdown (plasticboy) {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-markdown (plasticboy)
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_initial_foldlevel = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End vim-markdown (plasticboy)
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlP settings
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP settings {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:ctrlp_match_window = 'bottom,order:ttb'
 "let g:ctrlp_switch_buffer = 0
 "let g:ctrlp_working_path_mode = 0
@@ -492,34 +452,21 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 " silent! nnoremap <unique> <silent> <Leader>f :CtrlPFiletype<CR>
 " source: https://github.com/endel/ctrlp-filetype.vim
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End CtrlP section
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" gundo section
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" gundo {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" end gundo section
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlP
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " by default <c-p> command open in MRU mode
 let g:ctrlp_cmd = 'CtrlPMRU'
 
-
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End CtrlP
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" tabular
+" tabular {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " custom mapping shortcuts
@@ -535,26 +482,14 @@ let g:ctrlp_cmd = 'CtrlPMRU'
 " equals signs
 " source: http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End tabular
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" GitGutter
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" GitGutter {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_max_signs = 500
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End GitGutter
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-javascript
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-javascript {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set cole=0
 " source: https://github.com/pangloss/vim-javascript/issues/101#issuecomment-45543789
 
@@ -581,33 +516,21 @@ let g:javascript_enable_domhtmlcss = 1
 " source: https://github.com/pangloss/vim-javascript
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End vim-javascript
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" color tweaks
+" color tweaks {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "hi Comment guibg=#212121
 "hi jsDocParam guibg=#212121
 "hi jsDocTags guibg=#212121
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End color tweaks
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" colorizer
+" colorizer {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " attempt to improve vim performance:
 "let g:colorizer_startup = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" end colorizer
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" smooth-scroll
+" smooth-scroll {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " temporarily disabling to see if it is causing performance issues with
@@ -618,12 +541,8 @@ let g:javascript_enable_domhtmlcss = 1
 "noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 "noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" end smooth-scroll
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Annoyance fixes
+" Annoyance fixes {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set visualbell           " don't beep
 set noerrorbells         " don't beep
@@ -654,7 +573,8 @@ set backspace=indent,eol,start
 nnoremap ; :
 " source: http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 
-" Editing behaviour
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Editing behaviour {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ignorecase                  " needed for smartcase setting to work
 set smartcase                   " ignore case if search pattern is all lowercase,
@@ -667,7 +587,7 @@ nnoremap <leader><space> :noh<cr>
 " source: http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Folding rules & setting
+" Folding rules & setting {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set foldenable                  " enable folding
 set foldcolumn=4                " add a fold column
@@ -687,7 +607,7 @@ set foldlevelstart=99
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" filetype & encoding
+" filetype & encoding {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -698,15 +618,7 @@ setglobal fileencoding=utf-8           " change default file encoding when writi
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
-" to test mac as default line endings on new files:
-"set ffs=mac,unix,dos
 
-"set regexpengine=1
-
-" Show matching brackets when text indicator is over them
-"set showmatch
-" How many tenths of a second to blink when matching brackets
-"set mat=8
 
 " Tab path completion like bash
 set wildmenu
@@ -747,18 +659,14 @@ nnoremap <Leader>hn :match<CR>
 " http://rayninfo.co.uk/vimtips.html
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree tabs
+" NERDTree tabs {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:nerdtree_tabs_open_on_new_tab = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" end NERDTree tabs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree tweaks
+" NERDTree tweaks {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " sets the working directory to the current file's directory:
 "autocmd BufEnter * lcd %:p:h
@@ -769,60 +677,10 @@ map <F1> :NERDTreeToggle %:p:h<CR>
 map <Leader>nt :NERDTreeToggle %:p:h<CR>
 " source: http://stackoverflow.com/questions/5800840/nerdtree-load-particular-directory-automatically
 
-" customize colours colors theme highlighting
-" hi Directory guifg=#96CBFE guibg=#00ff00 ctermfg=red
-" source: http://www.ur-ban.com/blog/2011/04/01/nerdtree-directory-colours/
-" hi treeDir guifg=#ff0000 guibg=#00ff00 ctermfg=red
-
-" let loaded_nerd_tree = 1
-let NERDChristmasTree = 0
-
-" standard:
-"exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" conceal cchar=_'
-" trying contained:
-"exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" contained conceal cchar=_ containedin=NERDTreeDir,NERDTreeFile'
-"
-"
-"
-" GOOD WORKING 4/12/2015 :)
-"exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" contained conceal cchar=_ containedin=ALL'
-"
-"
-"
-"exec 'autocmd filetype nerdtree syntax region hideBracketsInNerdTree start=/\[/ end=/\]/ conceal cchar=_'
-"exec 'autocmd filetype nerdtree syntax region hideBracketsInNerdTree start=/\[.\{1,2}/ end=/\]/ conceal cchar=_'
-"exec 'autocmd filetype nerdtree syntax region hideBracketsInNerdTree start=/\[/ end=/\]/ concealends cchar=_ containedin=NERDTreeDir,NERDTreeFile'
-"
-" GOOD WORKING 4/12/2015 :)
- "exec 'autocmd filetype nerdtree highlight hideBracketsInNerdTreeClose ctermbg=green ctermfg=none guibg=green guifg=#151515'
-
-
-"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeOpen Acronym conceal cchar=_'
-"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose LICENSE conceal cchar=_'
-"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose LICENSE'
-"
-" test is working:
-"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose LICENSE containedin=NERDTreeDir,NERDTreeFile conceal cchar=_'
-"
-" test is working:
-"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose doc containedin=NERDTreeDir,NERDTreeFile'
-"
-"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose \[ containedin=NERDTreeDir,NERDTreeFile'
-"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose \] containedin=NERDTreeDir,NERDTreeFile'
-
 " NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
-" original:
  exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
- " after first ]
- "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #\]\@<=.*'. a:extension .'$#'
- " trying contains on match
- "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #\]\@<=.*'. a:extension .'$# contains=hideBracketsInNerdTree'
-" trying contains on keyword:
- "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #\]\@<=.*'. a:extension .'$# contains=hideBracketsInNerdTreeOpen,hideBracketsInNerdTreeClose'
- " tyring contains on keyword with original match:
- "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$# contains=hideBracketsInNerdTreeOpen,hideBracketsInNerdTreeClose'
 endfunction
 
 call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
@@ -846,166 +704,9 @@ call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
 
 " source: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
 
-" airline config
-"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-" source: https://github.com/bling/vim-airline/issues/534
-
-" test not overwritting custom formatters:
-"
-" step 1: copy the function below to: /home/ryan/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/formatters/foo.vim
-"function! airline#extensions#tabline#formatters#foo#format(bufnr, buffers)
-    "return fnamemodify(bufname(a:bufnr), ':t') . ' CRAZY '
-  "endfunction
-
-" step 2: uncomment this line:
-"let g:airline#extensions#tabline#formatter = 'foo'
-
-"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-
-" enable vim-airline extensions:
-"let g:airline#extensions#capslock#enabled = 1
-""let g:airline#extensions#example#enabled = 1
-"let g:airline#extensions#whitespace#enabled = 0
-
-
-"let g:NERDTreeUnicodeDecorateFileNodes = 1
-"let g:NERDTreeUnicodeDecorateFileNodesDefaultSymbol = ''
-"let g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols = { 'styl': '', 'scss': '', 'htm': '', 'html': '', 'css': '', 'less': '', 'md': '', 'json': '', 'js': '', 'rb': '', 'php': '', 'py': '', 'coffee': '','mustache': '', 'hbs': '', 'conf': '', 'ini': '', 'yml': '', 'jpg': '', 'jpeg': '', 'bmp': '', 'png': '', 'gif': '', 'ai': '' }
-"let g:NERDTreeUnicodeDecorateFileNodesExactSymbols = { 'Gruntfile.js': '', 'Gulpfile.js': '' }
-
-"let g:NerdIconsAirlineOriginal = g:airline_section_c
-
-"function! NerdIconInit()
-"   echom 'vim enter nerd init'
-"  " cache original
-"  "let g:NerdIconsAirlineOriginal = g:airline_section_c
-""let tabline='hey'
-""let g:airline#extensions#tabline#fnamemod = 'xyz :p:. abc'
-""let tabline= call %!airline#extensions#tabline#get()
-"endfunction
-"let g:airline#extensions#tabline#fnamemod = ':t'
-
-" this works but is destructive:
-"let originalBufferName = buffer_name("%")
-" remove the \ before the double quotes:
-"execute \"file \".originalBufferName.""
-
-"let g:airline_section_c = ':D %t :O                            '
-"function! NerdIconAirlineInit()
-"  echom 'air init'
-"  let fileNodeExtension = expand("%:e")
-"  let fileNode = expand("%:s")
-"  let symbol = g:NERDTreeUnicodeDecorateFileNodesDefaultSymbol
-"  " cache original
-"  if !exists('g:NerdIconsAirlineOriginal')
-"    if exists('g:airline_section_c')
-"       let g:NerdIconsAirlineOriginal = g:airline_section_c
-"   else
-"      let g:NerdIconsAirlineOriginal = 'BLANK'
-"   endif
-"  endif
-"  "&ft
-"  "echo expand('%:s')
-"  "echom fileNodeExtension
-"  "echo &ft
-"  if has_key(g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
-"    "echo g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
-"    "echom 'has it'
-"    let symbol = g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
-"  endif
-
-"  if has_key(g:NERDTreeUnicodeDecorateFileNodesExactSymbols, fileNode)
-"    "echo g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols[fileNode]
-"    "echom 'has it'
-"    let symbol = g:NERDTreeUnicodeDecorateFileNodesExactSymbols[fileNode]
-"  endif
-
-"let g:airline_section_c = symbol . '  ' . g:NerdIconsAirlineOriginal
-"let g:airline#extensions#tabline#left_sep = symbol . ' '
-"let g:airline_extensions_tabline_left_sep = symbol . ' '
-""set tabline = %#airline_tabsel# %(%{airline#extensions#tabline#get_buffer_name(1)}%) %#airline_tabsel_to_airline_tabfill#%#airline_tabfill#%#airline_tabfill#%=%#airline_tabfill_to_airline_tabtype#%#airline_tabtype# buffers
-
-""set tabline=&tabline.'a'
-"endfunction
-
-"augroup testgroup
-  "autocmd VimEnter * call NerdIconInit()
-  "autocmd BufWinEnter * call NerdIconInit()
-  "autocmd VimEnter * call NerdIconAirlineInit()
-  "autocmd BufWinEnter * call NerdIconAirlineInit()
-"  autocmd BufWinEnter * call NerdIconAirlineInit()
-"  autocmd VimEnter * call NerdIconAirlineInit()
-"augroup end
-  "autocmd BufWritePost * AirlineRefresh
-  "autocmd BufWritePost * AirlineRefresh
-" overrrides. probably dont wanna do that, try this:
-"let g:airline_section_c = airline#section#create(['%{getcwd()}'])
-
-"let g:airline#extensions#tabline#fnamemod = 'hey :p:.'
-"call g:airline#extensions#prepend_to_section('c', "foo")
-
-"function! airline#extensions#nerdicons#apply(...)
-  "if &ft ==# "csv"
-  "  call airline#extensions#prepend_to_section('gutter',
-  "        \ g:airline_left_alt_sep.' %{airline#extensions#csv#get_column()}')
-  "endif
-"endfunction
-
-"function! airline#extensions#nerdicons#init(ext)
-"  call a:ext.add_statusline_func('airline#extensions#nerdicons#apply')
-"endfunction
-
-  "let g:airline#extensions#tabline#formatter = 'default'
-
-  "" here is how you can define a 'foo' formatter:
-  "function! g:airline#extensions#tabline#foo#format(bufnr, buffers)
-  "  return fnamemodify(bufname(a:bufnr), ':t')
-  "endfunction
-  "let g:airline#extensions#tabline#formatter = 'foo'
-
-"set tabline+=a
-"set tabline=%#airline_tabmod# %(%{airline#extensions#tabline#get_buffer_name(1)}%) %#airline_tabmod_to_airline_tabfill#%#airline_tabfill#%#airline_tabfill#%=%#airline_tabfill_to_airline_tabtype#%#airline_tabtype# buffers
-
-  "function! MyPlugin(...)
-  "  "if &filetype == 'MyPluginFileType'
-  "    let w:airline_section_a = 'MyPlugin'
-  "    let w:airline_section_b = '%f'
-  "    let w:airline_section_c = '%{MyPlugin#function()}'
-  "    let g:airline_variable_referenced_in_statusline = 'foo'
-  "  "endif
-  "endfunction
-  "call a:ext.add_statusline_func('MyPlugin')
-
-  "function! NerdiconsApply(...)
-  "   "if &ft ==# "csv"
-  "   "   call airline#extensions#prepend_to_section('gutter',
-  "   "            \ g:airline_left_alt_sep.' %{airline#extensions#csv#get_column()}')
-  "   "endif
-  "     let w:airline_section_a = 'MyPlugin'
-  "let w:airline_section_b = '%f'
-  "let w:airline_section_c = '%{MyPlugin#function()}'
-  "let g:airline_variable_referenced_in_statusline = 'foo'"
-  "endfunction
-  "function! NerdiconsInit(ext)
-  "   call a:ext.add_statusline_func('NerdiconsApply')
-  "endfunction
-
-"function! airline#extensions#tabline#get_buffer_name(nr)
-"  return airline#extensions#tabline#{s:formatter}#format(a:nr, get(s:, 'current_buffer_list', s:get_buffer_list()))
-"endfunction
-
-"let orig = g:airline#extensions#tabline#left_sep
-"let orig = ">"
-"let g:airline#extensions#tabline#left_sep = 'WHAT' . orig
-"let g:airline#extensions#tabline#left_alt_sep = 'AAA'
-
- "function! Foo(bufnr, buffers)
- "   return fnamemodify(bufname(a:bufnr), ':t')
- " endfunction
- " let g:airline#extensions#tabline#formatter = 'Foo'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tagbar plugin tweaks:
+" Tagbar plugin tweaks {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
 
@@ -1079,7 +780,7 @@ let g:tagbar_type_javascript = {
 \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  vdebug
+" vdebug {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :command! Bp Breakpoint
 
@@ -1092,7 +793,7 @@ let g:tagbar_type_javascript = {
 "let g:vdebug_keymap['run'] = '<C-s>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Custom mappings and command shortcuts
+" Custom mappings and command shortcuts {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Fast saving
@@ -1177,12 +878,7 @@ nmap <leader>l :set list!<CR>
 " to sort on just selected simply add sort! o_O , e.g. :'<,'>sort
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End Custom mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Custom Functions
+" Custom Functions {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "function! FormatJSON() :%!python -m json.tool endfunction
@@ -1206,7 +902,7 @@ autocmd FileType c,cpp,java,php,ruby,python,javascript,js,css,md,mkd,html autocm
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" OS Differences
+" OS Differences {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " set shell to something other than Windows Command Prompt
@@ -1258,7 +954,7 @@ set showtabline=2
 " source: http://vim.1045645.n5.nabble.com/Always-show-tab-bar-in-MacVim-td1215150.html
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" JSbeautify settings
+" JSbeautify settings {{{1
 " https://github.com/maksimr/vim-jsbeautify
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:config_Beautifier = {}
@@ -1274,9 +970,8 @@ map <c-f> :call JsBeautify()<cr>
 autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End JSbeautify settings
+" Window size at startup {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " maximize vim at startup ( i think i need to keep this at the bottom of the
 " vimrc so it resizes correctly after all the plugin and other changes
 " (showtabline=2 , etc)
@@ -1529,71 +1224,6 @@ hi SyntasticWarningSign ctermfg=184 guifg=#eeee00
 hi SpellBad cterm=undercurl gui=undercurl ctermfg=184 guisp=#eeee00
 hi SyntasticErrorSign ctermfg=184 guifg=#eeee00
 
-" vim-webdevicons testing area
-
-" testing work with nerdtree-git
-"let g:webdevicons_enable = 0
-
-"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
-"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rb'] = ''
-" test fix to glyph artifacts:
-
-"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-"let g:DevIconsEnableFoldersOpenClose = 1
-"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
-
-"autocmd filetype nerdtree echom "NT filetype"
-
-"autocmd FileType nerdtree nnoremap <S-c> :call webdevicons#redraw()<cr>
-"autocmd FileType nerdtree nmap <S-c> :call webdevicons#redraw()<cr>
-"nmap <S-c> :call webdevicons#redraw()<cr>
-
-" testing WIP ctrlp integration:
-
-"let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
-"let g:ctrlp_user_command = 'echo "hi"'        " MacOSX/Linux
-
-"function! Function_Name_1(...)
-"   "echom "Function_Name_1!"
-"   "echom s:keyloop
-"   "echom ctrlp_allfiles
-"   "buffers
-"   "echo getloclist(1)
-"   "echom "line 1: " . getline(1)
-"   call setline(1, "asdf")
-"   "echom a:0
-"   "echom a:1
-"   "echom a:000 " a:000 contains a list of all arguments that were passed to the function
-"   "return
-"endfunction
-
-"function! Function_Name_2(...)
-"   "echom "Function_Name_2!"
-"   "echom "line 1: " . getline(1)
-"   "return
-"endfunction
-
-"let g:ctrlp_buffer_func = {
-"    \ 'enter': 'Function_Name_1',
-"    \ 'exit':  'Function_Name_2',
-"    \ }
-
-"fu! s:reformat(mrufs, ...)
-"   let cwd = getcwd()
-"   let cwd .= cwd !~ '[\/]$' ? ctrlp#utils#lash() : ''
-"   if {s:re}
-"      let cwd = exists('+ssl') ? tr(cwd, '/', '\') : cwd
-"      cal filter(a:mrufs, '!stridx(v:val, cwd)')
-"   en
-"   if a:0 && a:1 == 'raw' | retu a:mrufs | en
-"   let idx = strlen(cwd)
-"   if exists('+ssl') && &ssl
-"      let cwd = tr(cwd, '\', '/')
-"      cal map(a:mrufs, 'tr(v:val, "\\", "/")')
-"   en
-"   retu map(a:mrufs, '!stridx(v:val, cwd) ? "[☘ " . WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . "] " . strpart(v:val, idx) : v:val')
-"endf
-
 " flagship
 " disable while using airline:
 let g:loaded_flagship = 1
@@ -1671,6 +1301,303 @@ map <Leader>p :set paste<CR>o<esc>"+]p:set nopaste<cr>
 autocmd User Startified setlocal buftype=
 " source: https://github.com/mhinz/vim-startify/blob/master/doc/startify.txt
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Experiments {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" NERDTree experiments {{{2
+
+
+" customize colours colors theme highlighting
+" hi Directory guifg=#96CBFE guibg=#00ff00 ctermfg=red
+" source: http://www.ur-ban.com/blog/2011/04/01/nerdtree-directory-colours/
+" hi treeDir guifg=#ff0000 guibg=#00ff00 ctermfg=red
+
+" let loaded_nerd_tree = 1
+let NERDChristmasTree = 0
+
+" NERDTress File highlighting
+"function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+"" original:
+" exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+" exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+" " after first ]
+" "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #\]\@<=.*'. a:extension .'$#'
+" " trying contains on match
+" "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #\]\@<=.*'. a:extension .'$# contains=hideBracketsInNerdTree'
+"" trying contains on keyword:
+" "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #\]\@<=.*'. a:extension .'$# contains=hideBracketsInNerdTreeOpen,hideBracketsInNerdTreeClose'
+" " tyring contains on keyword with original match:
+" "exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$# contains=hideBracketsInNerdTreeOpen,hideBracketsInNerdTreeClose'
+"endfunction
+
+
+" standard:
+"exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" conceal cchar=_'
+" trying contained:
+"exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" contained conceal cchar=_ containedin=NERDTreeDir,NERDTreeFile'
+"
+"
+"
+" GOOD WORKING 4/12/2015 :)
+"exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" contained conceal cchar=_ containedin=ALL'
+"
+"
+"
+"exec 'autocmd filetype nerdtree syntax region hideBracketsInNerdTree start=/\[/ end=/\]/ conceal cchar=_'
+"exec 'autocmd filetype nerdtree syntax region hideBracketsInNerdTree start=/\[.\{1,2}/ end=/\]/ conceal cchar=_'
+"exec 'autocmd filetype nerdtree syntax region hideBracketsInNerdTree start=/\[/ end=/\]/ concealends cchar=_ containedin=NERDTreeDir,NERDTreeFile'
+"
+" GOOD WORKING 4/12/2015 :)
+ "exec 'autocmd filetype nerdtree highlight hideBracketsInNerdTreeClose ctermbg=green ctermfg=none guibg=green guifg=#151515'
+
+
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeOpen Acronym conceal cchar=_'
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose LICENSE conceal cchar=_'
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose LICENSE'
+"
+" test is working:
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose LICENSE containedin=NERDTreeDir,NERDTreeFile conceal cchar=_'
+"
+" test is working:
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose doc containedin=NERDTreeDir,NERDTreeFile'
+"
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose \[ containedin=NERDTreeDir,NERDTreeFile'
+"exec 'autocmd filetype nerdtree syntax keyword hideBracketsInNerdTreeClose \] containedin=NERDTreeDir,NERDTreeFile'
+
+" vim-devicons testing area {{{2
+
+" to test mac as default line endings on new files:
+"set ffs=mac,unix,dos
+
+"set regexpengine=1
+
+" Show matching brackets when text indicator is over them
+"set showmatch
+" How many tenths of a second to blink when matching brackets
+"set mat=8
+
+" airline config
+"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+" source: https://github.com/bling/vim-airline/issues/534
+
+" test not overwritting custom formatters:
+"
+" step 1: copy the function below to: /home/ryan/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/formatters/foo.vim
+"function! airline#extensions#tabline#formatters#foo#format(bufnr, buffers)
+    "return fnamemodify(bufname(a:bufnr), ':t') . ' CRAZY '
+  "endfunction
+
+" step 2: uncomment this line:
+"let g:airline#extensions#tabline#formatter = 'foo'
+
+"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+" enable vim-airline extensions:
+"let g:airline#extensions#capslock#enabled = 1
+""let g:airline#extensions#example#enabled = 1
+"let g:airline#extensions#whitespace#enabled = 0
+
+
+"let g:NERDTreeUnicodeDecorateFileNodes = 1
+"let g:NERDTreeUnicodeDecorateFileNodesDefaultSymbol = ''
+"let g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols = { 'styl': '', 'scss': '', 'htm': '', 'html': '', 'css': '', 'less': '', 'md': '', 'json': '', 'js': '', 'rb': '', 'php': '', 'py': '', 'coffee': '','mustache': '', 'hbs': '', 'conf': '', 'ini': '', 'yml': '', 'jpg': '', 'jpeg': '', 'bmp': '', 'png': '', 'gif': '', 'ai': '' }
+"let g:NERDTreeUnicodeDecorateFileNodesExactSymbols = { 'Gruntfile.js': '', 'Gulpfile.js': '' }
+
+"let g:NerdIconsAirlineOriginal = g:airline_section_c
+
+"function! NerdIconInit()
+"   echom 'vim enter nerd init'
+"  " cache original
+"  "let g:NerdIconsAirlineOriginal = g:airline_section_c
+""let tabline='hey'
+""let g:airline#extensions#tabline#fnamemod = 'xyz :p:. abc'
+""let tabline= call %!airline#extensions#tabline#get()
+"endfunction
+"let g:airline#extensions#tabline#fnamemod = ':t'
+
+" this works but is destructive:
+"let originalBufferName = buffer_name("%")
+" remove the \ before the double quotes:
+"execute \"file \".originalBufferName.""
+
+"let g:airline_section_c = ':D %t :O                            '
+"function! NerdIconAirlineInit()
+"  echom 'air init'
+"  let fileNodeExtension = expand("%:e")
+"  let fileNode = expand("%:s")
+"  let symbol = g:NERDTreeUnicodeDecorateFileNodesDefaultSymbol
+"  " cache original
+"  if !exists('g:NerdIconsAirlineOriginal')
+"    if exists('g:airline_section_c')
+"       let g:NerdIconsAirlineOriginal = g:airline_section_c
+"   else
+"      let g:NerdIconsAirlineOriginal = 'BLANK'
+"   endif
+"  endif
+"  "&ft
+"  "echo expand('%:s')
+"  "echom fileNodeExtension
+"  "echo &ft
+"  if has_key(g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
+"    "echo g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
+"    "echom 'has it'
+"    let symbol = g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
+"  endif
+
+"  if has_key(g:NERDTreeUnicodeDecorateFileNodesExactSymbols, fileNode)
+"    "echo g:NERDTreeUnicodeDecorateFileNodesExtensionSymbols[fileNode]
+"    "echom 'has it'
+"    let symbol = g:NERDTreeUnicodeDecorateFileNodesExactSymbols[fileNode]
+"  endif
+
+"let g:airline_section_c = symbol . '  ' . g:NerdIconsAirlineOriginal
+"let g:airline#extensions#tabline#left_sep = symbol . ' '
+"let g:airline_extensions_tabline_left_sep = symbol . ' '
+""set tabline = %#airline_tabsel# %(%{airline#extensions#tabline#get_buffer_name(1)}%) %#airline_tabsel_to_airline_tabfill#%#airline_tabfill#%#airline_tabfill#%=%#airline_tabfill_to_airline_tabtype#%#airline_tabtype# buffers
+
+""set tabline=&tabline.'a'
+"endfunction
+
+"augroup testgroup
+  "autocmd VimEnter * call NerdIconInit()
+  "autocmd BufWinEnter * call NerdIconInit()
+  "autocmd VimEnter * call NerdIconAirlineInit()
+  "autocmd BufWinEnter * call NerdIconAirlineInit()
+"  autocmd BufWinEnter * call NerdIconAirlineInit()
+"  autocmd VimEnter * call NerdIconAirlineInit()
+"augroup end
+  "autocmd BufWritePost * AirlineRefresh
+  "autocmd BufWritePost * AirlineRefresh
+" overrrides. probably dont wanna do that, try this:
+"let g:airline_section_c = airline#section#create(['%{getcwd()}'])
+
+"let g:airline#extensions#tabline#fnamemod = 'hey :p:.'
+"call g:airline#extensions#prepend_to_section('c', "foo")
+
+"function! airline#extensions#nerdicons#apply(...)
+  "if &ft ==# "csv"
+  "  call airline#extensions#prepend_to_section('gutter',
+  "        \ g:airline_left_alt_sep.' %{airline#extensions#csv#get_column()}')
+  "endif
+"endfunction
+
+"function! airline#extensions#nerdicons#init(ext)
+"  call a:ext.add_statusline_func('airline#extensions#nerdicons#apply')
+"endfunction
+
+  "let g:airline#extensions#tabline#formatter = 'default'
+
+  "" here is how you can define a 'foo' formatter:
+  "function! g:airline#extensions#tabline#foo#format(bufnr, buffers)
+  "  return fnamemodify(bufname(a:bufnr), ':t')
+  "endfunction
+  "let g:airline#extensions#tabline#formatter = 'foo'
+
+"set tabline+=a
+"set tabline=%#airline_tabmod# %(%{airline#extensions#tabline#get_buffer_name(1)}%) %#airline_tabmod_to_airline_tabfill#%#airline_tabfill#%#airline_tabfill#%=%#airline_tabfill_to_airline_tabtype#%#airline_tabtype# buffers
+
+  "function! MyPlugin(...)
+  "  "if &filetype == 'MyPluginFileType'
+  "    let w:airline_section_a = 'MyPlugin'
+  "    let w:airline_section_b = '%f'
+  "    let w:airline_section_c = '%{MyPlugin#function()}'
+  "    let g:airline_variable_referenced_in_statusline = 'foo'
+  "  "endif
+  "endfunction
+  "call a:ext.add_statusline_func('MyPlugin')
+
+  "function! NerdiconsApply(...)
+  "   "if &ft ==# "csv"
+  "   "   call airline#extensions#prepend_to_section('gutter',
+  "   "            \ g:airline_left_alt_sep.' %{airline#extensions#csv#get_column()}')
+  "   "endif
+  "     let w:airline_section_a = 'MyPlugin'
+  "let w:airline_section_b = '%f'
+  "let w:airline_section_c = '%{MyPlugin#function()}'
+  "let g:airline_variable_referenced_in_statusline = 'foo'"
+  "endfunction
+  "function! NerdiconsInit(ext)
+  "   call a:ext.add_statusline_func('NerdiconsApply')
+  "endfunction
+
+"function! airline#extensions#tabline#get_buffer_name(nr)
+"  return airline#extensions#tabline#{s:formatter}#format(a:nr, get(s:, 'current_buffer_list', s:get_buffer_list()))
+"endfunction
+
+"let orig = g:airline#extensions#tabline#left_sep
+"let orig = ">"
+"let g:airline#extensions#tabline#left_sep = 'WHAT' . orig
+"let g:airline#extensions#tabline#left_alt_sep = 'AAA'
+
+ "function! Foo(bufnr, buffers)
+ "   return fnamemodify(bufname(a:bufnr), ':t')
+ " endfunction
+ " let g:airline#extensions#tabline#formatter = 'Foo'
+
+" testing work with nerdtree-git
+"let g:webdevicons_enable = 0
+
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rb'] = ''
+" test fix to glyph artifacts:
+
+"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:DevIconsEnableFoldersOpenClose = 1
+"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
+
+"autocmd filetype nerdtree echom "NT filetype"
+
+"autocmd FileType nerdtree nnoremap <S-c> :call webdevicons#redraw()<cr>
+"autocmd FileType nerdtree nmap <S-c> :call webdevicons#redraw()<cr>
+"nmap <S-c> :call webdevicons#redraw()<cr>
+
+" testing WIP ctrlp integration:
+
+"let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+"let g:ctrlp_user_command = 'echo "hi"'        " MacOSX/Linux
+
+"function! Function_Name_1(...)
+"   "echom "Function_Name_1!"
+"   "echom s:keyloop
+"   "echom ctrlp_allfiles
+"   "buffers
+"   "echo getloclist(1)
+"   "echom "line 1: " . getline(1)
+"   call setline(1, "asdf")
+"   "echom a:0
+"   "echom a:1
+"   "echom a:000 " a:000 contains a list of all arguments that were passed to the function
+"   "return
+"endfunction
+
+"function! Function_Name_2(...)
+"   "echom "Function_Name_2!"
+"   "echom "line 1: " . getline(1)
+"   "return
+"endfunction
+
+"let g:ctrlp_buffer_func = {
+"    \ 'enter': 'Function_Name_1',
+"    \ 'exit':  'Function_Name_2',
+"    \ }
+
+"fu! s:reformat(mrufs, ...)
+"   let cwd = getcwd()
+"   let cwd .= cwd !~ '[\/]$' ? ctrlp#utils#lash() : ''
+"   if {s:re}
+"      let cwd = exists('+ssl') ? tr(cwd, '/', '\') : cwd
+"      cal filter(a:mrufs, '!stridx(v:val, cwd)')
+"   en
+"   if a:0 && a:1 == 'raw' | retu a:mrufs | en
+"   let idx = strlen(cwd)
+"   if exists('+ssl') && &ssl
+"      let cwd = tr(cwd, '\', '/')
+"      cal map(a:mrufs, 'tr(v:val, "\\", "/")')
+"   en
+"   retu map(a:mrufs, '!stridx(v:val, cwd) ? "[☘ " . WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . "] " . strpart(v:val, idx) : v:val')
+"endf
+
 " test: https://github.com/ryanoasis/vim-devicons/issues/140
 "let g:webdevicons_enable_unite = 0
 
@@ -1691,10 +1618,6 @@ autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Experiments
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " setup
 function! s:strip(input)
@@ -1748,7 +1671,4 @@ function! AlternateCached115()
 
 endfun
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" End Experiments
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" end experiments }}}1
