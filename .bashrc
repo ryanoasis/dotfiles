@@ -74,3 +74,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/ryan/perl5"; export PERL_MM_OPT;
 #source /home/ryan/.oh-my-git/prompt.sh
 
 #echo "end .bashrc"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
