@@ -65,7 +65,7 @@
     <property name="toggle_workspaces" type="empty"/>
     <property name="unredirect_overlays" type="bool" value="true"/>
     <property name="urgent_blink" type="empty"/>
-    <property name="use_compositing" type="bool" value="false"/>
+    <property name="use_compositing" type="bool" value="true"/>
     <property name="workspace_count" type="int" value="9"/>
     <property name="workspace_names" type="array">
       <value type="string" value="Home"/>

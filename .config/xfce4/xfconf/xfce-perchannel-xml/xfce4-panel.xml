@@ -62,6 +62,7 @@
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="task manager"/>
         <value type="string" value="skype"/>
+        <value type="string" value="drop-down terminal"/>
         <value type="string" value="shutter"/>
         <value type="string" value="nvidia-prime"/>
         <value type="string" value="xfce terminal"/>
