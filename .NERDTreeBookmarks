@@ -7,6 +7,7 @@ ko_aud_FE ~/www/ko/proto/aud/src/ko/AudienceViewBundle/Resources/public
 ko_automation ~/browser-qa-automation
 ko_da ~/www/ko/proto/da
 ko_da_FE ~/www/ko/proto/da/src/ko/DigitalAuditsBundle/Resources/public
+ko_dash_FE ~/www/ko/proto/dash/src/ko/CustomDashBundle/Resources/public
 ko_multi ~/www/ko/proto/multi
 ko_pdfgen ~/www/ko/proto/pdfgen
 ko_portal ~/www/ko/proto/portal
