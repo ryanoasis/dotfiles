@@ -1,8 +1,8 @@
 delay=2
-region=1
+region=3
 action=1
 show_mouse=1
-screenshot_dir=file:/home/ryan/Pictures/screenshots
+screenshot_dir=file:/home/ryan/Acronym/tasks/custom-dashboard/fonts
 app=ristretto
 last_user=
 
