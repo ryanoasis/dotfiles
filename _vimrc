@@ -1683,4 +1683,11 @@ function! AlternateCached115()
 
 endfun
 
+" https://github.com/ryanoasis/vim-devicons/issues/133#issuecomment-206779203
+
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+"let g:webdevicons_conceal_nerdtree_brackets = 1
+"let g:webdeviconsunicodeglyphdoublewidth = 2
+
 " end experiments }}}1
+
