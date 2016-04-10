@@ -120,6 +120,7 @@ Plugin 'ryanoasis/vim-devicons'
 "Plugin 'file:///home/ryan/projects/vim-devicons'
 "Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'kien/ctrlp.vim'
+Plugin 'shawncplus/phpcomplete.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -968,6 +969,16 @@ set showtabline=2
 " ctrl+f
 map <c-f> :call JsBeautify()<cr>
 autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PHP settings {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+
+" source: https://jordaneldredge.com/blog/setting-up-php-completion-in-vim/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Window size at startup {{{1
