@@ -121,6 +121,7 @@ Plugin 'ryanoasis/vim-devicons'
 "Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'kien/ctrlp.vim'
 Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -305,7 +306,8 @@ let g:syntastic_javascript_jscs_args = " --fix --config /home/ryan/dotfiles/.jsc
 
 " Q. Syntastic supports several checkers for my filetype - how do I tell it
 " which one(s) to use?
-let g:syntastic_javascript_checkers = ["jshint", "jscs"]
+"let g:syntastic_javascript_checkers = ["jshint", "jscs", "jsxhint"]
+let g:syntastic_javascript_checkers = ["jsxcs", "jsxhint"]
 " source: https://github.com/scrooloose/syntastic
 
 " How can I display together the errors found by all checkers enabled for the
