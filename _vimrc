@@ -189,7 +189,7 @@ set shiftwidth=3
 " Visualize listchars (white space, tabs, etc)
 "	set listchars=tab:>-,trail:~,extends:>,precedes:<
 "	¦, ┆, ︙ or │
-set listchars=tab:\|\ ,trail:~,extends:>,precedes:<
+"set listchars=tab:\|\ ,trail:~,extends:>,precedes:<
 set listchars=tab:\\ ,trail:~,extends:>,precedes:<
 " http://stackoverflow.com/questions/1675688/make-vim-show-all-white-spaces-as-a-character
 set list
