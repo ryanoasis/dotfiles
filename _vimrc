@@ -881,6 +881,10 @@ nmap <leader>l :set list!<CR>
 :command! SortCSSBraceContents SortCSS
 " to sort on just selected simply add sort! o_O , e.g. :'<,'>sort
 
+:vnoremap <leader>x :!tidy -q -i --show-errors 0 --markup no --indent auto<CR>
+:nnoremap <leader>x :!tidy -q -i --show-errors 0 --markup no --indent auto %<CR>
+" source: http://vim.wikia.com/wiki/Cleanup_your_HTML
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom Functions {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -971,9 +975,17 @@ set showtabline=2
 
 " ctrl+f
 map <c-f> :call JsBeautify()<cr>
-autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType javascript vnoremap <buffer> <c-f> :call RangeJsBeautify()<cr>
 
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify() <bar> execute 'normal gg=G'<cr>
+autocmd FileType php noremap <buffer> <c-f> :call HtmlBeautify() <bar> execute 'normal gg=G'<cr>
 
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify() <bar> execute 'normal gg=G'<cr>
+autocmd FileType php vnoremap <buffer> <c-f> :call RangeHtmlBeautify() <bar> execute 'normal gg=G'<cr>
+" sources
+" http://stackoverflow.com/questions/815548/how-do-i-tidy-up-an-html-files-indentation-in-vi
+" https://github.com/maksimr/vim-jsbeautify
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
