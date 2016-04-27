@@ -1,5 +1,5 @@
 favorites=firefox.desktop,thunderbird.desktop,hexchat.desktop,mintinstall.desktop,Thunar.desktop,gedit.desktop,gcalctool.desktop,xfce4-terminal.desktop
-recent=libreoffice-startcenter.desktop,libreoffice-writer.desktop,mintinstall.desktop,libreoffice-impress.desktop,sonicwall-netextender.desktop,geany.desktop,xfce4-taskmanager.desktop,libreoffice-calc.desktop,gcalctool.desktop,gucharmap.desktop
+recent=gucharmap.desktop,libreoffice-calc.desktop,libreoffice-writer.desktop,libreoffice-startcenter.desktop,mintinstall.desktop,libreoffice-impress.desktop,sonicwall-netextender.desktop,geany.desktop,xfce4-taskmanager.desktop,gcalctool.desktop
 button-title=Applications
 button-icon=/usr/share/linuxmint/logo.png
 button-single-row=false
