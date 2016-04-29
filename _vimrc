@@ -989,7 +989,7 @@ if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
   "set lines=999 columns=999
-  "set lines=57 columns=210
+  set lines=57 columns=210
 else
   " This is console Vim.
   if exists("+lines")
