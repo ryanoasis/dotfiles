@@ -38,7 +38,7 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'joonty/vdebug'
 Plugin 'tpope/vim-surround'
-"Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-abolish'
 "Plugin 'othree/javascript-libraries-syntax.vim'
@@ -46,37 +46,19 @@ Plugin 'maksimr/vim-jsbeautify'
 " einars/js-beautify moved to beautify-web/js-beautify
 Plugin 'beautify-web/js-beautify'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'scrooloose/nerdtree' " commented out, because trying git-nerdtree
-" using official nerdtree plugin again now a dependency for Xuyuanp/nerdtree-git-plugin
-
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'ramitos/jsctags'
-"Plugin 'kien/ctrlp.vim'
-"Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
 "Plugin 'tpope/vim-markdown'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-"Plugin 'user/L9'
-" gives error
-"Plugin 'ascenator/L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'airblade/vim-gitgutter'
 "Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
@@ -94,8 +76,6 @@ Plugin 'vim-scripts/text-object-left-and-right'
 " Plugin 'chrisbra/changesPlugin' " didnt like that it conflicted with
 " gitgutter (didnt seem like there was a way to have both) and the styling i didnt find too appealing
 Plugin 'mattn/gist-vim'
-" Plugin 'Xuyuanp/git-nerdtree' " deprecated
-" having issues: e605 exception nerdtree.invalid Argument Error invalid path
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'kien/rainbow_parentheses.vim'
@@ -106,20 +86,16 @@ Plugin 'heavenshell/vim-jsdoc'
 Bundle 'ervandew/supertab'
 " Track the engine.
 Bundle 'SirVer/ultisnips'
-"Bundle 'terryma/vim-smooth-scroll'
+Bundle 'terryma/vim-smooth-scroll'
 Bundle 'itchyny/lightline.vim'
 Plugin 'kshenoy/vim-signature'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
-"Plugin 'tpope/vim-flagship'
 "Plugin 'koron/minimap-vim'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mhinz/vim-startify'
 Plugin 'ryanoasis/vim-devicons'
 "Plugin 'file:///home/ryan/projects/vim-devicons'
-"Plugin 'ctrlpvim/ctrlp.vim'
-"Plugin 'kien/ctrlp.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mxw/vim-jsx'
 
