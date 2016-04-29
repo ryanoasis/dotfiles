@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=TMUX Tabs: KO Apps [Proto]
+Comment=
+Exec=./tmux-run-acronym-git-proto-repos.sh
+Icon=/home/ryan/Dropbox/images/svgs/tmux-logomark.svg
+Path=/home/ryan
+Terminal=true
+StartupNotify=false

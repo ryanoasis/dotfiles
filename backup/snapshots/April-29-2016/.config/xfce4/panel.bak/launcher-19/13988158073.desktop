@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Screencapture: Monitor 2
+Comment=caputre monitor 2 as gif
+Exec=/home/ryan/Dropbox/Bash-Scripts/byzanz-screencapture-monitor2.sh
+Icon=gnome-screenshot
+Path=~/Dropbox/Bash-Scripts
+Terminal=true
+StartupNotify=false

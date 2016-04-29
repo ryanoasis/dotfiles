@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Layout: Single Screen
+Comment=
+Exec=/home/ryan/.screenlayout/ryan-randr-screenlayout-single.sh
+Icon=text-x-script
+Path=
+Terminal=false
+StartupNotify=false
+X-XFCE-Source=file:///usr/share/applications/Single%20Screen.desktop

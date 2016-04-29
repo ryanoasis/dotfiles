@@ -1,0 +1,60 @@
+favorites=firefox.desktop,thunderbird.desktop,hexchat.desktop,mintinstall.desktop,Thunar.desktop,gedit.desktop,gcalctool.desktop,xfce4-terminal.desktop
+recent=eclipse.desktop,xfce-wm-settings.desktop,mintdrivers.desktop,xfce-settings-manager.desktop,xfce-backdrop-settings.desktop,mintinstall.desktop,nvidia-settings.desktop,xfce4-taskmanager.desktop,kde4-konsole.desktop,bum.desktop
+button-title=Applications
+button-icon=/home/ryan/Dropbox/images/icon-like/tux.svg
+button-single-row=false
+show-button-title=false
+show-button-icon=true
+launcher-show-name=true
+launcher-show-description=true
+item-icon-size=3
+hover-switch-category=false
+category-icon-size=2
+load-hierarchy=true
+recent-items-max=10
+favorites-in-recent=true
+display-recent-default=true
+position-search-alternate=false
+position-commands-alternate=false
+position-categories-alternate=true
+menu-width=542
+menu-height=664
+menu-opacity=100
+command-settings=xfce4-settings-manager
+show-command-settings=true
+command-lockscreen=xflock4
+show-command-lockscreen=true
+command-switchuser=mdmflexiserver
+show-command-switchuser=true
+command-logout=xfce4-session-logout
+show-command-logout=true
+command-menueditor=menulibre
+show-command-menueditor=true
+command-profile=mugshot
+show-command-profile=true
+search-actions=4
+
+[action0]
+name=Man Pages
+pattern=#
+command=exo-open --launch TerminalEmulator man %s
+regex=false
+
+[action1]
+name=Wikipedia
+pattern=!w
+command=exo-open --launch WebBrowser https://en.wikipedia.org/wiki/%u
+regex=false
+
+[action2]
+name=Run in Terminal
+pattern=!
+command=exo-open --launch TerminalEmulator %s
+regex=false
+
+[action3]
+name=Open URI
+pattern=^(file|http|https):\\/\\/(.*)$
+command=exo-open \\0
+regex=true
+
