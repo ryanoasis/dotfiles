@@ -298,6 +298,8 @@ let g:syntastic_always_populate_loc_list = 1
 " :SyntasticCheck phpcs phpmd
 " :SyntasticCheck jscs
 
+let g:syntastic_vim_checkers = ['vint']
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe (YCM) config {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
