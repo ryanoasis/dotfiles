@@ -132,6 +132,9 @@ colorscheme jellybeans
 
 " working directory always where the active buffer is located
 "set autochdir
+autocmd BufEnter * silent! lcd %:p:h
+" source: http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
+" breaks load session?
 
 set ruler
 
