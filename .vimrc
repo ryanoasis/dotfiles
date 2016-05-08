@@ -878,6 +878,10 @@ nmap <leader>l :set list!<CR>
 :nnoremap <leader>x :!tidy -q -i --show-errors 0 --markup no --indent auto %<CR>
 " source: http://vim.wikia.com/wiki/Cleanup_your_HTML
 
+imap <C-Return> <CR><CR><C-o>k<C-t>
+" source:
+" http://stackoverflow.com/questions/4477031/vim-auto-indent-with-newline
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom Functions {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1265,6 +1269,7 @@ endif
 
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
 set guifont=PragmataPro\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
+set guifont=Fira\ Code\ Medium\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Medium\ 12
 
 " testing rounded separators (extra-powerline-symbols):
 "let g:airline_left_sep = "\uE0BA"
