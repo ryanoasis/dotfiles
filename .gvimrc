@@ -67,6 +67,8 @@ map ,= :let &guifont = substitute(&guifont, '\(\d\+\)', '\="" . (submatch(1) + 1
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular\ 12
 "set guifont=PragmataPro\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
+"set guifont=Fura\ Code\ Regular\ 12
+"set guifont=Fira\ Code\ Retina\ Regular\ 12
 
 "set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 12
 
