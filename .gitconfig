@@ -1,0 +1,202 @@
+[core]
+	pager = less -q
+	excludesfile = globalgitignore
+	# ignore unix file permissions
+	filemode = false
+	whitespace=-indent-with-non-tab,trailing-space,cr-at-eol
+
+# https://github.com/git/git/tree/master/contrib/diff-highlight
+# finds pairs of lines, and highlights the differing segments
+[pager]
+	log = ~/scripts/perl/diff-highlight | less -x1,5
+	show = ~/scripts/perl/diff-highlight | less -x1,5
+	diff = ~/scripts/perl/diff-highlight | less -x1,5
+	# source of '-x1,5':
+	# to show tabs as 4 spaces instead of default which seems to be 8?
+	# http://stackoverflow.com/questions/10581093/setting-tabwidth-to-4-in-git-show-git-diff
+
+[alias]
+# basics:
+	s = status -s
+	d = diff
+	ld = diff --color-words --ignore-space-at-eol
+	dl = diff --color-words --ignore-space-at-eol
+	#aliases for "commit"
+	com = commit
+	c = commit
+	#aliases for checkout
+	co = checkout
+	#aliases for branch
+	br = branch
+	# aliases for pull
+	pl = pull
+	# aliases for push
+	ps = push
+	
+	wd = diff --word-diff --ignore-space-at-eol
+	dw = diff --word-diff --ignore-space-at-eol
+	# git diff -w (--ignore-all-space)
+	diw = diff -w --ignore-space-at-eol
+	# git diff --ignore-space-at-eol
+	deol = diff --ignore-space-at-eol
+	# show only untracked files
+		## http://stackoverflow.com/questions/3065650/whats-the-simplest-way-to-git-a-list-of-conflicted-files
+	su = diff --name-only --diff-filter=U
+	
+	# add only untracked files
+	# http://stackoverflow.com/questions/7446640/adding-only-untracked-files
+	#au="ls-files -o --exclude-standard | xargs -i git add '{}'"
+	# or
+	au = !"git add $(git ls-files -o --exclude-standard)"
+	# http://stackoverflow.com/questions/7446640/adding-only-untracked-files
+	
+	alias = "config --get-regexp ^alias."
+	# source: http://stackoverflow.com/questions/7066325/list-git-aliases
+	
+# project management and workflow:
+
+	# http://stackoverflow.com/questions/1981830/undo-part-of-unstaged-changes-in-git
+	#checkpoint = !git stash; git stash apply
+	# checkpoint with shell param for naming the stash + date + give list when done
+	checkpoint = !sh -c \"git stash save $(date +%Y-%m-%d-%H:%M:%S) - $1 && git stash apply && git stash list -5 && echo 'Stopped at 5 (there may be more stashes) ...'\"
+	
+	# testing:
+	#tgif = log -- config/$1
+	#tgif2 = !sh -c \"git log -- $1\"
+	# GIT_TRACE=1 git tgif2 "config/"
+	
+	# http://rudygems.com/post/1085402153/git-pp-git-push-git-pull
+	pp = !sh -c 'git pull $0 $1 && git push $0 $1'
+	
+# logging:
+	# http://dropshado.ws/post/7844857440/gitconfig-colors
+	# http://stackoverflow.com/questions/5889878/color-in-git-log
+	# http://scie.nti.st/2007/5/2/colors-in-git
+	lt = log --word-diff --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr)%Creset %C(yellow)[%an]%Creset' --abbrev-commit --date=relative
+	l = log --word-diff --oneline --date-order --graph --decorate --color
+	today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+	scrum = log --since yesterday --author='Ryan M'
+	who = shortlog -n -s --no-merges
+	# http://serverfault.com/questions/175052/how-to-tell-which-local-branch-is-tracking-which-remote-branch-in-git
+	track = remote show origin
+	
+# View the change history of a file
+# http://stackoverflow.com/questions/278192/view-the-change-history-of-a-file-using-git-versioning
+# e.g. git log -p --follow web/css/backend/default.css
+	follow = log -p --follow
+	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
+
+# http://stackoverflow.com/questions/4649356/how-do-i-run-git-log-to-see-changes-only-for-a-specific-branch
+# how-do-i-run-git-log-to-see-changes-only-for-a-specific-branch
+# assuming that your branch was created off of master:
+# git log master..
+
+# how to grep in the git history
+# pickaxe (-S) option of git log
+# git log -SFoo -- path_containing_change
+
+# find changes in all branches:
+# http://www.kernel.org/pub/software/scm/git/docs/git-log.html
+# http://stackoverflow.com/questions/8440182/search-for-a-code-change-in-all-branches
+#git log --decorate --branches -S "ZE.country"
+# find changes in all branches when know the filepath:
+#git log --decorate --branches -S "ZE.country" -- lib/model/randomizer/koRankingRandomizer.class.php
+
+# find branches that contain commit via hash:
+# git branch --contains <commit>
+
+# merging ignore conflict (take either branch merging into (HEAD) or merging from (MERGE_HEAD)
+# http://www.gelato.unsw.edu.au/archives/git/0611/30902.html
+# git checkout HEAD the/file/you/wanted.c
+# (or, if you want to take it from the source you are merging _from_, just 
+# use MERGE_HEAD instead of HEAD).
+
+
+[branch]
+# always setup 'git pull' to rebase instead of merge
+# "git pull --rebase" by default
+autosetuprebase = always
+
+# SET DIFF
+# http://stackoverflow.com/questions/1881594/use-winmerge-inside-of-git-to-file-diff
+#
+
+#[diff]
+#	tool = winmerge
+#	#tool = kdiff3
+#	#external = C:/Development/Bash-Scripts/winmerge.sh \"$LOCAL\" \"$REMOTE\"
+#[difftool "winmerge"]
+#	#cmd = C:/Development/WinMerge/WinMergeU.exe -e -ub \"$1\" \"$2\"
+#	cmd = winmerge.sh \"$LOCAL\" \"$REMOTE\"
+#	#cmd = winmerge.sh \"\" \"\"
+#	#cmd = winmerge.sh \"$LOCAL\" \"$REMOTE\"
+#	path = "C:/Development/Bash-Scripts"
+#[difftool]
+#	prompt = true
+	#prompt = false
+
+#[diff]
+#    tool = any-name
+#[difftool "any-name"]
+#    cmd = "\"C:/path/to/my/ext/diff.exe\" \"$LOCAL\" \"$REMOTE\""
+
+
+#[mergetool "winmerge"]
+#    cmd = 'C:/Development/WinMerge/WinMergeU.exe' \"$MERGED\"
+
+# now following:
+# http://davesquared.net/2009/02/setting-up-diff-and-merge-tools-for-git.html
+
+# use internal diff for now (commented out)
+#[diff]
+#	external = git-diff-wrapper.sh
+	
+[merge]
+    tool = diffmerge
+    #tool = meld
+
+[mergetool]
+	keepBackup = false
+	prompt = false
+
+[mergetool "diffmerge"]
+	cmd = /home/ryan/Dropbox/public-bash-scripts/git-merge-diffmerge-wrapper.sh "$PWD/$LOCAL" "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$MERGED" 
+    trustExitCode = false
+ keepBackup = false
+ prompt = false
+ 
+[mergetool "kdiff3"]
+    path = C:/Program Files/KDiff3/kdiff3.exe
+    keepBackup = false
+    trustExitCode = false 
+	
+# set default difftool (else need flag: --tool=<name>
+[diff]
+    #tool = diffMerge
+	#tool = meld
+	#external = meld
+
+[difftool "kdiff3"]
+    path = C:/Program Files/KDiff3/kdiff3.exe
+    keepBackup = false
+    trustExitCode = false
+	
+[difftool "diffMerge"]
+ #cmd = /c/Users/Ryan/Bash-Scripts/git-merge-diffmerge-wrapper.sh "$PWD/$LOCAL" "$PWD/$BASE"
+ cmd = \"C:/Program Files/SourceGear/Common/DiffMerge/sgdm.exe\" $LOCAL $REMOTE
+    trustExitCode = false
+ keepBackup = false
+ prompt = false
+ 
+# safety!!!!!!!!!
+# per https://www.kernel.org/pub/software/scm/git/docs/git-config.html#_variables
+[push]
+	default = upstream
+[color]
+	ui = auto
+	[color "diff"]
+		meta = yellow bold
+		frag = magenta bold
+		old = red bold
+		new = green bold
+		whitespace = white red
