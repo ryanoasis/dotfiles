@@ -1018,192 +1018,6 @@ endif
 "let g:webdevicons_conceal_nerdtree_brackets = 0
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
 
-" NOTE: keep at bottom of file:
-" reload your .vimrc file without restarting vim
-" Only if you're editing it
-":so % 
-" Else if not editing this file directly
-":so $MYVIMRC
-
-
-
-" test vim-external-minimap server bindings:
-
-":nmap h h:let curwin=winnr()<CR>:keepjumps windo redraw<CR>:execute curwin . "wincmd w"<CR>
-":nnoremap j j:let curwin=winnr()<CR>:keepjumps windo redraw<CR>j:execute curwin . "wincmd w"<CR>
-":nmap k k:let curwin=winnr()<CR>:keepjumps windo redraw<CR>:execute curwin . "wincmd w"<CR>
-":nmap l l:let curwin=winnr()<CR>:keepjumps windo redraw<CR>:execute curwin . "wincmd w"<CR>
-
-"nmap <silent> j j | :execute ":silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send 'j'"<CR>
-"nmap <silent> k k | :execute ":silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send 'k'"<CR>
-"nmap <silent> <c-u> <c-u> | :execute ":silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send '<c-u>'"<CR>
-"nmap <silent> <c-d> <c-d> | :execute ":silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send '<c-d>'"<CR>
-
-" ^ these need to be mapped to a goto line on the server!
-
-"function! externalMinimap#GotoLine(line)
-function! GotoLine(line)
-	"echom "gotoline called"
-	"echom a:line
-	execute "silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . a:line . "<CR>'"
-endfunction
-
-function! MinimapOpen()
-	execute "silent !gvim -R % +" . shellescape(line(".")) . ' "+set nonumber" "+set foldcolumn=0" "+set tabline=" "+set norelativenumber" "+set noruler" "+set laststatus=0" "+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 3" "+set lines=130" "+set columns=90" --servername VIM-EXTERNAL-MINIMAP'
-endfunction
-
-function! UpdateHighlight()
-	let l:start = line("w0")
-	let l:end = line("w$")
-	let l:centerize = "zz"
-	let l:file = expand('%:t')
-	"let l:matchUpdate = "match externalminimap /".'\\%'."".l:start.'l\|'.'\\%'."".l:end."l/"
-	" now lets match the range: /\%>10l\&\%<14l/
-	" ^ matches line 10 to 14^
-	let l:matchUpdate = "match externalminimap /".'\\%>'."".l:start.'l\&'.'\\%<'."".l:end."l/"
-	let l:signStartUnplaceUpdate = "sign unplace 1 file=" . l:file
-	let l:signEndUnplaceUpdate = "sign unplace 2 file=" . l:file
-	let l:signStartUpdate = "sign place 1 line=" . l:start . " name=wholeline file=" . l:file
-	let l:signEndUpdate = "sign place 2 line=" . l:end . " name=wholeline file=" . l:file
-	execute "silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . l:matchUpdate . "<CR>'"
-	execute "silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . l:signStartUnplaceUpdate . "<CR>'"
-	execute "silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . l:signEndUnplaceUpdate . "<CR>'"
-	execute "silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . l:signStartUpdate . "<CR>'"
-	execute "silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . l:signEndUpdate . "<CR>'"
-	execute "silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send '" . l:centerize . "<CR>'"
-endfunction
-
-" could try signs (to get it to appear the width of the window):
-" :sign define wholeline linehl=ErrorMsg
-" :sign place 1 line=3 name=wholeline file=aw.advancedfilters.js
-
-function! GotoCurrentLine()
-	call GotoLine(line('.'))
-endfunction
-
-function! ServerRunning()
-	"execute "silent !vim --serverlist <CR>"
-	let l:servers = split(system("vim --serverlist"), "\n")
-	let l:running = 0
-	"echom l:servers[0]
-	for i in l:servers
-		if i == "VIM-EXTERNAL-MINIMAP"
-			"echom "running"
-			let l:running = 1
-		endif
-	endfor
-	
-	if l:running == 1
-		"echom "server is running, execute methods"
-	else
-		"echom "server is NOT running, NOT executing methods"
-	endif
-
-	return l:running
-endfunction
-
-
-function! MinimapUpdate()
-	"echom "minimapupdate"
-	if ServerRunning() == 1
-		call GotoCurrentLine()
-		call UpdateHighlight()
-	endif
-endfunction
-
-
-"nmap <silent> j j | :execute ":silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . line('.') . "<CR>'"<CR>
-"nmap <silent> k k | :execute ":silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . shellescape(line(".")) . "<CR>'"<CR>
-"nmap <silent> <c-u> <c-u> | :execute ":silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . shellescape(line(".")) . "<CR>'"<CR>
-"nmap <silent> <c-d> <c-d> | :execute ":silent !vim --servername VIM-EXTERNAL-MINIMAP --remote-send ':" . shellescape(line(".")) . "<CR>'"<CR>
-
-" refactor:
-" using map_bar (help map_bar)
-
-"highlight externalminimap ctermbg=lightgray guibg=lightgray
-highlight link externalminimap Visual
-sign define wholeline linehl=Search
-
-
-"nmap <silent> j j | :call MinimapExecute()<CR>
-"nmap <silent> k k | :call MinimapExecute()<CR>
-"nmap <silent> <c-u> <c-u> | :call MinimapExecute()<CR>
-"nmap <silent> <c-d> <c-d> | :call MinimapExecute()<CR>
-"nmap <silent> <LeftMouse> <LeftMouse> | :call MinimapExecute()<CR>
-"nmap j :call GotoLine(2)<CR>
-
-"nnoremap <silent> j j | :call MinimapExecute()<CR>
-"nnoremap <silent> k k | :call MinimapExecute()<CR>
-"nnoremap <silent> <c-u> <c-u> | :call MinimapExecute()<CR>
-"nnoremap <silent> <c-d> <c-d> | :call MinimapExecute()<CR>
-
-" patch/hack fix the screen flashing annoyance until proper solution?
-set novisualbell
-
-" see: help map_bar
-"nnoremap <silent> j j|:call MinimapUpdate()<CR>
-"nnoremap <silent> k k|:call MinimapUpdate()<CR>
-"nnoremap <silent> <c-u> <c-u>|:call MinimapUpdate()<CR>
-"nnoremap <silent> <c-d> <c-d>|:call MinimapUpdate()<CR>
-"nnoremap <silent> <S-g> <S-g>|:call MinimapUpdate()<CR>
-"nnoremap <silent> gg gg |:call MinimapUpdate()<CR>
-"nnoremap <silent> <CR> <CR> |:call MinimapUpdate()<CR>
-
-nnoremap <leader>mm :call MinimapOpen()<CR>
-
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
-
-"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
-
-"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = 'M'
-
-" Replace any `[` or `]` with underscore.
-" We'll hide the underscores anyways.
-"syntax match hideBracketsInNerdTree "[\]|\[]*" conceal cchar=_
-
- "exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" conceal cchar=_'
-
-" my test look behind:
-" /\]\@<=.*$
-" look behind part: \@<= (in front of this is what you are looking behind of)
-
-" test:
-" /\]\@<=.*md$
-
-" not working?
-" /\]\@<=.*md$
-
-" check ones active:
-"autocmd filetype nerdtree
-" clear all:
-"autocmd! filetype nerdtree
-
-"autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" conceal cchar=_
-
-" seems to be working well!
-"autocmd filetype nerdtree syn match md #\]\@<=.*md$#
-"autocmd filetype nerdtree syn match md #\]\@<=.*md$#
-
-" cant seem to have both at the same time. need to ignore [ and ] on the syn
-" match:
-
-" tester
-"hi tester ctermbg=green ctermfg=none guibg=green guifg=#151515
-"syntax keyword tester LICENSE
-
-" tester on nerdtree
-"autocmd filetype nerdtree highlight tester ctermbg=green ctermfg=none guibg=green guifg=#151515
-"autocmd filetype nerdtree syntax keyword tester LICENSE
-
-
-" Must be completely hidden otherwise cursorline doesn't highlight the concealed bg color correctly.
-"set conceallevel=3
-"set concealcursor=nvic
-
-"let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
-" for testing:
-"let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-
 
 "hi Comment guibg=#212121
 "hi jsDocParam guibg=#212121
@@ -1284,13 +1098,6 @@ set verbosefile=/home/ryan/debug-vim-verbose.txt
 
 "let g:ctrlp_line_prefix = WebDevIconsGetFileTypeSymbol('foo.txt')
 
-" test vim startify
-"let g:startify_custom_header = 'hey'
-"let g:startify_custom_entry_display = "\" (\" . WebDevIconsGetFileTypeSymbol(entry_path) . \") \" . repeat(' ', (3 - strlen(index))) . entry_path"
-"    let g:startify_custom_file_entry_display = 
-"            \ "' >' . repeat(' ', (3 - strlen(index))) . entry_path"
-"let g:foobar = "foo"
-" hey!
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -1299,11 +1106,6 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 "let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:webdevicons_gui_glyph_fix = 1
-
-"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = '['
-"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
-
-
 
 "let &t_SI .= "\<Esc>[?2004h"
 "let &t_EI .= "\<Esc>[?2004l"
@@ -1334,3 +1136,14 @@ source .vimrc_experiments
 
 " end experiments }}}1
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Bottom {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" NOTE: keep at bottom of file:
+" reload your .vimrc file without restarting vim
+" Only if you're editing it
+":so % 
+" Else if not editing this file directly
+":so $MYVIMRC
