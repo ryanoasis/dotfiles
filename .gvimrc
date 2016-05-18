@@ -71,6 +71,9 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular\ 12
 "set guifont=Fira\ Code\ Retina\ Regular\ 12
 
 "set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ 12
+"set guifont=Iosevka\ Nerd\ Font\ 13
+set guifont=Fantasque\ Sans\ Mono\ Nerd\ Font\ 14
+"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ 10
 
 "let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
 
