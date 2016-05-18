@@ -1,6 +1,9 @@
+[user]
+	name = Ryan L McIntyre
+	email = ryanoasis@gmail.com
 [core]
 	pager = less -q
-	excludesfile = globalgitignore
+	excludesfile = ~/.globalgitignore
 	# ignore unix file permissions
 	filemode = false
 	whitespace=-indent-with-non-tab,trailing-space,cr-at-eol
