@@ -41,7 +41,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-abolish'
-"Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'maksimr/vim-jsbeautify'
 " einars/js-beautify moved to beautify-web/js-beautify
 Plugin 'beautify-web/js-beautify'
@@ -94,10 +94,13 @@ Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
 "Plugin 'koron/minimap-vim'
 Plugin 'mhinz/vim-startify'
+"Plugin 'mhinz/vim-signify' " still liking vim-gitgutter more
 Plugin 'ryanoasis/vim-devicons'
 "Plugin 'file:///home/ryan/projects/vim-devicons'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'csscomb/vim-csscomb'
+Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
