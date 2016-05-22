@@ -320,6 +320,10 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
+
+" try to fix random freeze on autocomplete:
+let g:ycm_register_as_syntastic_checker = 0
+
 " source: https://github.com/Valloric/YouCompleteMe#i-get-a-weird-window-at-the-top-of-my-file-when-i-use-the-semantic-engine
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
