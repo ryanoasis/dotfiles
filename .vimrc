@@ -13,8 +13,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = ','
+let g:mapleader = ','
 " source: http://amix.dk/vim/vimrc.html
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -130,7 +130,10 @@ colorscheme jellybeans
 
 " working directory always where the active buffer is located
 "set autochdir
-autocmd BufEnter * silent! lcd %:p:h
+augroup vimrc_set_working_dir
+  au!
+  autocmd BufEnter * silent! lcd %:p:h
+augroup end
 " source: http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
 " breaks load session?
 
@@ -275,16 +278,16 @@ let g:syntastic_check_on_open=0
 
 " custom jshint rules for KO (acrowidgets, but should apply to all JS files)
 " /home/ryan/www/ko/proto/acrowidgets/.jshintrc
-let g:syntastic_javascript_jshint_args = " --config /home/ryan/dotfiles/.jshintrc"
-let g:syntastic_javascript_jscs_args = " --fix --config /home/ryan/dotfiles/.jscsrc --reporter text --force"
+let g:syntastic_javascript_jshint_args = ' --config /home/ryan/dotfiles/.jshintrc'
+let g:syntastic_javascript_jscs_args = ' --fix --config /home/ryan/dotfiles/.jscsrc --reporter text --force'
 
 " for troubleshooting:
 "let g:syntastic_debug=3
 
 " Q. Syntastic supports several checkers for my filetype - how do I tell it
 " which one(s) to use?
-"let g:syntastic_javascript_checkers = ["jshint", "jscs", "jsxhint"]
-let g:syntastic_javascript_checkers = ["jsxcs", "jsxhint"]
+"let g:syntastic_javascript_checkers = ['jshint', 'jscs', 'jsxhint']
+let g:syntastic_javascript_checkers = ['jsxcs', 'jsxhint']
 " source: https://github.com/scrooloose/syntastic
 
 " How can I display together the errors found by all checkers enabled for the
@@ -332,9 +335,9 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
 "let g:UltiSnipsExpandTrigger = "<S-tab>"
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 " from ultisnips help:
 " Supertab - UltiSnips has built-in support for Supertab. Just use a recent
@@ -465,7 +468,7 @@ let g:ctrlp_cmd = 'CtrlPMRU'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " custom mapping shortcuts
-"if exists(":Tabularize")
+"if exists(':Tabularize')
 	nmap <Leader>t= :Tabularize /=<CR>
 	vmap <Leader>t= :Tabularize /=<CR>
 	"nmap <Leader>t| :Tabularize /|<CR>
@@ -494,13 +497,13 @@ set cole=0
 " change to 1 to enable concealing
 let g:javascript_conceal = 0
 
-let g:javascript_conceal_function   = "ƒ"
-let g:javascript_conceal_null       = "ø"
-let g:javascript_conceal_this       = "@"
-let g:javascript_conceal_return     = "⇚"
-let g:javascript_conceal_undefined  = "¿"
-let g:javascript_conceal_NaN        = "ℕ"
-let g:javascript_conceal_prototype  = "¶"
+let g:javascript_conceal_function   = 'ƒ'
+let g:javascript_conceal_null       = 'ø'
+let g:javascript_conceal_this       = '@'
+let g:javascript_conceal_return     = '⇚'
+let g:javascript_conceal_undefined  = '¿'
+let g:javascript_conceal_NaN        = 'ℕ'
+let g:javascript_conceal_prototype  = '¶'
 
 " fix conceal color
 highlight Conceal guifg=#ffb964 guibg=#151515
@@ -573,7 +576,7 @@ nnoremap ; :
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-if has("autocmd")
+if has('autocmd')
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
@@ -653,7 +656,10 @@ highlight ExtraWhitespace ctermfg=237 guifg=#444444 gui=undercurl cterm=undercur
 "autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*/
 "autocmd BufWinEnter * match ExtraWhitespace / {2, }/
 " do 2 or more leading spaces to avoid highlighting some comment doc
-autocmd FileType c,cpp,java,php,ruby,python,javascript,js,css autocmd BufWinEnter * match ExtraWhitespace /^[ ]\{2,}/
+augroup vimrc_extra_whitespace_source_files
+  au!
+  autocmd FileType c,cpp,java,php,ruby,python,javascript,js,css autocmd BufWinEnter * match ExtraWhitespace /^[ ]\{2,}/
+augroup end
 
 nnoremap <Leader>ho :match ExtraWhitespace /^[ ]\{2,}/<CR>
 nnoremap <Leader>hn :match<CR>
@@ -663,7 +669,15 @@ nnoremap <Leader>hn :match<CR>
 " http://www.openlogic.com/wazi/bid/188101/Create-Your-Own-Syntax-Highlighting-in-Vim
 " http://stackoverflow.com/questions/7342441/how-would-i-have-vim-highlight-redundant-white-space-and-all-tabs
 " http://rayninfo.co.uk/vimtips.html
-"
+
+" File types to setup space indentation:
+augroup vimrc_file_type_indentation
+  au!
+  autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 expandtab
+  autocmd FileType python setlocal shiftwidth=2 tabstop=2 expandtab
+  autocmd FileType vim setlocal shiftwidth=2 tabstop=2 expandtab
+augroup end
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree tabs {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -826,7 +840,7 @@ imap <C-S-x> ✓<CR>
 
 " pandoc /home/ryan/Acronym/meetings/11-19-2014_Weekly_strategy_meeting.md -t mediawiki -o /home/ryan/Acronym/meetings/11-19-2014_Weekly_strategy_meeting.wiki2
 function! PandocFileToMediaWiki()
-	execute "!pandoc " . buffer_name("%") . " -t mediawiki -o " . expand("%:r") . ".wiki"
+	execute '!pandoc ' . buffer_name('%') . ' -t mediawiki -o ' . expand('%:r') . '.wiki'
 endfunction
 
 " convert markdown to mediawiki
@@ -904,8 +918,8 @@ com! FormatJSON %!python -m json.tool
 
 " remove trailing whitespace in vim automatically when saving!
 fun! <SID>StripTrailingWhitespaces()
-	let l = line(".")
-	let c = col(".")
+	let l = line('.')
+	let c = col('.')
 	%s/\s\+$//e
 	call cursor(l, c)
 endfun
@@ -953,7 +967,6 @@ set shellslash
 
 "hi Search cterm=NONE ctermfg=grey ctermbg=blue
 " http://stackoverflow.com/questions/7103173/vim-how-to-change-the-highlight-color-for-search-hits-and-quickfix-selection
-
 
 
 " attempt to maximize gVim window (not exactly but better)
@@ -1008,17 +1021,17 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 " maximize vim at startup ( i think i need to keep this at the bottom of the
 " vimrc so it resizes correctly after all the plugin and other changes
 " (showtabline=2 , etc)
-if has("gui_running")
+if has('gui_running')
   " GUI is running or is about to start.
   " Maximize gvim window.
   "set lines=999 columns=999
   set lines=57 columns=210
 else
   " This is console Vim.
-  if exists("+lines")
+  if exists('+lines')
     "set lines=50
   endif
-  if exists("+columns")
+  if exists('+columns')
     "set columns=100
   endif
 endif
@@ -1078,7 +1091,7 @@ let g:loaded_flagship = 1
 "let g:loaded_nerdtree_git_status = 1
 
 " after a re-source, fix syntax matching issues (concealing brackets):
-if exists("g:loaded_webdevicons")
+if exists('g:loaded_webdevicons')
 	call webdevicons#refresh()
 endif
 
@@ -1108,8 +1121,8 @@ set verbosefile=/home/ryan/debug-vim-verbose.txt
 
 "let g:ctrlp_line_prefix = WebDevIconsGetFileTypeSymbol('foo.txt')
 
-
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+" (,zz) Debug currently cursor hilighted area with the syntax rule being used
+map <Leader>zz :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
