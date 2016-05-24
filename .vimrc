@@ -582,6 +582,11 @@ if has('autocmd')
 endif
 " source: http://stackoverflow.com/questions/774560/in-vim-how-do-i-get-a-file-to-open-at-the-same-line-number-i-closed-it-at-last
 
+" disable continuation of comments to the next line
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+" source:
+" http://superuser.com/questions/271023/vim-can-i-disable-continuation-of-comments-to-the-next-line
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing behaviour {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
