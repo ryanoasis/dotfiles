@@ -417,31 +417,35 @@ let g:vim_markdown_folding_disabled = 1
 " source: https://github.com/plasticboy/vim-markdown/issues/162
 let g:vim_markdown_initial_foldlevel = 1
 
+" disable conceal in markdown
+let g:vim_markdown_conceal = 0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP settings {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:ctrlp_match_window = 'bottom,order:ttb'
-"let g:ctrlp_switch_buffer = 0
-"let g:ctrlp_working_path_mode = 0
-" let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-" source: http://dougblack.io/words/a-good-vimrc.html#ctrlp-section
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-
-"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-"let g:ctrlp_custom_ignore = {
-"  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-"  \ 'file': '\v\.(exe|so|dll)$',
-"  \ 'link': 'some_bad_symbolic_links'
-"  \ }
-" source: https://github.com/kien/ctrlp.vim
 
 " ctrlp extensions:
 " CtrlP for filetype
 "let g:ctrlp_extensions = ['filetype']
 " silent! nnoremap <unique> <silent> <Leader>f :CtrlPFiletype<CR>
 " source: https://github.com/endel/ctrlp-filetype.vim
+
+" Faster searching if 'ag' present
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+" source: http://dougblack.io/words/a-good-vimrc.html#ctrlp-section
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gundo {{{1
