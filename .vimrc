@@ -367,8 +367,8 @@ let g:airline#extensions#whitespace#enabled = 0
 " define the set of text to display for each mode.  >
 let g:airline_mode_map = {
    \ '__' : '-',
-   \ 'n'  : '№',
-   \ 'i'  : '✎ ',
+   \ 'n'  : 'N',
+   \ 'i'  : 'I ',
    \ 'R'  : 'R',
    \ 'c'  : 'C',
    \ 'v'  : 'ಠ',
