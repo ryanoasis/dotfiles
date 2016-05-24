@@ -1,11 +1,10 @@
 " vim:fdm=marker
-" vimrc
+" file: .vimrc
 " author: ryanoasis (Ryan L McIntyre)
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " License {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Copyright 2016 Ryan McIntyre
 " @todo
 " }}}1
 
@@ -32,10 +31,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'joonty/vdebug'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -96,7 +92,6 @@ Plugin 'Shougo/vimfiler.vim'
 Plugin 'mhinz/vim-startify'
 "Plugin 'mhinz/vim-signify' " still liking vim-gitgutter more
 Plugin 'ryanoasis/vim-devicons'
-"Plugin 'file:///home/ryan/projects/vim-devicons'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'csscomb/vim-csscomb'
@@ -788,9 +783,6 @@ let g:tagbar_type_javascript = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :command! Bp Breakpoint
 
-" tabnew (:T)
-:command! -nargs=* T tabnew <args>
-" source: http://superuser.com/questions/376213/in-vi-how-do-i-map-t-equal-to-tabnew
 
 " per: C:\Users\Ryan\vimfiles\doc\Vdebug.txt ; *VdebugTroubleshooting*
 " <F5> resulting in error: E488: Trailing characters
@@ -832,6 +824,10 @@ endfunction
 
 " convert markdown to mediawiki
 :command! PandocMediaWiki :call PandocFileToMediaWiki()<CR>
+
+" tabnew (:T)
+:command! -nargs=* T tabnew <args>
+" source: http://superuser.com/questions/376213/in-vi-how-do-i-map-t-equal-to-tabnew
 
 " Convert slashes to backslashes for Windows.
 if has('win32')
