@@ -626,6 +626,9 @@ set foldlevelstart=99
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
+" set scriptencoding after 'encoding' and when using multibyte chars
+scriptencoding utf-8
+" source: http://rbtnn.hateblo.jp/entry/2014/12/28/010913
 
 " source: http://stackoverflow.com/questions/5477565/how-to-setup-vim-properly-for-editing-in-utf-8
 setglobal fileencoding=utf-8           " change default file encoding when writing new files
