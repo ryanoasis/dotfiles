@@ -1159,11 +1159,19 @@ autocmd User Startified setlocal buftype=
 " source: https://github.com/mhinz/vim-startify/blob/master/doc/startify.txt
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" KO Project Specific {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ctrlp (Ctrl + k) launch at project root:
+nnoremap <C-k> :CtrlP ~/www/ko/proto/<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Experiments {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vimrc experimental and/or test settings:
-source .vimrc_experiments
+source ~/.vimrc_experiments
 
 " end experiments }}}1
 
