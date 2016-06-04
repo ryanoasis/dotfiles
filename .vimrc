@@ -486,7 +486,7 @@ let g:ctrlp_cmd = 'CtrlPMRU'
 let g:gitgutter_max_signs = 500
 
 " attempt to make gitgutter update faster
-set updatetime=250
+"set updatetime=50
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-javascript {{{1
