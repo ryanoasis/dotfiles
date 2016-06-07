@@ -893,18 +893,37 @@ nmap <leader>n :set number!<CR>
 nmap <leader>l :set list!<CR>
 " source: http://vimcasts.org/episodes/show-invisibles/
 
+" no highlight on Escape key press
+nnoremap <Esc> :noh<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CSS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" eg /* .something { } */
+" giving up and using CSSComb XD
 
 " Alphabetically sort CSS properties in file with :SortCSS
-:command! SortCSS :g#\({\n\)\@<=#.,/}/sort
+":command! SortCSS :g#\({\n\)\@<=#.,/}/sort
 " source: various
 " source 1:
 " http://code.tutsplus.com/articles/top-10-pitfalls-when-switching-to-vim--net-18113
 " source 2:
 " http://stackoverflow.com/questions/3050797/how-to-alphabetize-a-css-file-in-vim
 " my aliases for SortCSS (just makes it easier to find in command mode)
-:command! CSSSort SortCSS
-:command! SortCSSBraceContents SortCSS
+":command! CSSSort SortCSS
+":command! SortCSSBraceContents SortCSS
 " to sort on just selected simply add sort! o_O , e.g. :'<,'>sort
+
+" Map ctrl+f to run CSScomb
+autocmd FileType css noremap <buffer> <c-f> :CSScomb<CR>
+" Automatically comb your CSS on save
+autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" HTML
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 :vnoremap <leader>x :!tidy -q -i --show-errors 0 --markup no --indent auto<CR>
 :nnoremap <leader>x :!tidy -q -i --show-errors 0 --markup no --indent auto %<CR>
@@ -1186,3 +1205,4 @@ source ~/.vimrc_experiments
 ":so % 
 " Else if not editing this file directly
 ":so $MYVIMRC
+
