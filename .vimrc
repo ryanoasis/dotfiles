@@ -96,6 +96,7 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'csscomb/vim-csscomb'
 Plugin 'dracula/vim'
+Plugin 'vim-ctrlspace/vim-ctrlspace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -449,6 +450,15 @@ if executable('ag')
   "let g:ctrlp_use_caching = 0 " are we sure???
 endif
 " source: http://dougblack.io/words/a-good-vimrc.html#ctrlp-section
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrlspace {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if has('gui_running')
+    " Settings for MacVim and Inconsolata font
+    let g:CtrlSpaceSymbols = { 'File': '◯', 'CTab': '▣', 'Tabs': '▢' }
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gundo {{{1
