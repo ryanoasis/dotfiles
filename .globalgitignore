@@ -1,0 +1,18 @@
+nbproject/*
+cache/*
+log/*
+web/uploads/*
+web/exports/*
+.DS_Store
+!.gitignore
+.settings/*
+.externalToolBuilders/*
+.buildpath
+.project
+.tern-project
+
+# my stuff
+temp/*
+# torch specific
+protected/config/client_config.php.outofbox
+protected/config/client_config.php.ryan.bak
