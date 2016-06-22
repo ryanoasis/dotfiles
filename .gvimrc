@@ -197,3 +197,6 @@ set mousemodel=popup
 " Else if not editing this file directly
 ":so $MYGVIMRC
 
+if exists('g:loaded_webdevicons')
+  call webdevicons#refresh()
+endif
