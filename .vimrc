@@ -96,7 +96,7 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'csscomb/vim-csscomb'
 Plugin 'dracula/vim'
-Plugin 'vim-ctrlspace/vim-ctrlspace'
+"Plugin 'vim-ctrlspace/vim-ctrlspace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
