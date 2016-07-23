@@ -676,7 +676,7 @@ highlight ExtraWhitespace ctermfg=237 guifg=#444444 gui=undercurl cterm=undercur
 " do 2 or more leading spaces to avoid highlighting some comment doc
 augroup vimrc_extra_whitespace_source_files
   au!
-  autocmd FileType c,cpp,java,php,ruby,python,javascript,js,css autocmd BufWinEnter * match ExtraWhitespace /^[ ]\{2,}/
+  autocmd FileType c,cpp,java,php,ruby,python,javascript,js,css autocmd BufWinEnter <buffer> match ExtraWhitespace /^[ ]\{2,}/
 augroup end
 
 nnoremap <Leader>ho :match ExtraWhitespace /^[ ]\{2,}/<CR>
