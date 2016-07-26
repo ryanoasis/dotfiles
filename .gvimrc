@@ -100,6 +100,7 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 " force to use vim keys more often and give more screen realestate:
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
+set guioptions-=e  "remove gui tabs
 "set guioptions-=r  "remove right-hand scroll bar
 " source: http://vim.wikia.com/wiki/Hide_toolbar_or_menus_to_see_more_text
 
