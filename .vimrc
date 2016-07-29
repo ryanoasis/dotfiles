@@ -144,9 +144,6 @@ set ruler
 set hidden
 " source: http://nvie.com/posts/how-i-boosted-my-vim/
 
-" Sets the font and size
-"set guifont=Consolas:h11
-
 " Sets the percent transparency
 " causes error
 " set transparency=10
@@ -1076,8 +1073,6 @@ endif
 
 "let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 "let g:webdevicons_conceal_nerdtree_brackets = 0
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
-
 
 "hi Comment guibg=#212121
 "hi jsDocParam guibg=#212121
@@ -1141,8 +1136,6 @@ endif
 " for now must grab this specific one:
 " https://github.com/ryanoasis/powerline-extra-symbols/blob/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
 
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
-set guifont=PragmataPro\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
 set guifont=Fira\ Code\ Medium\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Medium\ 12
 
 " testing rounded separators (extra-powerline-symbols):
