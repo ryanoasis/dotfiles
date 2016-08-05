@@ -730,6 +730,7 @@ call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('jsx', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
@@ -1208,4 +1209,3 @@ source ~/.vimrc_experiments
 ":so % 
 " Else if not editing this file directly
 ":so $MYVIMRC
-
