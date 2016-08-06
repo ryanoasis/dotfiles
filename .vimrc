@@ -1128,17 +1128,10 @@ if exists('g:loaded_webdevicons')
   call webdevicons#refresh()
 endif
 
-"let g:DevIconsEnableFolderPatternMatching = 1
-" let g:DevIconsEnableFolderExtensionPatternMatching = 0
-
-" testing extra-powerline-symbols
-
 " set font:
-" for now must grab this specific one:
-" https://github.com/ryanoasis/powerline-extra-symbols/blob/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
-
 set guifont=Fira\ Code\ Medium\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Medium\ 12
 
+" testing extra-powerline-symbols
 " testing rounded separators (extra-powerline-symbols):
 "let g:airline_left_sep = "\uE0BA"
 "let g:airline_right_sep = "\uE0BB"
