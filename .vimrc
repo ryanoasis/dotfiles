@@ -138,7 +138,6 @@ augroup end
 
 set ruler
 
-" set hidden
 set hidden
 " source: http://nvie.com/posts/how-i-boosted-my-vim/
 
