@@ -206,7 +206,8 @@ vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 " source: http://amix.dk/vim/vimrc.html
 
-set scrolloff=3               " keep at least 3 lines above/below
+" offset vertical for context: keep at least 3 lines above/below
+set scrolloff=3
 " source: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
 
 " Highlight every other line
