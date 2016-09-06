@@ -1,6 +1,6 @@
 # Settings Previews
 
-> screenshots and overview of my dev settings for my own reference mainly but if it's helpful to others then that's cool
+> screenshots, backup, and overview of my dev settings for my own reference. If it's useful to others then that's cool
 
 
 ## Desktop
