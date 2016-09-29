@@ -40,8 +40,7 @@
 
 ![img](previews/bash-terminal-1.png)
 
-* Showing
-  * [Milkbikis' Powerline Shell][powerline-shell]
+* Showing [Milkbikis' Powerline Shell][powerline-shell]
 
 ### Bash Aliases
 
