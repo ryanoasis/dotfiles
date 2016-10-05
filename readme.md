@@ -1,15 +1,18 @@
-# Settings Previews
+# Dotfiles
 
 > screenshots, backup, and overview of my dev settings for my own reference. If it's useful to others then that's cool
 
 
-## Desktop
+## Settings Previews
+
+
+### Desktop
 
 ![img](previews/desktop-1.png)
 
-## Vim configuration
+### Vim configuration
 
-### Custom font and glyphs
+#### Custom font and glyphs
 
 ![img](previews/custom-glyphs.png)
 
@@ -17,7 +20,7 @@
   * file type glyphs from [vim-devicons][vim-devicons]
   * font from [nerd-fonts][nerd-fonts]
 
-### JavaScript development
+#### JavaScript development
 
 ![img](previews/vim-js-development-1.png)
 
@@ -36,7 +39,7 @@
   * [Syntastic][syntastic]
   * [JSDoc.vim][vim-jsdoc]
 
-## Terminal
+### Terminal
 
 ![img](previews/bash-terminal-1.png)
 
@@ -65,7 +68,7 @@
 * git version (tag and branch at a specific deploy point)
   * `gv`
 
-## Tmux
+### Tmux
 
 * todo
 
