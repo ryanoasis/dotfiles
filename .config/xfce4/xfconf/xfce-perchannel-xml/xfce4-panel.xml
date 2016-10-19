@@ -67,6 +67,8 @@
         <value type="string" value="nvidia-prime"/>
         <value type="string" value="xfce terminal"/>
         <value type="string" value="pidgin"/>
+        <value type="string" value="blueman-applet"/>
+        <value type="string" value="hexchat"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="keepassx"/>
         <value type="string" value="banshee"/>

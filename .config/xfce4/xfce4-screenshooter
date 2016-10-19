@@ -2,7 +2,7 @@ delay=3
 region=3
 action=1
 show_mouse=1
-screenshot_dir=file:/home/ryan/Pictures/screenshots
+screenshot_dir=file:/home/ryan/projects/wiki.vim-devicons/screenshots/v0.9.x
 app=ristretto
 last_user=
 
