@@ -1,4 +1,4 @@
 xterm*font: Droid Sans Mono for Powerline Plus Nerd File Types Mono:pixelsize=12
 XTerm*faceName: Droid Sans Mono for Powerline Plus Nerd File Types Mono
-xterm*faceSize: 12
-xterm*vt100*geometry: 80x60
+xterm*faceSize: 16
+xterm*vt100*geometry: 60x60

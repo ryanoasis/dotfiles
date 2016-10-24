@@ -120,12 +120,20 @@ filetype plugin on " for nerdcommenter
 set t_Co=256
 
 syntax on
+"syntax enable
+"set term=xterm-256color
+"set background=light
+set background=dark
+"set t_Co=256
+"set t_Co=16
 "colorscheme robinhood
 "colorscheme elflord
 "colorscheme obsidian2
 "colorscheme jellybeans
 "colorscheme distinguished
 colorscheme jellybeans
+"colorscheme dracula
+"colorscheme solarized
 
 " working directory always where the active buffer is located
 "set autochdir
@@ -254,6 +262,12 @@ nmap <silent> <leader>d <Plug>(jsdoc)
 " use some synonyms
 let g:jsdoc_tags = {}
 let g:jsdoc_tags['returns'] = 'return'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JavaScript Libraries Syntax config {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:used_javascript_libs = 'jquery,underscore,react,angularjs,requirejs'
+let g:ycm_seed_identifiers_with_syntax = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic config {{{1
@@ -500,7 +514,7 @@ set cole=0
 " source: https://github.com/pangloss/vim-javascript/issues/101#issuecomment-45543789
 
 " change to 1 to enable concealing
-let g:javascript_conceal = 0
+let g:javascript_conceal = 1
 
 let g:javascript_conceal_function   = 'ƒ'
 let g:javascript_conceal_null       = 'ø'
@@ -511,7 +525,7 @@ let g:javascript_conceal_NaN        = 'ℕ'
 let g:javascript_conceal_prototype  = '¶'
 
 " fix conceal color
-highlight Conceal guifg=#ffb964 guibg=#151515
+highlight Conceal guifg=#ffb964
 
 "highlight link Conceal SpellCap
 "highlight link Conceal comment
@@ -1080,21 +1094,29 @@ endif
 hi jsThis term=bold cterm=bold ctermfg=214 guifg=#ffb964
 hi jsFunction term=bold cterm=bold ctermfg=205 gui=bold guifg=#cc4c8c
 hi jsFuncName ctermfg=205 guifg=#cc4c8c
-hi jsFunctionKey ctermfg=205 guifg=#cc4c8c
+hi jsFunctionKey cterm=bold gui=bold ctermfg=205 guifg=#cc4c8c
 hi jsFuncArgs term=italic cterm=italic gui=italic guifg=#8197bf
-hi jsDocTags term=bold cterm=bold ctermfg=103 gui=bold guifg=#8197bf guibg=#212121
-hi jsDocComment term=bold cterm=bold ctermfg=244 gui=italic guibg=#212121 guifg=#888888
-hi jsComment term=italic cterm=italic gui=italic ctermfg=244 guibg=#212121 guifg=#888888
-hi jsDocParam term=bold cterm=bold ctermbg=233 ctermfg=103 guibg=#212121 guifg=#8197bf
-hi jsDocType term=underline cterm=underline ctermfg=215 guibg=#212121 guifg=#ffb964
-hi jsDocTypeNoParam term=underline cterm=underline ctermfg=215 guibg=#212121 guifg=#ffb964
+hi jsDocTags term=bold cterm=bold,italic ctermfg=103 gui=bold,italic guifg=#8197bf
+hi jsDocComment term=bold cterm=bold ctermfg=244 gui=italic guifg=#888888
+hi jsComment term=italic cterm=italic gui=italic ctermfg=244 guifg=#888888
+hi jsBlockComment term=italic cterm=italic gui=italic ctermfg=244 guifg=#888888
+
+let mybgcolor= synIDattr(hlID('NonText'), 'bg')
+"let bgcolor='#1e1f29'
+"hi jsDocParam term=bold cterm=bold ctermbg=233 ctermfg=103 guibg=bgcolor guifg=#8197bf
+hi jsDocParam term=bold cterm=bold,italic gui=bold,italic ctermfg=103 guifg=#8197bf
+hi jsDocType term=underline cterm=underline gui=bold,italic ctermfg=215 guifg=#ffb964
+hi jsDocTypeNoParam term=underline cterm=underline ctermfg=215 guifg=#ffb964
 
 " tweak color scheme colors slightly:
-hi Special guifg=#DF7401
+"hi Special guifg=#DF7401
+hi SpecialKey ctermfg=59 ctermbg=236 cterm=NONE guifg=#6272a4 guibg=#1e1f29 gui=NONE
 
 " tweak SpecialKey background so it always matches theme:
 "let oldcolor = synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")
 hi SpecialKey ctermbg=233 guibg=#151515
+"echo mybgcolor
+"exec 'hi SpecialKey ctermbg=' . mybgcolor
 " matches jellybeans (@todo make dynamic)
 
 " syntastic tweak
@@ -1103,7 +1125,7 @@ hi SpecialKey ctermbg=233 guibg=#151515
 "hi SpellCap term=reverse cterm=undercurl ctermbg=12 gui=undercurl guisp=#eeee00
 hi clear SpellCap
 hi clear SpellBad
-hi SpellCap term=reverse cterm=undercurl ctermbg=233 guibg=#151515 gui=undercurl guisp=#eeee00
+hi SpellCap term=reverse cterm=undercurl gui=undercurl guisp=#eeee00
 " source:
 " http://stackoverflow.com/questions/17677441/changing-error-highlight-color-used-by-syntastic
 
@@ -1186,7 +1208,7 @@ nnoremap <C-k> :CtrlP ~/www/ko/proto/<cr>
 
 " vimrc experimental and/or test settings:
 source ~/.vimrc_experiments
-
+let g:CtrlSpaceSymbols = { "File": "X", "CTab": "▣", "Tabs": "▢" }
 " end experiments }}}1
 
 
