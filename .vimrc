@@ -314,6 +314,8 @@ let g:syntastic_always_populate_loc_list = 1
 
 let g:syntastic_vim_checkers = ['vint']
 
+let g:syntastic_text_checkers = ['proselint']
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe (YCM) config {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
