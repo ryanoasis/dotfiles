@@ -315,6 +315,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_vim_checkers = ['vint']
 
 let g:syntastic_text_checkers = ['proselint']
+"let g:syntastic_sh_checkers = ['shellcheck']
+let g:syntastic_sh_checkers = ['shellcheck', 'sh']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe (YCM) config {{{1

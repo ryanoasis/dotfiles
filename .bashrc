@@ -1,7 +1,7 @@
 #echo "start .bashrc"
 
 # added ls-- to path to execute bin from any directory
-export PATH=$PATH:/opt/lampp/bin:/home/ryan/bin:/home/ryan/bin/ls--:/home/ryan/bin/screenFetch
+export PATH=$PATH:/opt/lampp/bin:/home/ryan/bin:/home/ryan/bin/ls--:/home/ryan/bin/screenFetch:/home/ryan/.cabal/bin
 
 #enable color support of ls
 # enable color support of ls

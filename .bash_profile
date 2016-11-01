@@ -14,5 +14,8 @@ FDK_EXE="/home/ryan/bin/FDK/Tools/linux"
 PATH=${PATH}:"/home/ryan/bin/FDK/Tools/linux"
 export PATH
 export FDK_EXE
+# add shellcheck (vim is checking here for $PATH): (Oct 29 2016)
+PATH=${PATH}:"/home/ryan/.cabal/bin"
+export PATH
 
 #echo "end .bash_profile"
