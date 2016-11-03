@@ -1,6 +1,6 @@
 [Configuration]
 BackgroundDarkness=1.000000
-FontName=DejaVuSansMonoForPowerline Nerd Font 12
+FontName=3270Medium Nerd Font Medium 14
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBordersDefault=TRUE
@@ -24,4 +24,5 @@ ColorPalette=#3f3f3f;#705050;#60b48a;#dfaf8f;#9ab8d7;#dc8cc3;#8cd0d3;#dcdcdc;#70
 ColorForeground=#dcdcdc
 ColorBackground=#2c2c2c
 ColorCursor=#dcdcdc
+FontAllowBold=FALSE
 
