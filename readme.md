@@ -17,16 +17,16 @@
 ![img](previews/custom-glyphs.png)
 
 * Showing
-  * file type glyphs from [vim-devicons][vim-devicons]
-  * font from [nerd-fonts][nerd-fonts]
+  * file type glyphs from [VimDevIcons][vim-devicons]
+  * font from [Nerd Fonts][nerd-fonts]
 
 #### JavaScript development
 
 ![img](previews/vim-js-development-1.png)
 
 * Showing
-  * custom separators and column number glyphs from [powerline-extra-symbols][powerline-extra-symbols]
-  * file type glyphs from [vim-devicons][vim-devicons]
+  * custom separators and column number glyphs from [Powerline Extra Symbols][powerline-extra-symbols]
+  * file type glyphs from [VimDevIcons][vim-devicons]
   * custom [syntastic][syntastic] glyphs
   ```vim
     let g:syntastic_style_error_symbol = '⚡'
