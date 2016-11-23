@@ -2,7 +2,7 @@
 
 <channel name="keyboards" version="1.0">
   <property name="Default" type="empty">
-    <property name="Numlock" type="bool" value="false"/>
+    <property name="Numlock" type="bool" value="true"/>
     <property name="KeyRepeat" type="bool" value="true">
       <property name="Delay" type="int" value="250"/>
       <property name="Rate" type="int" value="40"/>
