@@ -47,12 +47,22 @@
 
 ### Bash Aliases
 
+* git
+  * `g`
 * git branch
   * `gb`
 * git commit -a -m
   * `gcam`
 * git checkout
   * `gco`
+* git diff
+  * `gd`
+* git diff --cached
+  * `gdc`
+* gitk &
+  * `gk`
+* gitk --all &
+  * `gka`
 * git pull
   * `gp`
 * git rev-parse HEAD | cut -c -7
