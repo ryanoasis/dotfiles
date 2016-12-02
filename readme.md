@@ -47,36 +47,23 @@
 
 ### Bash Aliases
 
-* git
-  * `g`
-* git branch
-  * `gb`
-* git commit -a -m
-  * `gcam`
-* git checkout
-  * `gco`
-* git diff
-  * `gd`
-* git diff --cached
-  * `gdc`
-* gitk &
-  * `gk`
-* gitk --all &
-  * `gka`
-* git pull
-  * `gp`
-* git rev-parse HEAD | cut -c -7
-  * `grev`
-* git status
-  * `gs`
-* git fetch pull
-  * `gfpull`
-* git fetch push
-  * `gfpush`
-* git track (create new tracking branch)
-  * `gt`
-* git version (tag and branch at a specific deploy point)
-  * `gv`
+|    alias     | command                        |
+|:------------:|:------------------------------:|
+| `g`          | git                            |
+| `gb`         | git branch                     |
+| `gcam`       | git commit -a -m               |
+| `gco`        | git checkout                   |
+| `gd`         | git diff                       |
+| `gdc`        | git diff --cached              |
+| `gk`         | gitk &                         |
+| `gka`        | gitk --all &                   |
+| `gp`         | git pull                       |
+| `grev`       | git rev-parse HEAD | cut -c -7 |
+| `gs`         | git status                     |
+| `gfpull`     | git fetch pull                 |
+| `gfpush`     | git fetch push                 |
+| `gt`         | git track                      |
+| `gv`         | git version                    |
 
 ### Tmux
 
