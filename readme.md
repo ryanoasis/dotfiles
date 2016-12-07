@@ -1,6 +1,6 @@
 # Dotfiles
 
-> screenshots, backup, and overview of my dev settings for my own reference. If it's useful to others then that's cool
+> Screenshots, backup, and overview of my development settings for my own reference. If it's useful to others then that's cool
 
 
 ## Settings Previews
