@@ -30,7 +30,7 @@ sudo apt-get -y install \
     nfs-common git gitk gitg \
     fontforge ruby \
     virtualbox virtualbox-guest-additions-iso dropbox \
-    skype curl gparted google-chrome-stable \
+    skype curl gparted geany \
     npm vlc shellcheck
     
     
