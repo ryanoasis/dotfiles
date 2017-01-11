@@ -21,7 +21,7 @@ rm -rf ~/Music
 # todo: google chrome
 
 # PPAs
-sudo add-apt-repository ppa:fontforge/fontforge
+sudo add-apt-repository --yes ppa:fontforge/fontforge
 
 sudo apt-get update
 
