@@ -29,6 +29,7 @@ sudo apt-get update
 sudo apt-get -y install \
     nfs-common git gitk gitg \
     fontforge ruby \
+    keepassx \
     virtualbox virtualbox-guest-additions-iso dropbox \
     skype curl gparted geany \
     npm vlc shellcheck
