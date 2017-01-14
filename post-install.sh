@@ -30,10 +30,13 @@ sudo apt-get -y install \
     nfs-common git gitk gitg \
     fontforge ruby \
     keepassx shutter \
-    virtualbox virtualbox-guest-additions-iso dropbox \
+    virtualbox virtualbox-guest-additions-iso \
     skype curl gparted geany \
     npm vlc shellcheck
     
+# dropbox
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd
     
 # npm
 sudo npm install -g write-good
