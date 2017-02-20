@@ -37,7 +37,8 @@ sudo apt-get -y install \
 # terminal emulators (mostly for testing VimDevIcons)
 sudo apt install \
     rxvt-unicode \
-    tmux
+    tmux \
+    python-pip
     
 # dropbox
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
