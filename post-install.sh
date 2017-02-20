@@ -34,6 +34,10 @@ sudo apt-get -y install \
     skype curl gparted geany \
     npm vlc shellcheck
     
+# terminal emulators (mostly for testing VimDevIcons)
+sudo apt install \
+    rxvt-unicode
+    
 # dropbox
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
