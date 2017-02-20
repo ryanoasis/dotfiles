@@ -40,11 +40,16 @@ sudo apt install \
     tmux \
     python-pip
     
+# pip installs
+## upgrade pip
+pip install --upgrade pip
+pip install proselint
+    
 # dropbox
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
     
-# npm
+# npm installs
 sudo npm install -g write-good
 
 # gems
