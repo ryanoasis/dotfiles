@@ -38,7 +38,8 @@ sudo apt-get -y install \
 sudo apt install \
     rxvt-unicode \
     tmux \
-    python-pip
+    python-pip \
+    virtualenv
     
 # pip installs
 ## upgrade pip
