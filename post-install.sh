@@ -55,3 +55,7 @@ sudo npm install -g write-good
 
 # gems
 sudo gem install gist
+
+# setup node in path
+## /usr/bin/env: ‘node’: No such file or directory
+sudo ln -s /usr/bin/nodejs /usr/bin/node
