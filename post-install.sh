@@ -45,6 +45,20 @@ sudo apt install \
 ## upgrade pip
 pip install --upgrade pip
 pip install proselint
+
+# VimDevIcons specific prerequisites
+# via https://github.com/xolox/vim-tools
+cd ~
+## Clone the repository
+git clone https://github.com/xolox/vim-tools.git
+cd vim-tools
+## Create the virtual environment.
+virtualenv html2vimdoc
+## Install the dependencies.
+html2vimdoc/bin/pip install beautifulsoup coloredlogs markdown
+## Run the program.
+html2vimdoc/bin/python ./html2vimdoc.py --help
+
     
 # dropbox
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
