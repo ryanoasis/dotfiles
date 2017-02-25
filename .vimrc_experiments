@@ -580,6 +580,41 @@ endfun
 "let g:foobar = "foo"
 " hey!
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-devicons icons glyphs cropping cutting in half (https://github.com/ryanoasis/vim-devicons/issues/179) {{{3
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"let g:webdevicons_enable_ctrlp = 0
+g:webdevicons_enable = 0
+g:loaded_webdevicons = 1
+
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = '⚠'
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['txt'] = '✅'
+"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['sh'] = '😊'
+
+" try override bufnrfilpath argument passed in removing the icon
+
+"set noemoji
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nerdtree-git-plugin issue (https://github.com/Xuyuanp/nerdtree-git-plugin/issues/75) {{{3
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '⛌',
+    \ "Unknown"   : "?"
+    \ }
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-devicons AND ctrlspace {{{3
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
