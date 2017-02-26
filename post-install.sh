@@ -39,7 +39,8 @@ sudo apt install \
     rxvt-unicode \
     tmux \
     python-pip \
-    virtualenv
+    virtualenv \
+    cifs-utils
     
 # pip installs
 ## upgrade pip
