@@ -1,5 +1,5 @@
 #!/bin/bash
-# Author: Ryan L McIntyre
+# Author: Ryan L McIntyre (https://github.com/ryanoasis)
 # inspiration: http://blog.self.li/post/74294988486/creating-a-post-installation-script-for-ubuntu
 
 # post clean-up
