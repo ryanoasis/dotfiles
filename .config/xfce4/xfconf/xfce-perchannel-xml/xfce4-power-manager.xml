@@ -4,7 +4,7 @@
   <property name="xfce4-power-manager" type="empty">
     <property name="power-button-action" type="empty"/>
     <property name="lid-action-on-battery" type="empty"/>
-    <property name="brightness-switch-restore-on-exit" type="int" value="0"/>
+    <property name="brightness-switch-restore-on-exit" type="int" value="-1"/>
     <property name="brightness-switch" type="int" value="0"/>
     <property name="blank-on-ac" type="int" value="0"/>
     <property name="dpms-on-ac-sleep" type="uint" value="0"/>
