@@ -131,8 +131,8 @@ set background=dark
 "colorscheme obsidian2
 "colorscheme jellybeans
 "colorscheme distinguished
-colorscheme jellybeans
-"colorscheme dracula
+"colorscheme jellybeans
+colorscheme dracula
 "colorscheme solarized
 
 " working directory always where the active buffer is located
