@@ -203,6 +203,7 @@ set mousemodel=popup
 "echom color_scheme_guibg
 "exec 'hi SpecialKey guibg=' . color_scheme_guibg
 
+" after a re-source, fix syntax matching issues (concealing brackets):
 if exists('g:loaded_webdevicons')
   call webdevicons#refresh()
 endif
