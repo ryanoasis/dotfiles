@@ -1173,7 +1173,7 @@ map <Leader>zz :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> 
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:webdevicons_gui_glyph_fix = 1
 
@@ -1225,3 +1225,5 @@ let g:CtrlSpaceSymbols = { 'File': 'X', 'CTab': '▣', 'Tabs': '▢' }
 ":so % 
 " Else if not editing this file directly
 ":so $MYVIMRC
+
+
