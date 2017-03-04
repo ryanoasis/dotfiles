@@ -78,6 +78,7 @@ set guifont=Fantasque\ Sans\ Mono\ Nerd\ Font\ 14
 "let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
 
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = '⚠'
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = ''
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['db'] = ''
