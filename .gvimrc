@@ -199,7 +199,7 @@ set mousemodel=popup
 " Else if not editing this file directly
 ":so $MYGVIMRC
 "echom 'test'
-let color_scheme_guibg= synIDattr(hlID('NonText'), 'bg#')
+"let color_scheme_guibg= synIDattr(hlID('NonText'), 'bg#')
 "echom color_scheme_guibg
 "exec 'hi SpecialKey guibg=' . color_scheme_guibg
 
