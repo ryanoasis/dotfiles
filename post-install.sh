@@ -32,7 +32,8 @@ sudo apt-get -y install \
     keepassx shutter \
     virtualbox virtualbox-guest-additions-iso \
     skype curl gparted geany \
-    npm vlc shellcheck
+    npm vlc shellcheck \
+    python-fontforge
     
 # terminal emulators (mostly for testing VimDevIcons)
 sudo apt install \
