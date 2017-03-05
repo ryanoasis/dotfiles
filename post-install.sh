@@ -33,7 +33,8 @@ sudo apt-get -y install \
     virtualbox virtualbox-guest-additions-iso \
     skype curl gparted geany \
     npm vlc shellcheck \
-    python-fontforge
+    python-fontforge \
+    jekyll
     
 # terminal emulators (mostly for testing VimDevIcons)
 sudo apt install \
