@@ -46,8 +46,9 @@ sudo apt install \
     
 # pip installs
 ## upgrade pip
-pip install --upgrade pip
-pip install proselint
+sudo pip install --upgrade pip
+sudo pip install proselint
+sudo pip install icon_font_to_png
 
 # VimDevIcons specific prerequisites
 # via https://github.com/xolox/vim-tools
