@@ -891,8 +891,8 @@ if has('win32')
 "  nmap ,c8 :let @*=substitute(expand("%:p:8"), "/", "\\", "g")<CR>
 "endif
 else
-  nmap ,fs :let @+=expand("%")<CR>
-  nmap ,fl :let @+=expand("%:p")<CR>
+  nmap ,fs :let @+=expand("%").':'.line(".")<CR>
+  nmap ,fl :let @+=expand("%:p").':'.line(".")<CR>
 endif
 " source: http://vim.wikia.com/wiki/Copy_filename_to_clipboard
 
