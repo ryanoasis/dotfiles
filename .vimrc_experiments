@@ -586,8 +586,8 @@ endfun
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "let g:webdevicons_enable_ctrlp = 0
-g:webdevicons_enable = 0
-g:loaded_webdevicons = 1
+"g:webdevicons_enable = 0
+"g:loaded_webdevicons = 1
 
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = '⚠'
@@ -621,3 +621,11 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " simple test
 let g:CtrlSpaceSymbols = { "File": "X", "CTab": "▣", "Tabs": "▢" }
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" test opening NERDTree on startup
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"autocmd VimEnter * NERDTree
+
+
