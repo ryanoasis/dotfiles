@@ -19,3 +19,4 @@ PATH=${PATH}:"/home/ryan/.cabal/bin"
 export PATH
 
 #echo "end .bash_profile"
+PATH=/usr/bin:$PATH
