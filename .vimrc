@@ -1228,4 +1228,11 @@ let g:CtrlSpaceSymbols = { 'File': 'X', 'CTab': '▣', 'Tabs': '▢' }
 " Else if not editing this file directly
 ":so $MYVIMRC
 
+"set shell=/bin/bash
+
+"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = '愛'
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+
+"let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 

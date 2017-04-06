@@ -75,6 +75,8 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular\ 12
 set guifont=Fantasque\ Sans\ Mono\ Nerd\ Font\ 14
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ 10
 
+set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ 14
+
 "let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
 
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
@@ -91,7 +93,9 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = '⚠'
 
 " test setting folders in flags:
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = ''
+"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = '愛'
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
 
 " set guifont=Ubuntu\ Mono:h8
 " set guifont=ProggyCleanTT\ 16
