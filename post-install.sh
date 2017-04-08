@@ -78,3 +78,8 @@ sudo gem install gist
 # setup node in path
 ## /usr/bin/env: ‘node’: No such file or directory
 sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+# asciinema (https://asciinema.org/) on Ubuntu
+sudo apt-add-repository ppa:zanchey/asciinema
+sudo apt-get update
+sudo apt-get install asciinema
