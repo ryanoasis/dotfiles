@@ -708,6 +708,7 @@ augroup vimrc_file_type_indentation
   autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 expandtab
   autocmd FileType python setlocal shiftwidth=2 tabstop=2 expandtab
   autocmd FileType vim setlocal shiftwidth=2 tabstop=2 expandtab
+  autocmd FileType sh setlocal shiftwidth=2 tabstop=2 expandtab
 augroup end
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
