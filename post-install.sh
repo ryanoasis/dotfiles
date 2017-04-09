@@ -83,3 +83,15 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 sudo apt-add-repository ppa:zanchey/asciinema
 sudo apt-get update
 sudo apt-get install asciinema
+
+# byzanz (for byzanz-record)
+sudo apt install byzanz
+# xrectsel (for byzanz screen capture)
+cd Downloads/
+git clone https://github.com/lolilolicon/xrectsel
+cd xrectsel/
+./bootstrap
+./configure --prefix /usr/local
+sudo make install
+cd ..
+rm -rf xrectsel/
