@@ -1116,11 +1116,11 @@ hi jsDocTypeNoParam term=underline cterm=underline ctermfg=215 guifg=#ffb964
 
 " tweak color scheme colors slightly:
 "hi Special guifg=#DF7401
-hi SpecialKey ctermfg=59 ctermbg=236 cterm=NONE guifg=#6272a4 guibg=#1e1f29 gui=NONE
+"hi SpecialKey ctermfg=59 ctermbg=236 cterm=NONE guifg=#6272a4 guibg=#1e1f29 gui=NONE
 
 " tweak SpecialKey background so it always matches theme:
 "let oldcolor = synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")
-hi SpecialKey ctermbg=233 guibg=#151515
+"hi SpecialKey ctermbg=233 guibg=#151515
 "echo mybgcolor
 "exec 'hi SpecialKey ctermbg=' . mybgcolor
 " matches jellybeans (@todo make dynamic)
