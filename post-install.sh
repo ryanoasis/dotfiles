@@ -87,6 +87,8 @@ sudo apt-get install asciinema
 # byzanz (for byzanz-record)
 sudo apt install byzanz
 # xrectsel (for byzanz screen capture)
+## pre-req:
+sudo apt-get install dh-autoreconf
 cd Downloads/
 git clone https://github.com/lolilolicon/xrectsel
 cd xrectsel/
