@@ -1,5 +1,12 @@
-
-
+" vim:fdm=marker
+" file: .gvimrc
+" author: ryanoasis (Ryan L McIntyre)
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" License {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MIT
+" }}}1
 
 " Dynamic increase or decrease font size:
 " source: http://vim.wikia.com/wiki/VimTip414
