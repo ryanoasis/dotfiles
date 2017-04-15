@@ -1214,8 +1214,6 @@ nnoremap <C-k> :CtrlP ~/www/ko/proto/<cr>
 
 " vimrc experimental and/or test settings:
 source ~/.vimrc_experiments
-let g:CtrlSpaceSymbols = { 'File': 'X', 'CTab': '▣', 'Tabs': '▢' }
-" end experiments }}}1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
