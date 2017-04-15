@@ -103,15 +103,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 filetype plugin on " for nerdcommenter
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General settings {{{1
@@ -1226,12 +1218,4 @@ source ~/.vimrc_experiments
 ":so % 
 " Else if not editing this file directly
 ":so $MYVIMRC
-
-"set shell=/bin/bash
-
-"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = '愛'
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-
-"let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 
