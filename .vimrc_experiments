@@ -569,6 +569,14 @@ endfun
 "let g:webdeviconsunicodeglyphdoublewidth = 2
 
 
+"let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = '愛'
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+
+"let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-devicons AND vim-startify {{{3
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -634,4 +642,11 @@ let g:CtrlSpaceSymbols = { "File": "X", "CTab": "▣", "Tabs": "▢" }
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "let g:CtrlSpaceSymbols = { 'File': 'X', 'CTab': '▣', 'Tabs': '▢' }
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vundle {{{3
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"set shell=/bin/bash
 
