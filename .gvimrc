@@ -25,8 +25,11 @@ map ,= :let &guifont = substitute(&guifont, '\(\d\+\)', '\="" . (submatch(1) + 1
 " au GUIEnter * simalt x " x on an English Windows version. n on a French one
 " source: http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
 
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular\ 12
-set guifont=Fantasque\ Sans\ Mono\ Nerd\ Font\ 14
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Font {{{3
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ 14
 
 
@@ -55,6 +58,11 @@ endif
 " The highlight group you want is “IncSearch” even if you don’t have the the ‘incsearch’ option enabled—it is also used for the current substitution when confirmation is enabled.
 highlight IncSearch guifg=firebrick1 guibg=firebrick4
 " source: http://denihow.com/vim-how-to-change-the-current-item-highlight-color-when-substituting/
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" cursor visual tweaks {{{3
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "highlight Cursor guifg=white guibg=firebrick4
 "highlight iCursor guifg=white guibg=firebrick4
@@ -92,6 +100,9 @@ set guicursor=n:block-NCursor-blinkwait0-blinkon0-blinkoff0
 set mousemodel=popup
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" notes {{{3
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " NOTE: keep at bottom of file:
 " reload your .vimrc file without restarting vim
@@ -99,10 +110,11 @@ set mousemodel=popup
 ":so %
 " Else if not editing this file directly
 ":so $MYGVIMRC
-"echom 'test'
-"let color_scheme_guibg= synIDattr(hlID('NonText'), 'bg#')
-"echom color_scheme_guibg
-"exec 'hi SpecialKey guibg=' . color_scheme_guibg
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" re-sourcing fixes {{{3
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " after a re-source, fix syntax matching issues (concealing brackets):
 if exists('g:loaded_webdevicons')
