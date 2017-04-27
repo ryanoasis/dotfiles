@@ -134,6 +134,40 @@ set novisualbell
 nnoremap <leader>mm :call MinimapOpen()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JSbeautify settings {{{1
+" https://github.com/maksimr/vim-jsbeautify
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"let g:config_Beautifier = {}
+"let g:config_Beautifier['js'] = {}
+"let g:config_Beautifier['js'].indent_size = '4'
+"let g:config_Beautifier['js'].indent_style = 'tab'
+"let g:config_Beautifier['js'].brace_style = 'none'
+"let g:config_Beautifier['js'].keep_array_indentation = 'true'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CSS experiments {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" eg /* .something { } */
+" giving up and using CSSComb XD
+
+" Alphabetically sort CSS properties in file with :SortCSS
+":command! SortCSS :g#\({\n\)\@<=#.,/}/sort
+" source: various
+" source 1:
+" http://code.tutsplus.com/articles/top-10-pitfalls-when-switching-to-vim--net-18113
+" source 2:
+" http://stackoverflow.com/questions/3050797/how-to-alphabetize-a-css-file-in-vim
+" my aliases for SortCSS (just makes it easier to find in command mode)
+":command! CSSSort SortCSS
+":command! SortCSSBraceContents SortCSS
+" to sort on just selected simply add sort! o_O , e.g. :'<,'>sort
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree experiments {{{2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
