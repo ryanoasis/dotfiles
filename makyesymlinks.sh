@@ -41,6 +41,10 @@ for file in $files; do
        mv ~/$file ~/dotfiles_old/
        echo "Creating symlink to $file in home directory."
        ln -s $dir/$file ~/$file
+   elif ! [ -f ~/$file ]; then
+       echo "$file doesn't yet exist"
+       echo "Creating symlink to $file in home directory."
+       ln -s $dir/$file ~/$file
    else
        echo "NOT Creating symlink to $file already seems to be a symlink: not overwriting back-up"
    fi
