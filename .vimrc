@@ -6,7 +6,6 @@
 " License {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MIT
-" }}}1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Leader shortcuts {{{1
@@ -18,7 +17,7 @@ let g:mapleader = ','
 " source: http://amix.dk/vim/vimrc.html
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Package management (vundle) and plugins {{{1
+" Package management (Vundle) and plugins {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -29,7 +28,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-" Keep Plugin commands between vundle#begin/end.
 Plugin 'joonty/vdebug'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -37,7 +35,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-abolish'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'maksimr/vim-jsbeautify'
-" einars/js-beautify moved to beautify-web/js-beautify
 Plugin 'beautify-web/js-beautify'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
@@ -49,7 +46,6 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'ramitos/jsctags'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
-"Plugin 'tpope/vim-markdown'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
@@ -108,7 +104,6 @@ filetype plugin on " for nerdcommenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General settings {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " set color term to 256 colors
 " need to use with CSApprox script to work (huh?)
 set t_Co=256
@@ -176,14 +171,12 @@ set list
 " setting above as the whole list so it doesnt overwrite the trailing etc.
 " source: https://github.com/Yggdroot/indentLine
 
-
-set lazyredraw          " redraw only when we need to.
+" redraw only when we need to.
+set lazyredraw
 " source: http://dougblack.io/words/a-good-vimrc.html
-" disabled because i seem to be getting some odd visual character mixture on
-" load or scroll up/down sometimes
 
-" set relative number makes doing selections and modifications MUCH easier (d
-" 20 j, v 20 j, etc)
+" set relative number makes doing selections
+" and modifications MUCH easier (d 20 j, v 20 j, etc)
 set relativenumber
 " source: http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 
@@ -280,8 +273,7 @@ let g:syntastic_check_on_open=0
 " source: https://github.com/scrooloose/syntastic/issues/689
 " source: http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 
-" custom jshint rules for KO (acrowidgets, but should apply to all JS files)
-" /home/ryan/www/ko/proto/acrowidgets/.jshintrc
+" custom jshint rules
 let g:syntastic_javascript_jshint_args = ' --config /home/ryan/dotfiles/.jshintrc'
 let g:syntastic_javascript_jscs_args = ' --fix --config /home/ryan/dotfiles/.jscsrc --reporter text --force'
 
@@ -307,7 +299,6 @@ let g:syntastic_always_populate_loc_list = 1
 " :SyntasticCheck jscs
 
 let g:syntastic_vim_checkers = ['vint']
-
 let g:syntastic_text_checkers = ['proselint']
 let g:syntastic_sh_checkers = ['shellcheck', 'sh']
 
@@ -456,6 +447,10 @@ if executable('ag')
   "let g:ctrlp_use_caching = 0 " are we sure???
 endif
 " source: http://dougblack.io/words/a-good-vimrc.html#ctrlp-section
+
+
+" ctrlp (Ctrl + k) launch at project root:
+"nnoremap <C-k> :CtrlP ~/www/some/path/<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctrlspace {{{1
@@ -1015,13 +1010,7 @@ set showtabline=2
 " JSbeautify settings {{{1
 " https://github.com/maksimr/vim-jsbeautify
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:config_Beautifier = {}
-"let g:config_Beautifier['js'] = {}
-"let g:config_Beautifier['js'].indent_size = '4'
-"let g:config_Beautifier['js'].indent_style = 'tab'
-"let g:config_Beautifier['js'].brace_style = 'none'
-"let g:config_Beautifier['js'].keep_array_indentation = 'true'
-" see .editorconfig instead
+" see .editorconfig for configuration settings
 
 " ctrl+f
 map <c-f> :call JsBeautify()<cr>
@@ -1176,14 +1165,6 @@ map <Leader>p :set paste<CR>o<esc>"+]p:set nopaste<cr>
 " fix opening in split when using vim startify:
 autocmd User Startified setlocal buftype=
 " source: https://github.com/mhinz/vim-startify/blob/master/doc/startify.txt
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" KO Project Specific {{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" ctrlp (Ctrl + k) launch at project root:
-nnoremap <C-k> :CtrlP ~/www/ko/proto/<cr>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Experiments {{{1
