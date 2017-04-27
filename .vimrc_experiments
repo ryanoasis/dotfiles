@@ -1,9 +1,11 @@
+" vim:fdm=marker
+" file: .vimrc_experiments
+" author: ryanoasis (Ryan L McIntyre)
 " This is mostly just a dump of random trial and error vimrc settings
 " and various vim experiments (especially for plugins)
-"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Minimap experiments {{{2
+" Minimap experiments {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
