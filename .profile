@@ -21,6 +21,9 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# set PATH so it includes user's private bin directories
+#PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+
 export STEAM_FRAME_FORCE_CLOSE=1
 # Initialization for FDK command line tools.Sun Aug  9 09:56:54 2015
 FDK_EXE="/home/ryan/bin/FDK/Tools/linux"
