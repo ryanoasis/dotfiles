@@ -744,6 +744,9 @@ let g:DevIconsEnableFoldersOpenClose = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " test vim startify
 "let g:startify_custom_header = 'hey'
+"let g:startify_custom_header = ''
+let g:startify_custom_header = ['', '']
+"let g:startify_custom_header = "startify showing integration with VimDevIcons"
 "let g:startify_custom_entry_display = "\" (\" . WebDevIconsGetFileTypeSymbol(entry_path) . \") \" . repeat(' ', (3 - strlen(index))) . entry_path"
 "    let g:startify_custom_file_entry_display = 
 "            \ "' >' . repeat(' ', (3 - strlen(index))) . entry_path"
