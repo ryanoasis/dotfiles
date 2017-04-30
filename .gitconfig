@@ -1,6 +1,6 @@
 [user]
 	name = Ryan L McIntyre
-	email = ryanoasis@gmail.com
+	email = ryanoasis@users.noreply.github.com
 [core]
 	pager = less -q
 	excludesfile = ~/.globalgitignore
