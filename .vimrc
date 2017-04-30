@@ -87,7 +87,10 @@ Plugin 'Shougo/vimfiler.vim'
 Plugin 'mhinz/vim-startify'
 "Plugin 'mhinz/vim-signify' " still liking vim-gitgutter more
 "Plugin 'ryanoasis/vim-devicons'
-Plugin '0phoff/vim-devicons'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:////home/ryan/projects/vim-devicons'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plugin '0phoff/vim-devicons'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'csscomb/vim-csscomb'
