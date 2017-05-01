@@ -1173,7 +1173,7 @@ autocmd User Startified setlocal buftype=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vimrc experimental and/or test settings:
-source ~/.vimrc_experiments
+"source ~/.vimrc_experiments
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
