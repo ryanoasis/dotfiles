@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files=".bashrc .bash_profile .profile .vimrc .gvimrc .vimrc_experiments .NERDTreeBookmarks .zshrc .jscs.json .ls++.conf .gitconfig .globalgitignore"    # list of files/folders to symlink in homedir
+files=".bashrc .bash_profile .profile .vimrc .gvimrc .vimrc_experiments .NERDTreeBookmarks .tmux.conf .zshrc .jscs.json .ls++.conf .gitconfig .globalgitignore"    # list of files/folders to symlink in homedir
 # for testing:
 #files=".vimrc .gvimrc Dropbox/vim/allcolorstest.vim"
 
