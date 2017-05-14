@@ -44,7 +44,7 @@ sudo apt install \
     python-pip \
     virtualenv \
     cifs-utils
-    
+
 # pip installs
 ## upgrade pip
 sudo pip install --upgrade pip
@@ -64,7 +64,7 @@ html2vimdoc/bin/pip install beautifulsoup coloredlogs markdown
 ## Run the program.
 html2vimdoc/bin/python ./html2vimdoc.py --help
 
-    
+
 # dropbox
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
@@ -98,3 +98,4 @@ cd xrectsel/
 sudo make install
 cd ..
 rm -rf xrectsel/
+
