@@ -909,7 +909,7 @@ nmap <leader>l :set list!<CR>
 " source: http://vimcasts.org/episodes/show-invisibles/
 
 " no highlight on Escape key press
-nnoremap <Esc> :noh<CR>
+"nnoremap <Esc> :noh<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
