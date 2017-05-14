@@ -809,6 +809,13 @@ let g:CtrlSpaceSymbols = { "File": "X", "CTab": "▣", "Tabs": "▢" }
 
 "let g:CtrlSpaceSymbols = { 'File': 'X', 'CTab': '▣', 'Tabs': '▢' }
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrlp vimdevicons issue #203 {{{3
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+let g:airline#parts#ffenc#skip_expected_string='utf-8 '
+let g:webdevicons_enable_airline_statusline_fileformat_symbols = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle {{{3
