@@ -34,8 +34,9 @@ sudo apt-get -y install \
     skype curl gparted geany \
     npm vlc shellcheck \
     python-fontforge \
-    jekyll
-    
+    jekyll \
+    p7zip-full
+
 # terminal emulators (mostly for testing VimDevIcons)
 sudo apt install \
     rxvt-unicode \
