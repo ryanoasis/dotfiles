@@ -1125,17 +1125,10 @@ endif
 " set font:
 set guifont=Fira\ Code\ Medium\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Medium\ 12
 
-" testing extra-powerline-symbols
-" testing rounded separators (extra-powerline-symbols):
-"let g:airline_left_sep = "\uE0BA"
-"let g:airline_right_sep = "\uE0BB"
-
 " set the CN (column number) symbol:
 let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
 
 set verbosefile=/home/ryan/debug-vim-verbose.txt
-
-"let g:ctrlp_line_prefix = WebDevIconsGetFileTypeSymbol('foo.txt')
 
 " (,zz) Debug currently cursor hilighted area with the syntax rule being used
 map <Leader>zz :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
