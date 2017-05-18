@@ -234,6 +234,13 @@ let NERDChristmasTree = 0
 " vim-devicons testing area {{{2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" testing extra-powerline-symbols
+" testing rounded separators (extra-powerline-symbols):
+"let g:airline_left_sep = "\uE0BA"
+"let g:airline_right_sep = "\uE0BB"
+
+"let g:ctrlp_line_prefix = WebDevIconsGetFileTypeSymbol('foo.txt')
+
 let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
 
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
