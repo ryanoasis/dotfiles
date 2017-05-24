@@ -952,10 +952,7 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd FileType c,cpp,java,php,ruby,python,javascript,js,css,md,mkd,html autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-"autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-"autocmd BufWritePre *.js :call <SID>StripTrailingWhitespaces()
 " source: http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OS Differences {{{1
