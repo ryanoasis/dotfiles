@@ -6,6 +6,23 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Old and/or disabled Vim Plugins {{{1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Plugin 'majutsushi/tagbar'
+" Plugin 'lilydjwg/colorizer' " temporarily disabled due to performance issues
+" and seemingly not maintained anymore, now using: gorodinskiy/vim-coloresque
+"Plugin 'Yggdroot/indentLine'
+" dont need right now, working in vim for tabs with set list lcs=tab...
+"Plugin 'endel/ctrlp-filetype.vim'
+" for files that are not tracked in version control (git):
+" Plugin 'chrisbra/changesPlugin' " didnt like that it conflicted with
+" gitgutter (didnt seem like there was a way to have both) and the styling i didnt find too appealing
+"Plugin 'koron/minimap-vim'
+"Plugin 'mhinz/vim-signify' " still liking vim-gitgutter more
+"Plugin 'vim-ctrlspace/vim-ctrlspace' " for testing possible vim-devicons integration
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pasting {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
