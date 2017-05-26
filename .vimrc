@@ -50,21 +50,12 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
-"Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'tpope/vim-unimpaired'
-" Plugin 'lilydjwg/colorizer' " temporarily disabled due to performance issues
-" and seemingly not maintained anymore, now using: gorodinskiy/vim-coloresque
 Plugin 'gorodinskiy/vim-coloresque'
-"Plugin 'Yggdroot/indentLine'
-" dont need right now, working in vim for tabs with set list lcs=tab...
 Plugin 'justinmk/vim-gtfo'
 Plugin 'vim-scripts/text-object-left-and-right'
-"Plugin 'endel/ctrlp-filetype.vim'
-" for files that are not tracked in version control (git):
-" Plugin 'chrisbra/changesPlugin' " didnt like that it conflicted with
-" gitgutter (didnt seem like there was a way to have both) and the styling i didnt find too appealing
 Plugin 'mattn/gist-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -83,9 +74,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/denite.nvim'
 Plugin 'Shougo/vimfiler.vim'
-"Plugin 'koron/minimap-vim'
 Plugin 'mhinz/vim-startify'
-"Plugin 'mhinz/vim-signify' " still liking vim-gitgutter more
 Plugin 'ryanoasis/vim-devicons'
 " git repos on your local machine (i.e. when working on your own plugin)
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -93,7 +82,6 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'csscomb/vim-csscomb'
 Plugin 'dracula/vim'
-"Plugin 'vim-ctrlspace/vim-ctrlspace' " for testing possible vim-devicons integration
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
