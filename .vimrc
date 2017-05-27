@@ -372,8 +372,6 @@ let g:airline_mode_map = {
 
 "let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-" test disabling the extension
-"let g:loaded_airline = 1
 
 " Just show the filename (no path) in the tab
 let g:airline#extensions#tabline#fnamemod = ':t'
