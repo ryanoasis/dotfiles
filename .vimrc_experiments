@@ -282,6 +282,9 @@ let NERDChristmasTree = 0
 "let g:airline_left_sep = "\uE0BA"
 "let g:airline_right_sep = "\uE0BB"
 
+" test disabling the extension
+"let g:loaded_airline = 1
+
 "let g:ctrlp_line_prefix = WebDevIconsGetFileTypeSymbol('foo.txt')
 
 let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
