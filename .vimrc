@@ -104,14 +104,7 @@ syntax on
 set background=dark
 "set t_Co=256
 "set t_Co=16
-"colorscheme robinhood
-"colorscheme elflord
-"colorscheme obsidian2
-"colorscheme jellybeans
-"colorscheme distinguished
-"colorscheme jellybeans
 colorscheme dracula
-"colorscheme solarized
 
 " working directory always where the active buffer is located
 "set autochdir
