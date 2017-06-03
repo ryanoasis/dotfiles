@@ -97,10 +97,9 @@ filetype plugin on " for nerdcommenter
 " need to use with CSApprox script to work (huh?)
 set t_Co=256
 
-syntax on
 "syntax enable
+syntax on
 "set term=xterm-256color
-"set background=light
 set background=dark
 "set t_Co=256
 "set t_Co=16
