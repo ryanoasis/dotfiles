@@ -324,20 +324,15 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 " to Supertab for expansion.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-powerline (obselete now using airline) {{{1
+" vim-airline {{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" recommended to put in vimrc NOT gvimrc (too late loading)
-" let g:Powerline_symbols = 'fancy'
+
 " fixes statusline only appearing in split windows mode
 set laststatus=2
 " source: https://github.com/Lokaltog/vim-powerline
 
 " dont need showmode indicator now because using awesome Powerline :D
 set noshowmode
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-airline {{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:airline_powerline_fonts = 1
 "let g:airline_theme = 'powerlineish'
