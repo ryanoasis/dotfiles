@@ -1028,9 +1028,6 @@ else
 endif
 " source: http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
 
-"let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
-"let g:webdevicons_conceal_nerdtree_brackets = 0
-
 "hi Comment guibg=#212121
 "hi jsDocParam guibg=#212121
 "hi jsDocTags guibg=#212121
