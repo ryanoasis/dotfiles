@@ -426,6 +426,8 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 
+"let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+"let g:webdevicons_conceal_nerdtree_brackets = 0
 
 
 " to test mac as default line endings on new files:
