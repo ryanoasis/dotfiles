@@ -76,7 +76,6 @@ Plugin 'Shougo/denite.nvim'
 Plugin 'Shougo/vimfiler.vim'
 Plugin 'mhinz/vim-startify'
 Plugin 'ryanoasis/vim-devicons'
-" git repos on your local machine (i.e. when working on your own plugin)
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mxw/vim-jsx'
