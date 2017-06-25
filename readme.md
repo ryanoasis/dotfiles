@@ -43,7 +43,7 @@
 
 ![img](previews/bash-terminal-1.png)
 
-* Showing [Milkbikis' Powerline Shell][powerline-shell]
+* Showing [Shrey Banga's Powerline Shell][powerline-shell]
 
 ### Bash Aliases
 
@@ -75,5 +75,5 @@
 [jscs]:https://github.com/jscs-dev/node-jscs
 [jshint]:https://github.com/jshint/jshint
 [vim-jsdoc]:https://github.com/heavenshell/vim-jsdoc
-[powerline-shell]:https://github.com/milkbikis/powerline-shell
+[powerline-shell]:https://github.com/banga/powerline-shell
 [nerd-fonts]:https://github.com/ryanoasis/nerd-fonts
