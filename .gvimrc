@@ -30,7 +30,7 @@ map ,= :let &guifont = substitute(&guifont, '\(\d\+\)', '\="" . (submatch(1) + 1
 " Font {{{3
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ 14
+set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ 12
 
 
 " force to use vim keys more often and give more screen realestate:
