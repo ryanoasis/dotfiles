@@ -120,3 +120,10 @@ set mousemodel=popup
 if exists('g:loaded_webdevicons')
   call webdevicons#refresh()
 endif
+
+    "augroup devicons_nerdtree
+    "    autocmd FileType nerdtree setlocal list
+    "    autocmd FileType nerdtree setlocal listchars=space:.
+    "    autocmd FileType nerdtree setlocal nolist
+    "    "autocmd FileType nerdtree setlocal ambiwidth=double
+    "augroup END
