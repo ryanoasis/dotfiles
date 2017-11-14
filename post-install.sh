@@ -72,6 +72,7 @@ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 # npm installs
 sudo npm install -g write-good
 sudo npm install -g alex
+sudo npm install -g all-contributors-cli
 
 # gems
 sudo gem install gist
