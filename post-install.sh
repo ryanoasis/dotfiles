@@ -50,6 +50,8 @@ sudo apt install \
 sudo pip install --upgrade pip
 sudo pip install proselint
 sudo pip install icon_font_to_png
+## Nerd Fonts development
+sudo pip install configparser
 
 # VimDevIcons specific prerequisites
 # via https://github.com/xolox/vim-tools
