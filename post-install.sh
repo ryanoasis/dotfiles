@@ -54,6 +54,7 @@ sudo pip install icon_font_to_png
 ## Nerd Fonts development
 sudo pip install configparser
 ### Nerd Fonts Hack development
+sudo pip install fonttools
 curl https://raw.githubusercontent.com/source-foundry/Hack/master/tools/scripts/install/ttfautohint-build.sh --output ~/ttfautohint-build.sh
 chmod 770 ~/ttfautohint-build.sh
 cd ~
