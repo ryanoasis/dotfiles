@@ -78,6 +78,8 @@ PERL_MM_OPT="INSTALL_BASE=/home/ryan/perl5"; export PERL_MM_OPT;
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+export PATH="/home/ryan/ttfautohint-build/local/bin:$PATH"
+
 # added 03-31-2017:
 # source: http://stackoverflow.com/questions/9457233/unlimited-bash-history
 
