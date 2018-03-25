@@ -292,6 +292,7 @@ let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['vue'] = '﵂'
 
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = 'M'
 
@@ -871,6 +872,18 @@ let g:CtrlSpaceSymbols = { "File": "X", "CTab": "▣", "Tabs": "▢" }
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#parts#ffenc#skip_expected_string='utf-8 '
 let g:webdevicons_enable_airline_statusline_fileformat_symbols = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vimdevicons issue #223 {{{3
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+
+let g:DevIconsEnableNERDTreeRedraw = 1
+"let g:DevIconsAppendArtifactFix = 1
+"let g:webdevicons_conceal_nerdtree_brackets = 0
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = '  '
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle {{{3
