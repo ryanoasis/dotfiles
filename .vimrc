@@ -333,7 +333,7 @@ set laststatus=2
 " dont need showmode indicator now because using awesome Powerline :D
 set noshowmode
 
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 "let g:airline_theme = 'powerlineish'
 let g:airline_theme = 'dracula'
 let g:airline#extensions#tabline#enabled = 1
@@ -1117,7 +1117,7 @@ autocmd User Startified setlocal buftype=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vimrc experimental and/or test settings:
-"source ~/.vimrc_experiments
+source ~/.vimrc_experiments
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1131,3 +1131,4 @@ autocmd User Startified setlocal buftype=
 " Else if not editing this file directly
 ":so $MYVIMRC
 
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
