@@ -163,7 +163,7 @@ autosetuprebase = always
 	prompt = false
 
 [mergetool "diffmerge"]
-	cmd = /home/ryan/Dropbox/public-bash-scripts/git-merge-diffmerge-wrapper.sh "$PWD/$LOCAL" "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$MERGED" 
+	cmd = /home/ryan/Dropbox/public-bash-scripts/git-scripts/git-merge-diffmerge-wrapper.sh "$PWD/$LOCAL" "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$MERGED" 
     trustExitCode = false
  keepBackup = false
  prompt = false
