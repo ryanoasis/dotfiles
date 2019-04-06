@@ -40,5 +40,5 @@ mkdir -p /mnt/syn_video
 
 # mount as specific users
 sudo mount -t cifs -o "username=$username" "//$address/files" /mnt/syn
-sudo mount -t cifs -o "username=$username" "//$address/video" /mnt/syn_video
+sudo mount -t cifs -o username=$username "//$address/video" /mnt/syn_video
 
