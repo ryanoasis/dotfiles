@@ -1117,8 +1117,7 @@ autocmd User Startified setlocal buftype=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vimrc experimental and/or test settings:
-source ~/.vimrc_experiments
-
+"source ~/.vimrc_experiments
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bottom {{{1
@@ -1131,4 +1130,19 @@ source ~/.vimrc_experiments
 " Else if not editing this file directly
 ":so $MYVIMRC
 
+"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+
+let g:webdevicons_enable_nerdtree = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+"let g:DevIconsEnableFoldersOpenClose = 1
+"let g:DevIconsEnableFolderExtensionPatternMatching = 1
+
+let g:webdevicons_conceal_nerdtree_brackets = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+"let g:WebDevIconsNerdTreeBeforeGlyphPadding = '        '
+" Disable arrow icons at the left side of folders for NERDTree.
+let g:NERDTreeDirArrowExpandable = "\u00a0"
+let g:NERDTreeDirArrowCollapsible = "\u00a0"
