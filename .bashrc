@@ -99,3 +99,7 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 export NVM_DIR="/home/ryan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# add pip packages et al:
+
+export PATH="/home/ryan/.local/bin:$PATH"
